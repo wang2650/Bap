@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WXQ.InOutPutEntites</name>
+    </assembly>
+    <members>
+        <member name="T:WXQ.InOutPutEntites.Input.BaseIncludeDate">
+            <summary>
+            带开始结束时间的入参
+            </summary>
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Input.BaseIncludeDate.BeginDt">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Input.BaseIncludeDate.EndDt">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="T:WXQ.InOutPutEntites.Input.PageInput">
+            <summary>
+            带分页条件的入参
+            </summary>
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Input.PageInput.PageIndex">
+            <summary>
+            分页索引
+            </summary>
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Input.PageInput.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.InsertInput.Introduction">
+            <summary>
+            Desc:介绍
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.InsertInput.NickName">
+            <summary>
+            Desc:昵称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.InsertInput.HeadImage">
+            <summary>
+            Desc:头像
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.UpdateInput.Introduction">
+            <summary>
+            Desc:介绍
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.UpdateInput.NickName">
+            <summary>
+            Desc:昵称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.UpdateInput.HeadImage">
+            <summary>
+            Desc:头像
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.UpdateUsersStateInput.RowVersion">
+            <summary>
+            Desc:版本号
+            Default:0
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:WXQ.InOutPutEntites.Output.ResponseResult">
+            <summary>
+            输出结果对象
+            </summary>
+        </member>
+        <member name="M:WXQ.InOutPutEntites.Output.ResponseResult.#ctor(System.Int32,System.String)">
+            <summary>
+            输出结果对象
+            </summary>
+            <param name="code"></param>
+            <param name="message"></param>
+        </member>
+        <member name="F:WXQ.InOutPutEntites.Output.ResponseResult.Dt">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.ResponseResult.Guid">
+            <summary>
+            标识id
+            </summary>
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.ResponseResult.Code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.ResponseResult.Errors">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.ResponseResult.Data">
+            <summary>
+            返回的数据结果
+            </summary>
+        </member>
+    </members>
+</doc>

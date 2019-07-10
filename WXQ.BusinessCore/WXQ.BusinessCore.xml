@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WXQ.BusinessCore</name>
+    </assembly>
+    <members>
+        <member name="T:AppConfigurtaionServices">
+            <summary>
+            读取配置文件
+            </summary>
+        </member>
+        <member name="M:WXQDbContext`1.GetList">
+            <summary>
+            获取所有
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.GetList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据表达式查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.GetPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},SqlSugar.PageModel)">
+            <summary>
+            根据表达式查询分页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.GetPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},SqlSugar.PageModel,System.Linq.Expressions.Expression{System.Func{`0,System.Object}},SqlSugar.OrderByType)">
+            <summary>
+            根据表达式查询分页并排序
+            </summary>
+            <param name="whereExpression">it</param>
+            <param name="pageModel"></param>
+            <param name="orderByExpression">it=>it.id或者it=>new{it.id,it.name}</param>
+            <param name="orderByType">OrderByType.Desc</param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.GetById(System.Object)">
+            <summary>
+            根据主键查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.DeleteById(System.Object)">
+            <summary>
+            根据主键删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.Delete(`0)">
+            <summary>
+            根据实体删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.DeleteByIds(System.Object[])">
+            <summary>
+            根据主键删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据表达式删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.Update(`0)">
+            <summary>
+            根据实体更新，实体需要有主键
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.Update(System.Collections.Generic.List{`0})">
+             <summary>
+            批量更新
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.Insert(`0)">
+            <summary>
+            插入
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQDbContext`1.Insert(System.Collections.Generic.List{`0})">
+            <summary>
+            批量
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.DepartmentOp.InsertDepartment(WXQ.Enties.Department)">
+            <summary>
+            添加部门
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.DepartmentOp.UpdateDepartment(WXQ.Enties.Department)">
+            <summary>
+            修改部门
+            </summary>
+            <param name="r"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.DepartmentOp.DeleteDepartmentByDepartmentId(System.Int32)">
+            <summary>
+            删除部门根据主键
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.DepartmentOp.DeleteDepartment(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            根据部门id批量删除部门
+            </summary>
+            <param name="departmentIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.DepartmentOp.GetDepartmentList(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            查找部门
+            </summary>
+            <param name="departmentName">部门名</param>
+            <param name="parentId">上一级id</param>
+            <param name="pageModel">分页</param>
+            <param name="rsState">记录状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.DepartmentOp.GetDepartmentListByUserId(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            查找用户所在的部门
+            </summary>
+            <param name="userId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.DepartmentOp.GetUserListByDepartmentId(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            查找部门的用户
+            </summary>
+            <param name="userId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.MenuOp.InsertMenu(WXQ.Enties.Menu)">
+            <summary>
+            添加菜单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.MenuOp.UpdateMenu(WXQ.Enties.Menu)">
+            <summary>
+            修改菜单
+            </summary>
+            <param name="r"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.MenuOp.DeleteMenuByMenuId(System.Int32)">
+            <summary>
+            删除菜单根据主键
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.MenuOp.DeleteMenus(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            根据主键批量删除菜单
+            </summary>
+            <param name="userIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.MenuOp.GetMenuList(System.String,System.String,SqlSugar.PageModel@,System.Int32)">
+            <summary>
+            查找菜单
+            </summary>
+            <param name="menuName">菜单名</param>
+            <param name="url">地址</param>
+            <param name="pageModel">分页</param>
+            <param name="rsState">记录状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.MenuOp.GetMenuListByRoleId(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            查找角色包含的菜单
+            </summary>
+            <param name="userId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.MenuOp.GetUsersListByRoleId(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            查找菜单所在的角色
+            </summary>
+            <param name="userId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.RoleOp.GetRoleList(System.String,SqlSugar.PageModel@,System.Int32,System.Int32)">
+            <summary>
+            获取角色列表
+            </summary>
+            <param name="roleName">角色名称</param>
+            <param name="pageModel">分页</param>
+            <param name="parentId">上一级id</param>
+            <param name="rsState">状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.RoleOp.InsertRole(WXQ.Enties.Role)">
+            <summary>
+            添加角色
+            </summary>
+            <param name="r"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.RoleOp.UpdateRole(WXQ.Enties.Role)">
+            <summary>
+            修改角色
+            </summary>
+            <param name="r"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.RoleOp.DeleteRoleByRoleId(System.Int32)">
+            <summary>
+            删除角色根据主键
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.RoleOp.DeleteRoleByParentId(System.Int32)">
+            <summary>
+            删除角色  根据父级id
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.RoleOp.GetRoleListByUserId(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            查找用户所属的角色
+            </summary>
+            <param name="userId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.RoleOp.GetUsersListByRoleId(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            查找角色包含的用户
+            </summary>
+            <param name="userId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.UserOp.InsertUsers(WXQ.Enties.Users)">
+            <summary>
+            添加用户
+            </summary>
+            <param name="r"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.UserOp.UpdateUsers(WXQ.Enties.Users)">
+            <summary>
+            修改用户
+            </summary>
+            <param name="r"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.UserOp.UpdateUsersState(WXQ.Enties.Users)">
+            <summary>
+            修改用户记录状态
+            </summary>
+            <param name="r"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.UserOp.DeleteUsersByUsersId(System.Int32)">
+            <summary>
+            删除用户根据主键
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.UserOp.DeleteUsers(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            根据主键批量删除用户
+            </summary>
+            <param name="userIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.UserOp.GetUserList(System.String,SqlSugar.PageModel@,System.Int32)">
+            <summary>
+            查找用户
+            </summary>
+            <param name="userName">用户名或昵称</param>
+            <param name="pageModel">分页</param>
+            <param name="rsState">记录状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:WXQ.BusinessCore.systemmanage.UserOp.Login(System.String,System.String)">
+            <summary>
+            登录  如果返回为null或者 用户id为0则失败
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

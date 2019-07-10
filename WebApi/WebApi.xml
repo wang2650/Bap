@@ -1,0 +1,560 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WebApi.Common.LogAttribute">
+            <summary>
+            记录操作日志
+            </summary>
+        </member>
+        <member name="M:WebApi.Common.LogAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            添加操作日志 liyouming
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Common.LogAttribute.GetRequestValues(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            读取request 的提交内容
+            </summary>
+            <param name="actionExecutedContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Common.Appsettings">
+            <summary>
+            appsettings.json操作类
+            </summary>
+        </member>
+        <member name="M:WebApi.Common.Appsettings.app(System.String[])">
+            <summary>
+            封装要操作的字符
+            </summary>
+            <param name="sections"></param>
+            <returns></returns>
+        </member>
+        <member name="P:WebApi.Common.CustomIdentity.AuthenticationType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.CustomIdentity.IsAuthenticated">
+            <summary>
+            是否验证
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.CustomIdentity.Name">
+            <summary>
+            返回用户
+            </summary>
+        </member>
+        <member name="T:WebApi.Common.GlobalExceptionsFilter">
+            <summary>
+            全局异常处理
+            </summary>
+        </member>
+        <member name="M:WebApi.Common.GlobalExceptionsFilter.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+        </member>
+        <member name="M:WebApi.Common.GlobalExceptionsFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            异常发生
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebApi.Common.GlobalExceptionsFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            异步处理异常
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Common.GlobalExceptionsFilter.WriteLog(System.String,System.Exception)">
+            <summary>
+            写入日志
+            </summary>
+            <param name="throwMsg"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="T:WebApi.Common.GlobalExceptionsFilter.InternalServerErrorObjectResult">
+            <summary>
+            服务器端异常
+            </summary>
+        </member>
+        <member name="M:WebApi.Common.GlobalExceptionsFilter.InternalServerErrorObjectResult.#ctor(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:WebApi.Common.GlobalExceptionsFilter.JsonErrorResponse">
+            <summary>
+            返回错误信息
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.GlobalExceptionsFilter.JsonErrorResponse.Message">
+            <summary>
+            生产环境的消息
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.GlobalExceptionsFilter.JsonErrorResponse.DevelopmentMessage">
+            <summary>
+            开发环境的消息
+            </summary>
+        </member>
+        <member name="M:WebApi.Common.HelpOp.UserOp.GetUserId(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            获取用户的id
+            </summary>
+            <param name="claimsPrincipal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Common.JwtHelper.SerializeJWT(WebApi.Common.TokenModelJWT)">
+            <summary>
+            颁发JWT字符串
+            </summary>
+            <param name="tokenModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Common.JwtHelper.DerializeJWT(System.String)">
+            <summary>
+            解析
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Common.TokenModelJWT">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.TokenModelJWT.Uid">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.TokenModelJWT.ExpDate">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="T:WebApi.Controllers.configmanager.DictController">
+            <summary>
+            字典管理
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.configmanager.DictController.InsertDict(WXQ.InOutPutEntites.Input.configmanager.Dict.InsertDictInput)">
+            <summary>
+            添加字典
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.configmanager.DictController.UpdateDict(WXQ.InOutPutEntites.Input.configmanager.Dict.UpdateDictInput)">
+            <summary>
+            修改字典
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.configmanager.DictController.DeleteDictByDictId(System.Int32)">
+            <summary>
+            删除字典通过主键
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.configmanager.DictController.DeleteDictByGroupName(System.String)">
+            <summary>
+            删除字典根据分组名
+            </summary>
+            <param name="GroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.configmanager.DictController.GetDictList(WXQ.InOutPutEntites.Input.configmanager.Dict.GetDictListInput)">
+            <summary>
+            搜索列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.LogManage.MetricsController">
+            <summary>
+            度量日志
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.LogManage.MetricsController.GetMetricsList(WXQ.InOutPutEntites.Input.LogManage.Metrics.GetMetricsListInput)">
+            <summary>
+            查找度量日志
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.LogManage.MetricsController.Delete(WXQ.InOutPutEntites.Input.LogManage.Metrics.DeleteInput)">
+            <summary>
+            删除度量日志
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.LogManage.NLogController">
+            <summary>
+            调试日志
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.LogManage.NLogController.GetNLogList(WXQ.InOutPutEntites.Input.LogManage.NLog.GetNLogListInput)">
+            <summary>
+            查找调试日志
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.LogManage.NLogController.Delete(WXQ.InOutPutEntites.Input.LogManage.NLog.DeleteInput)">
+            <summary>
+            删除调试日志
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.LogManage.OpLogController">
+            <summary>
+            操作日志
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.LogManage.OpLogController.GetOpLogList(WXQ.InOutPutEntites.Input.LogManage.OpLog.GetOpLogListInput)">
+            <summary>
+            查找操作日志
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.LogManage.OpLogController.Delete(WXQ.InOutPutEntites.Input.LogManage.OpLog.DeleteInput)">
+            <summary>
+            删除操作日志
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.systemmanage.DepartmentController">
+            <summary>
+            菜单模块
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.DepartmentController.InsertDepartment(WXQ.InOutPutEntites.Input.SystemManage.Department.InsertDepartmentInput)">
+            <summary>
+            添加部门
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.DepartmentController.UpdateDepartment(WXQ.InOutPutEntites.Input.SystemManage.Department.UpdateDepartmentInput)">
+            <summary>
+            修改部门
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.DepartmentController.DeleteDepartmentByDepartmentId(System.Int32)">
+            <summary>
+            删除部门
+            </summary>
+            <param name="DepartmentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.DepartmentController.GetDepartmentList(WXQ.InOutPutEntites.Input.SystemManage.Department.GetDepartmentListInput)">
+            <summary>
+            查找部门
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.DepartmentController.GetDepartmentListByUserId(WXQ.InOutPutEntites.Input.SystemManage.Department.GetDepartmentListByUserIdInput)">
+            <summary>
+            查找用户所在的部门
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.DepartmentController.GetDepartmentListForCurrentUser">
+            <summary>
+            查找当前用户所在的部门
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.DepartmentController.GetDepartmentAndSubDepartmentForCurrentUser">
+            <summary>
+            查找当前用户所在的部门和子部门
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.DepartmentController.GetUserListByDepartmentId(WXQ.InOutPutEntites.Input.SystemManage.Department.GetUserListByDepartmentIdInput)">
+            <summary>
+            查找部门中的用户
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.DepartmentController.AddUserForDepartment(WXQ.InOutPutEntites.Input.SystemManage.Department.ModifyUserForDepartmentInput)">
+            <summary>
+            添加部门的用户
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.DepartmentController.RemoveUserForDepartment(WXQ.InOutPutEntites.Input.SystemManage.Department.ModifyUserForDepartmentInput)">
+            <summary>
+            移除部门中的用户
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.systemmanage.MenuController">
+            <summary>
+            菜单模块
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.InsertMenu(WXQ.InOutPutEntites.Input.SystemManage.Menu.InsertMenuInput)">
+            <summary>
+            添加菜单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.DeleteMenuByMenuId(System.Int32)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="MenuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.UpdateMenu(WXQ.InOutPutEntites.Input.SystemManage.Menu.UpdateMenuInput)">
+            <summary>
+            修改菜单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.GetMenuList(WXQ.InOutPutEntites.Input.SystemManage.Menu.GetMenuListInput)">
+            <summary>
+            查找菜单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.GetMenuListByRoleId(WXQ.InOutPutEntites.Input.SystemManage.Menu.GetMenuListByRoleIdInput)">
+            <summary>
+            查找角色的菜单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.GetMenuListByUserId(WXQ.InOutPutEntites.Input.SystemManage.Menu.GetMenuListByUserIdInput)">
+            <summary>
+            获取用户的菜单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.GetMenuTreeForCurrentUser">
+            <summary>
+            获取当前用户的菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.GetMenuTreeForCurrentUserByDeparentId(System.Int32,System.Int32)">
+            <summary>
+            获取用户在某部门的权限，某角色的权限
+            </summary>
+            <param name="departmentId">部门id</param>
+            <param name="roleId">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.GetMenuTreeByUserId(System.Int32)">
+            <summary>
+            获取用户的菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.GetUrlRightByUserId(System.Int32)">
+            <summary>
+            获取用户可访问url地址
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.GetUrlRightForCurrentUser">
+            <summary>
+            获取用户可访问url地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.GetMenuTreeByRoleId(System.Int32)">
+            <summary>
+            获取角色的菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.MenuController.ModifyMentForRole(WXQ.InOutPutEntites.Input.SystemManage.Menu.ModifyMentForRoleInput)">
+            <summary>
+            设置角色的菜单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.systemmanage.RoleController">
+            <summary>
+            角色模块
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.RoleController.InsertRole(WXQ.InOutPutEntites.Input.SystemManage.Role.InsertRoleInput)">
+            <summary>
+            添加角色
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.RoleController.UpdateRole(WXQ.InOutPutEntites.Input.SystemManage.Role.UpdateRoleInput)">
+            <summary>
+            修改角色
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.RoleController.DeleteRoleByRoleId(System.Int32)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.RoleController.GetRoleList(WXQ.InOutPutEntites.Input.SystemManage.Role.GetRoleListInput)">
+            <summary>
+            角色列表
+            </summary>
+            <param name="model">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.RoleController.GetRoleListByUserId(WXQ.InOutPutEntites.Input.SystemManage.Role.GetRoleListByUserIdInput)">
+            <summary>
+            查找用户所属的角色
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.RoleController.GetUsersListByRoleId(WXQ.InOutPutEntites.Input.SystemManage.Role.GetUsersListByRoleIdInput)">
+            <summary>
+            查找角色包含的用户
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.RoleController.AddUserForRole(WXQ.InOutPutEntites.Input.SystemManage.Role.AddUserForRoleInput)">
+            <summary>
+            添加用户到角色
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.RoleController.RemoveUserFromRole(WXQ.InOutPutEntites.Input.SystemManage.Role.AddUserForRoleInput)">
+            <summary>
+            从角色移除用户
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.systemmanage.UserController">
+            <summary>
+            用户模块
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.DeleteUser(System.Int32)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.GetCurrentUserInfo">
+            <summary>
+            当前用户的信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.GetUserList(WXQ.InOutPutEntites.Input.SystemManage.User.GetUserListInput)">
+            <summary>
+            用户列表
+            </summary>
+            <param name="model">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.InsertUser(WXQ.InOutPutEntites.Input.SystemManage.User.InsertInput)">
+            <summary>
+            添加
+            </summary>
+            <param name="model">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.Login(WXQ.InOutPutEntites.Input.SystemManage.User.LoginInput)">
+            <summary>
+            登录 8小时过期 过期后可以用老的token 来刷新token
+            </summary>
+            <param name="model">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.ModifyUserPassord(WXQ.InOutPutEntites.Input.SystemManage.User.LoginInput)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.RefreshToken(System.String)">
+            <summary>
+            刷新token
+            </summary>
+            <param name="token">用户token信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.ResetPassord(WXQ.InOutPutEntites.Input.SystemManage.User.ResetPasswordInput)">
+            <summary>
+            重置密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.UpdateUsers(WXQ.InOutPutEntites.Input.SystemManage.User.UpdateInput)">
+            <summary>
+            修改
+            </summary>
+            <param name="model">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.UpdateMyselfInfo(WXQ.InOutPutEntites.Input.SystemManage.User.UpdateInput)">
+            <summary>
+            修改自己的信息
+            </summary>
+            <param name="model">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.GetUsersRefDepartment(WXQ.InOutPutEntites.Input.SystemManage.User.GetUsersRefDepartmentInput)">
+            <summary>
+            获取用户集合，包含部门id
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.systemmanage.UserController.GetUsersRefRole(WXQ.InOutPutEntites.Input.SystemManage.User.GetUsersRefRoleInput)">
+            <summary>
+            获取用户集合，包含角色id
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

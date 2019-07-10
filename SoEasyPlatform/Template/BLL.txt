@@ -1,0 +1,12 @@
+﻿using @Model.ClassNamespace;
+using SqlSugar;
+using System;
+using System.Collections.Generic;
+public class @(Model.Name)Manager : WXQDbContext<@Model.Name>
+{
+ 
+
+
+ 
+ 
+}

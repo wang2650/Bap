@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>G:\temp\WXQ.BusinessCore\WXQ.BusinessCore.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SecurityCodeScan.VS2017" Version="3.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="sqlSugarCore" Version="5.0.0.8" />
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\WXQ.Enties\WXQ.Enties.csproj">
+      <Name>WXQ.Enties</Name>
+      <Project>{d7dd3a91-1547-4aa8-ad84-449be5d3ba45}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\WXQ.InOutPutEntites\WXQ.InOutPutEntites.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DbCore\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="WXQ.BusinessCore.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
