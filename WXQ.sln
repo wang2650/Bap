@@ -13,11 +13,26 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WXQ.InOutPutEntites", "WXQ.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlSugar", "SqlSugar\SqlSugar.csproj", "{56F91124-50E3-4C68-AF66-E86FE6A006A7}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "WXQDB", "WXQDB\WXQDB.sqlproj", "{481B3FC6-6627-4392-829F-7588AB3A1B9E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{BC5C806A-BF54-46C8-824D-B445014A9866}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{02F9B82B-7E52-4945-9E21-9DABB061A1BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{02F9B82B-7E52-4945-9E21-9DABB061A1BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql", "sql", "{ED8B5E4A-1FFE-47DC-9016-81434F9E29E4}"
+	ProjectSection(SolutionItems) = preProject
+		tb_department.sql = tb_department.sql
+		tb_departmentrole.sql = tb_departmentrole.sql
+		tb_dict.sql = tb_dict.sql
+		tb_menu.sql = tb_menu.sql
+		tb_menupageelement.sql = tb_menupageelement.sql
+		tb_metrics.sql = tb_metrics.sql
+		tb_nlog.sql = tb_nlog.sql
+		tb_oplog.sql = tb_oplog.sql
+		tb_role.sql = tb_role.sql
+		tb_rolemenu.sql = tb_rolemenu.sql
+		tb_userdepartment.sql = tb_userdepartment.sql
+		tb_userrole.sql = tb_userrole.sql
+		tb_users.sql = tb_users.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,12 +60,6 @@ Global
 		{56F91124-50E3-4C68-AF66-E86FE6A006A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56F91124-50E3-4C68-AF66-E86FE6A006A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56F91124-50E3-4C68-AF66-E86FE6A006A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{481B3FC6-6627-4392-829F-7588AB3A1B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{481B3FC6-6627-4392-829F-7588AB3A1B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{481B3FC6-6627-4392-829F-7588AB3A1B9E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{481B3FC6-6627-4392-829F-7588AB3A1B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{481B3FC6-6627-4392-829F-7588AB3A1B9E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{481B3FC6-6627-4392-829F-7588AB3A1B9E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{BC5C806A-BF54-46C8-824D-B445014A9866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC5C806A-BF54-46C8-824D-B445014A9866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC5C806A-BF54-46C8-824D-B445014A9866}.Release|Any CPU.ActiveCfg = Release|Any CPU

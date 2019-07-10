@@ -184,6 +184,18 @@
             <param name="model"></param>
             <returns></returns>
         </member>
+        <member name="T:WebApi.Controllers.FileHandle.FileHandleController">
+            <summary>
+            文件控制
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.FileHandle.FileHandleController.SaveExcel(System.String,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            保存excel文件
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
         <member name="T:WebApi.Controllers.LogManage.MetricsController">
             <summary>
             度量日志

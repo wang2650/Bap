@@ -22,11 +22,11 @@ namespace SugarCodeGeneration
         /***3个必填参数***/
 
         //如果你不需要自定义，直接配好数据库连接，F5运行项目
-        const SqlSugar.DbType dbType = SqlSugar.DbType.SqlServer;
+        const SqlSugar.DbType dbType = SqlSugar.DbType.MySql;
         /// <summary>
         /// 连接字符串
         /// </summary>
-        const string connectionString = "server=127.0.0.1;uid=sa;pwd=123456;database=WXQDB";
+        const string connectionString = "server=127.0.0.1;uid=root;pwd=123456;database=bapdb";
         /// <summary>
         ///解决方案名称
         /// </summary>
