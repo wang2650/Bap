@@ -1,8 +1,8 @@
 ﻿CREATE TABLE `tb_department` (
   `Id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `ParentId` int(10) NOT NULL COMMENT '上级id',
-  `DepartmentName` int(10) NOT NULL COMMENT '部门名称',
-  `Description` int(10) NOT NULL COMMENT '描述',
+  `DepartmentName` varchar(50) NOT NULL COMMENT '部门名称',
+  `Description` varchar(100) NOT NULL COMMENT '描述',
   `AddDateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
   `UpdateDateTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
   `AddUser` varchar(50) NOT NULL DEFAULT '' COMMENT '添加人',
