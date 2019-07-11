@@ -8,10 +8,10 @@ namespace WXQ.Enties
     ///<summary>
     ///
     ///</summary>
-    [SugarTable("tb_nlog")]
-    public partial class nlog
+    [SugarTable("tb_limitip")]
+    public partial class LimitIp
     {
-           public nlog(){
+           public LimitIp(){
 
 
            }
@@ -20,35 +20,21 @@ namespace WXQ.Enties
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public DateTime? Logged {get;set;}
+           public string IpEnd {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public string Level {get;set;}
+           public short? RelationType {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public string Message {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string Logger {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string CallSite {get;set;}
+           public int? RelationId {get;set;}
 
            /// <summary>
            /// Desc:
@@ -63,7 +49,7 @@ namespace WXQ.Enties
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public string Application {get;set;}
+           public string IPBegin {get;set;}
 
     }
 }

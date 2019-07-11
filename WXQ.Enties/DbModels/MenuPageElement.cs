@@ -8,92 +8,83 @@ namespace WXQ.Enties
     ///<summary>
     ///
     ///</summary>
-    [SugarTable("Tb_MenuPageElement")]
+    [SugarTable("tb_menupageelement")]
     public partial class MenuPageElement
     {
            public MenuPageElement(){
 
-            this.MenuId =Convert.ToInt32("0");
-            this.ElementName =Convert.ToString("");
-            this.Description =Convert.ToString("");
-            this.AddDateTime =DateTime.Now;
-            this.UpdateDateTime =DateTime.Now;
-            this.AddUser =Convert.ToString("");
-            this.UpdateUser =Convert.ToString("");
-            this.RowVersion =Convert.ToInt32("0");
-            this.RsState =Convert.ToByte("1");
 
            }
            /// <summary>
            /// Desc:
            /// Default:
-           /// Nullable:False
-           /// </summary>           
-           [SugarColumn(IsIdentity=true)]
-           public int Id {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:0
-           /// Nullable:False
-           /// </summary>           
-           public int MenuId {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:False
+           /// Nullable:True
            /// </summary>           
            public string ElementName {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
-           /// Nullable:False
+           /// Nullable:True
            /// </summary>           
            public string Description {get;set;}
 
            /// <summary>
            /// Desc:
-           /// Default:DateTime.Now
-           /// Nullable:False
+           /// Default:
+           /// Nullable:True
            /// </summary>           
-           public DateTime AddDateTime {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:DateTime.Now
-           /// Nullable:False
-           /// </summary>           
-           public DateTime UpdateDateTime {get;set;}
+           public DateTime? AddDateTime {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
-           /// Nullable:False
+           /// Nullable:True
+           /// </summary>           
+           public DateTime? UpdateDateTime {get;set;}
+
+           /// <summary>
+           /// Desc:
+           /// Default:
+           /// Nullable:True
            /// </summary>           
            public string AddUser {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
-           /// Nullable:False
+           /// Nullable:True
            /// </summary>           
            public string UpdateUser {get;set;}
 
            /// <summary>
            /// Desc:
-           /// Default:0
+           /// Default:
            /// Nullable:False
            /// </summary>           
-           public int RowVersion {get;set;}
+           [SugarColumn(IsPrimaryKey=true,IsIdentity=true)]
+           public int Id {get;set;}
 
            /// <summary>
            /// Desc:
-           /// Default:1
-           /// Nullable:False
+           /// Default:
+           /// Nullable:True
            /// </summary>           
-           public byte RsState {get;set;}
+           public int? RowVersion {get;set;}
+
+           /// <summary>
+           /// Desc:
+           /// Default:
+           /// Nullable:True
+           /// </summary>           
+           public int? MenuId {get;set;}
+
+           /// <summary>
+           /// Desc:
+           /// Default:
+           /// Nullable:True
+           /// </summary>           
+           public byte? RsState {get;set;}
 
     }
 }

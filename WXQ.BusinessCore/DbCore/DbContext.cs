@@ -55,20 +55,21 @@ public class WXQDbContext <T> where T : class, new()
     public SqlSugarClient Db;//用来处理事务多表查询和复杂的操作
 	public SimpleClient<T> CurrentDb { get { return new SimpleClient<T>(Db); } }//用来操作当前表的数据
 
+   public SimpleClient<Department> departmentDb { get { return new SimpleClient<Department>(Db); } }//用来处理department表的常用操作
+   public SimpleClient<DepartmentRole> departmentroleDb { get { return new SimpleClient<DepartmentRole>(Db); } }//用来处理departmentrole表的常用操作
+   public SimpleClient<Dict> dictDb { get { return new SimpleClient<Dict>(Db); } }//用来处理dict表的常用操作
+   public SimpleClient<LimitIp> limitipDb { get { return new SimpleClient<LimitIp>(Db); } }//用来处理limitip表的常用操作
+   public SimpleClient<Menu> menuDb { get { return new SimpleClient<Menu>(Db); } }//用来处理menu表的常用操作
+   public SimpleClient<MenuPageElement> menupageelementDb { get { return new SimpleClient<MenuPageElement>(Db); } }//用来处理menupageelement表的常用操作
+   public SimpleClient<Metrics> metricsDb { get { return new SimpleClient<Metrics>(Db); } }//用来处理metrics表的常用操作
    public SimpleClient<nlog> nlogDb { get { return new SimpleClient<nlog>(Db); } }//用来处理nlog表的常用操作
-   public SimpleClient<OpLog> OpLogDb { get { return new SimpleClient<OpLog>(Db); } }//用来处理OpLog表的常用操作
-   public SimpleClient<Role> RoleDb { get { return new SimpleClient<Role>(Db); } }//用来处理Role表的常用操作
-   public SimpleClient<RoleMenu> RoleMenuDb { get { return new SimpleClient<RoleMenu>(Db); } }//用来处理RoleMenu表的常用操作
-   public SimpleClient<UserDepartment> UserDepartmentDb { get { return new SimpleClient<UserDepartment>(Db); } }//用来处理UserDepartment表的常用操作
-   public SimpleClient<efactorLog> efactorLogDb { get { return new SimpleClient<efactorLog>(Db); } }//用来处理efactorLog表的常用操作
-   public SimpleClient<UserRole> UserRoleDb { get { return new SimpleClient<UserRole>(Db); } }//用来处理UserRole表的常用操作
-   public SimpleClient<Dict> DictDb { get { return new SimpleClient<Dict>(Db); } }//用来处理Dict表的常用操作
-   public SimpleClient<Users> UsersDb { get { return new SimpleClient<Users>(Db); } }//用来处理Users表的常用操作
-   public SimpleClient<Department> DepartmentDb { get { return new SimpleClient<Department>(Db); } }//用来处理Department表的常用操作
-   public SimpleClient<DepartmentRole> DepartmentRoleDb { get { return new SimpleClient<DepartmentRole>(Db); } }//用来处理DepartmentRole表的常用操作
-   public SimpleClient<Menu> MenuDb { get { return new SimpleClient<Menu>(Db); } }//用来处理Menu表的常用操作
-   public SimpleClient<MenuPageElement> MenuPageElementDb { get { return new SimpleClient<MenuPageElement>(Db); } }//用来处理MenuPageElement表的常用操作
-   public SimpleClient<Metrics> MetricsDb { get { return new SimpleClient<Metrics>(Db); } }//用来处理Metrics表的常用操作
+   public SimpleClient<OpLog> oplogDb { get { return new SimpleClient<OpLog>(Db); } }//用来处理oplog表的常用操作
+   public SimpleClient<Role> roleDb { get { return new SimpleClient<Role>(Db); } }//用来处理role表的常用操作
+   public SimpleClient<RoleMenu> rolemenuDb { get { return new SimpleClient<RoleMenu>(Db); } }//用来处理rolemenu表的常用操作
+   public SimpleClient<UserDepartment> userdepartmentDb { get { return new SimpleClient<UserDepartment>(Db); } }//用来处理userdepartment表的常用操作
+   public SimpleClient<UserExtendInfo> userextendinfoDb { get { return new SimpleClient<UserExtendInfo>(Db); } }//用来处理userextendinfo表的常用操作
+   public SimpleClient<UserRole> userroleDb { get { return new SimpleClient<UserRole>(Db); } }//用来处理userrole表的常用操作
+   public SimpleClient<Users> UsersDb { get { return new SimpleClient<Users>(Db); } }//用来处理users表的常用操作
 
 
    /// <summary>

@@ -2,7 +2,7 @@
 using SqlSugar;
 using System;
 using System.Collections.Generic;
-public class efactorLogManager : WXQDbContext<efactorLog>
+public class limitipManager : WXQDbContext<LimitIp>
 {
  
 

@@ -3,15 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoEasyPlatform", "SoEasyPlatform\SoEasyPlatform.csproj", "{F3A5AFCB-16F2-43E1-B7D3-7BC733C05B70}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WXQ.BusinessCore", "WXQ.BusinessCore\WXQ.BusinessCore.csproj", "{2B87E8DA-DAC3-4621-81C5-998D7A2B976A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WXQ.Enties", "WXQ.Enties\WXQ.Enties.csproj", "{F4075B02-A066-496C-A81F-E468E825ECD3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WXQ.InOutPutEntites", "WXQ.InOutPutEntites\WXQ.InOutPutEntites.csproj", "{F8FA5E6F-961A-4E85-A960-7C9B94A1D248}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlSugar", "SqlSugar\SqlSugar.csproj", "{56F91124-50E3-4C68-AF66-E86FE6A006A7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{BC5C806A-BF54-46C8-824D-B445014A9866}"
 EndProject
@@ -42,10 +38,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F3A5AFCB-16F2-43E1-B7D3-7BC733C05B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3A5AFCB-16F2-43E1-B7D3-7BC733C05B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3A5AFCB-16F2-43E1-B7D3-7BC733C05B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3A5AFCB-16F2-43E1-B7D3-7BC733C05B70}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2B87E8DA-DAC3-4621-81C5-998D7A2B976A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2B87E8DA-DAC3-4621-81C5-998D7A2B976A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B87E8DA-DAC3-4621-81C5-998D7A2B976A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,10 +50,6 @@ Global
 		{F8FA5E6F-961A-4E85-A960-7C9B94A1D248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8FA5E6F-961A-4E85-A960-7C9B94A1D248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8FA5E6F-961A-4E85-A960-7C9B94A1D248}.Release|Any CPU.Build.0 = Release|Any CPU
-		{56F91124-50E3-4C68-AF66-E86FE6A006A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{56F91124-50E3-4C68-AF66-E86FE6A006A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{56F91124-50E3-4C68-AF66-E86FE6A006A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56F91124-50E3-4C68-AF66-E86FE6A006A7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC5C806A-BF54-46C8-824D-B445014A9866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC5C806A-BF54-46C8-824D-B445014A9866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC5C806A-BF54-46C8-824D-B445014A9866}.Release|Any CPU.ActiveCfg = Release|Any CPU

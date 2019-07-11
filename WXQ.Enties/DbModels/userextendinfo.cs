@@ -8,10 +8,10 @@ namespace WXQ.Enties
     ///<summary>
     ///
     ///</summary>
-    [SugarTable("tb_role")]
-    public partial class Role
+    [SugarTable("tb_userextendinfo")]
+    public partial class UserExtendInfo
     {
-           public Role(){
+           public UserExtendInfo(){
 
 
            }
@@ -20,42 +20,42 @@ namespace WXQ.Enties
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public string Description {get;set;}
+           public string TelePhone {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public DateTime? AddDateTime {get;set;}
+           public string RelationPerson {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public DateTime? UpdateDateTime {get;set;}
+           public string Url {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public string AddUser {get;set;}
+           public byte? UserKey {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public string UpdateUser {get;set;}
+           public byte? Sex {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public int? RowVersion {get;set;}
+           public short? Sequence {get;set;}
 
            /// <summary>
            /// Desc:
@@ -70,14 +70,14 @@ namespace WXQ.Enties
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public byte? RsState {get;set;}
+           public byte? IsMustUseKey {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public string RoleName {get;set;}
+           public int? UserId {get;set;}
 
     }
 }

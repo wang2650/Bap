@@ -26,7 +26,7 @@ namespace SugarCodeGeneration
         /// <summary>
         /// 连接字符串
         /// </summary>
-        const string connectionString = "server=127.0.0.1;uid=root;pwd=123456;database=bapdb";
+        const string connectionString = "server=127.0.0.1;uid=root;pwd=123456;database=wxqdb";
         /// <summary>
         ///解决方案名称
         /// </summary>
