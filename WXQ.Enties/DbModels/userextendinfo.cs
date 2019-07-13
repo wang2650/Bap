@@ -41,21 +41,21 @@ namespace WXQ.Enties
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public byte? UserKey {get;set;}
+           public byte UserKey {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public byte? Sex {get;set;}
+           public byte Sex {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public short? Sequence {get;set;}
+           public short Sequence {get;set;}
 
            /// <summary>
            /// Desc:
@@ -70,14 +70,14 @@ namespace WXQ.Enties
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public byte? IsMustUseKey {get;set;}
+           public byte IsMustUseKey {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public int? UserId {get;set;}
+           public int UserId {get;set;}
 
     }
 }

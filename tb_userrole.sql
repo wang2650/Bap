@@ -1,14 +1,4 @@
-﻿CREATE TABLE `tb_userrole` (
-  `Id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Id',
-  `RoleId` int(10) NOT NULL COMMENT '角色id',
-  `UserId` int(10) NOT NULL COMMENT '用户id',
-  `AddDateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
-  `UpdateDateTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
-  `AddUser` varchar(50) NOT NULL DEFAULT '' COMMENT '添加人',
-  `UpdateUser` varchar(50) NOT NULL DEFAULT '' COMMENT '更新人',
-  `RowVersion` int(10) NOT NULL COMMENT '版本号',
-  `RsState` tinyint(3) unsigned NOT NULL COMMENT '记录状态',
-  PRIMARY KEY (`Id`),
-  UNIQUE KEY `Id` (`Id`),
-  UNIQUE KEY `tbRU` (`RoleId`,`UserId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `tb_userrole` VALUES (1, 1, 2, '2019-5-30 13:12:09', '2019-5-30 13:12:09', '', '', 0, 1);
+INSERT INTO `tb_userrole` VALUES (2, 5, 2, '2019-6-19 16:25:20', '2019-6-19 16:25:20', '', '', 0, 1);
+INSERT INTO `tb_userrole` VALUES (3, 2, 1005, '2019-6-30 13:18:42', '2019-6-30 13:18:43', '0', '', 0, 1);
+INSERT INTO `tb_userrole` VALUES (5, 2, 1008, '2019-6-30 13:19:01', '2019-6-30 13:19:01', '0', '', 0, 1);

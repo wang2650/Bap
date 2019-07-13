@@ -1,11 +1,1 @@
-﻿CREATE TABLE `tb_nlog` (
-  `Id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Id',
-  `Application` varchar(50) NOT NULL DEFAULT '' COMMENT '应用名称',
-  `Logged` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '记录时间',
-  `Level` varchar(50) NOT NULL DEFAULT '' COMMENT '级别',
-  `Message` varchar(3000) NOT NULL DEFAULT '' COMMENT '消息',
-  `Logger` varchar(100) NOT NULL DEFAULT '' COMMENT '日志',
-  `CallSite` varchar(100) NOT NULL DEFAULT '' COMMENT '站点',
-  PRIMARY KEY (`Id`),
-  UNIQUE KEY `Id` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `tb_nlog` VALUES (13, 'WebApi', '2019-5-20 12:32:11', 'Error', 'An unhandled exception has occurred while executing the request.', 'Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware', 'Microsoft.AspNetCore.Diagnostics.Internal.DiagnosticsLoggerExtensions.UnhandledException');

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80016
 File Encoding         : 65001
 
-Date: 2019-07-13 15:14:55
+Date: 2019-07-13 15:20:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -36,10 +36,12 @@ CREATE TABLE `tb_department` (
 -- ----------------------------
 -- Records of tb_department
 -- ----------------------------
-INSERT INTO `tb_department` VALUES ('1', '0', '总公司', '', '2019-06-17 13:52:31', '2019-06-17 13:52:31', '', '', '0', '1');
-INSERT INTO `tb_department` VALUES ('2', '1', '财务部', '', '2019-06-19 14:03:00', '2019-06-19 14:03:00', '', '', '0', '1');
-INSERT INTO `tb_department` VALUES ('3', '1', '人事部', '', '2019-06-19 14:03:12', '2019-06-19 14:03:12', '', '', '0', '1');
-INSERT INTO `tb_department` VALUES ('4', '1', '技术部', '', '2019-06-19 14:03:29', '2019-06-19 14:03:29', '', '', '0', '1');
-INSERT INTO `tb_department` VALUES ('5', '4', '电梯', '', '2019-06-19 14:03:53', '2019-06-19 14:03:53', '', '', '0', '1');
-INSERT INTO `tb_department` VALUES ('6', '4', '楼梯部', '', '2019-06-19 14:04:05', '2019-06-19 14:04:05', '', '', '0', '1');
-INSERT INTO `tb_department` VALUES ('7', '1', 'xiaceshi', 'aaaaa', '2019-07-11 15:19:14', null, '2', null, null, null);
+INSERT INTO `tb_department` 	(`ParentId`
+		,`DepartmentName`
+		,`Description`
+		,`AddDateTime`
+		,`UpdateDateTime`
+		,`AddUser`
+		,`UpdateUser`
+		,`RowVersion`
+		,`RsState`) VALUES ( '0', '总公司', '', '2019-06-17 13:52:31', '2019-06-17 13:52:31', '', '', '0', '1');

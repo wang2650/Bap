@@ -1,17 +1,16 @@
-﻿CREATE TABLE `tb_menu` (
-  `Id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Id',
-  `MenuName` varchar(50) NOT NULL DEFAULT '' COMMENT '菜单名称',
-  `Description` varchar(50) NOT NULL DEFAULT '' COMMENT '描述',
-  `ParentId` int(10) NOT NULL COMMENT '上级id',
-  `AddDateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
-  `UpdateDateTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
-  `AddUser` varchar(50) NOT NULL DEFAULT '' COMMENT '添加人',
-  `UpdateUser` varchar(50) NOT NULL DEFAULT '' COMMENT '更新人',
-  `RowVersion` int(10) NOT NULL COMMENT '版本号',
-  `MenuType` int(10) NOT NULL COMMENT '菜单类型',
-  `Url` varchar(50) NOT NULL DEFAULT '' COMMENT '地址',
-  `RsState` tinyint(3) unsigned NOT NULL COMMENT '记录状态',
-  `Icon` varchar(50) NOT NULL DEFAULT '' COMMENT '图标',
-  PRIMARY KEY (`Id`),
-  UNIQUE KEY `Id` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `tb_menu` VALUES (1, '系统首页', '', 0, '2019-5-30 13:05:46', '2019-5-30 13:05:46', '', '', 0, 1, 'dashboard', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (2, '基础表格', '', 0, '2019-5-30 13:06:01', '2019-5-30 13:06:01', '', '', 0, 1, 'table', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (3, 'tab选项卡', '', 0, '2019-5-30 13:06:34', '2019-5-30 13:06:34', '', '', 0, 1, 'tabs', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (4, '表单相关', '', 0, '2019-5-30 13:06:37', '2019-5-30 13:06:37', '', '', 0, 1, '', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (5, '基本表单', '', 4, '2019-5-30 13:07:43', '2019-5-30 13:07:43', '', '', 0, 1, 'form', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (6, '三级菜单', '', 4, '2019-5-30 13:07:52', '2019-5-30 13:07:52', '', '', 0, 1, '', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (7, '富文本编辑器', '', 6, '2019-5-30 13:08:41', '2019-5-30 13:08:41', '', '', 0, 1, 'editor', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (8, 'markdown编辑器', '', 6, '2019-5-30 13:09:00', '2019-5-30 13:09:00', '', '', 0, 1, 'markdown', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (9, '系统管理', '', 0, '2019-6-12 13:13:31', '2019-6-12 13:13:31', '', '', 0, 1, '', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (10, '用户', '', 9, '2019-6-12 13:14:02', '2019-6-12 13:14:02', '', '', 0, 1, '', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (11, '用户管理', '', 10, '2019-6-12 13:15:15', '2019-6-12 13:15:15', '', '', 0, 1, 'usermanage', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (12, '角色管理', '', 9, '2019-6-15 10:13:45', '2019-6-15 10:13:45', '', '', 0, 1, '', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (13, '角色', '', 12, '2019-6-15 10:14:02', '2019-6-15 10:14:02', '', '', 0, 1, 'rolemanage', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (14, '部门', '', 9, '2019-6-19 14:46:20', '2019-6-19 14:46:20', '', '', 0, 1, '', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (15, '部门管理', '', 14, '2019-6-19 14:46:30', '2019-6-19 14:46:30', '', '', 0, 1, 'departmentmanage', 1, 'el-icon-menu');
+INSERT INTO `tb_menu` VALUES (16, '我的首页', '', 0, '2019-7-1 16:03:18', '2019-7-1 16:03:18', '', '', 0, 1, 'myselfinfo', 1, 'el-icon-menu');

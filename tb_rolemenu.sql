@@ -1,13 +1,24 @@
-﻿CREATE TABLE `tb_rolemenu` (
-  `Id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Id',
-  `RoleId` int(10) NOT NULL COMMENT '角色id',
-  `MenuId` int(10) NOT NULL COMMENT '菜单id',
-  `AddDateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
-  `UpdateDateTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
-  `AddUser` varchar(50) NOT NULL DEFAULT '' COMMENT '添加人',
-  `UpdateUser` varchar(50) NOT NULL DEFAULT '' COMMENT '更新人',
-  `RowVersion` int(10) NOT NULL COMMENT '版本号',
-  `RsState` tinyint(3) unsigned NOT NULL COMMENT '记录状态',
-  PRIMARY KEY (`Id`),
-  UNIQUE KEY `Id` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `tb_rolemenu` VALUES (1, 1, 1, '2019-5-30 13:20:21', '2019-5-30 13:20:21', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (2, 1, 2, '2019-5-30 13:20:24', '2019-5-30 13:20:24', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (3, 1, 3, '2019-5-30 13:20:27', '2019-5-30 13:20:27', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (4, 1, 4, '2019-5-30 13:20:29', '2019-5-30 13:20:29', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (5, 1, 5, '2019-5-30 13:20:33', '2019-5-30 13:20:33', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (6, 1, 6, '2019-5-30 13:20:35', '2019-5-30 13:20:35', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (7, 1, 7, '2019-5-30 13:20:38', '2019-5-30 13:20:38', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (8, 1, 8, '2019-5-30 13:20:43', '2019-5-30 13:20:43', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1009, 1, 9, '2019-6-12 13:16:58', '2019-6-12 13:16:58', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1010, 1, 10, '2019-6-12 13:17:03', '2019-6-12 13:17:03', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1011, 1, 11, '2019-6-12 13:17:08', '2019-6-12 13:17:08', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1012, 1, 12, '2019-6-15 10:14:24', '2019-6-15 10:14:24', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1013, 1, 13, '2019-6-15 10:14:31', '2019-6-15 10:14:31', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1014, 1, 14, '2019-6-19 14:46:54', '2019-6-19 14:46:54', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1015, 1, 15, '2019-6-19 14:47:04', '2019-6-19 14:47:04', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1016, 5, 1, '2019-6-19 16:27:51', '2019-6-19 16:27:51', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1017, 5, 2, '2019-6-19 16:27:56', '2019-6-19 16:27:56', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1018, 5, 3, '2019-6-19 16:28:03', '2019-6-19 16:28:03', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1019, 5, 4, '2019-6-19 16:28:10', '2019-6-19 16:28:10', '', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1031, 2, 6, '2019-6-20 11:22:49', '2019-6-20 11:22:49', '2', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1032, 2, 7, '2019-6-20 11:22:49', '2019-6-20 11:23:04', '2', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1033, 2, 8, '2019-6-20 11:22:49', '2019-6-20 11:23:05', '2', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1034, 2, 4, '2019-6-20 11:22:49', '2019-6-20 11:23:06', '2', '', 0, 1);
+INSERT INTO `tb_rolemenu` VALUES (1035, 1, 16, '2019-7-1 16:03:47', '2019-7-1 16:03:47', '', '', 0, 1);

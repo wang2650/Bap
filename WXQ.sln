@@ -13,25 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{02F9B82B-7E52-4945-9E21-9DABB061A1BF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql", "sql", "{ED8B5E4A-1FFE-47DC-9016-81434F9E29E4}"
-	ProjectSection(SolutionItems) = preProject
-		tb_department.sql = tb_department.sql
-		tb_departmentrole.sql = tb_departmentrole.sql
-		tb_dict.sql = tb_dict.sql
-		tb_menu.sql = tb_menu.sql
-		tb_menupageelement.sql = tb_menupageelement.sql
-		tb_metrics.sql = tb_metrics.sql
-		tb_nlog.sql = tb_nlog.sql
-		tb_oplog.sql = tb_oplog.sql
-		tb_role.sql = tb_role.sql
-		tb_rolemenu.sql = tb_rolemenu.sql
-		tb_userdepartment.sql = tb_userdepartment.sql
-		tb_userrole.sql = tb_userrole.sql
-		tb_users.sql = tb_users.sql
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InitData", "InitData", "{6F8639C9-D885-4583-B3BE-D1ED06EC3D67}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,9 +42,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{6F8639C9-D885-4583-B3BE-D1ED06EC3D67} = {ED8B5E4A-1FFE-47DC-9016-81434F9E29E4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D75CA165-B2E7-4544-A28F-733026AA2510}
