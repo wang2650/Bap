@@ -1,1 +1,0 @@
-INSERT INTO `tb_nlog` VALUES (13, 'WebApi', '2019-5-20 12:32:11', 'Error', 'An unhandled exception has occurred while executing the request.', 'Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware', 'Microsoft.AspNetCore.Diagnostics.Internal.DiagnosticsLoggerExtensions.UnhandledException');
