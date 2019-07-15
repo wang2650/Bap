@@ -159,8 +159,21 @@ namespace WebApi.Controllers.systemmanage
                     RsState = 1,
                     RowVersion = 0
                 };
+                WXQ.Enties.UserExtendInfo modelUserExtentd = new WXQ.Enties.UserExtendInfo
+                {
+                    TelePhone=model.TelePhone,
+                    RelationPerson=model.RelationPerson,
+                    Url=model.Url,
+                    UserKey=model.UserKey,
+                    Sex=model.Sex,
+                    Sequence=model.Sequence,
+                    IsMustUseKey=model.IsMustUseKey
 
-                bool rv = op.InsertUsers(userModel);
+
+                };
+
+
+                bool rv = op.InsertUsers(userModel,modelUserExtentd);
 
                 if (!rv)
                 {
@@ -378,8 +391,19 @@ namespace WebApi.Controllers.systemmanage
                     NickName = model.NickName,
                     Password = model.PassWord,
                 };
+                WXQ.Enties.UserExtendInfo modelUserExtentd = new WXQ.Enties.UserExtendInfo
+                {
+                    TelePhone = model.TelePhone,
+                    RelationPerson = model.RelationPerson,
+                    Url = model.Url,
+                    UserKey = model.UserKey,
+                    Sex = model.Sex,
+                    Sequence = model.Sequence,
+                    IsMustUseKey = model.IsMustUseKey
 
-                bool rv = op.UpdateUsers(userModel);
+
+                };
+                bool rv = op.UpdateUsers(userModel, modelUserExtentd);
 
                 if (!rv)
                 {
@@ -429,8 +453,19 @@ namespace WebApi.Controllers.systemmanage
                     NickName = model.NickName,
                     Password = model.PassWord,
                 };
+                WXQ.Enties.UserExtendInfo modelUserExtentd = new WXQ.Enties.UserExtendInfo
+                {
+                    TelePhone = model.TelePhone,
+                    RelationPerson = model.RelationPerson,
+                    Url = model.Url,
+                    UserKey = model.UserKey,
+                    Sex = model.Sex,
+                    Sequence = model.Sequence,
+                    IsMustUseKey = model.IsMustUseKey
 
-                bool rv = op.UpdateUsers(userModel);
+
+                };
+                bool rv = op.UpdateUsers(userModel, modelUserExtentd);
 
                 if (!rv)
                 {

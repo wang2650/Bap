@@ -37,13 +37,26 @@ namespace WXQ.BusinessCore.systemmanage
         /// </summary>
         /// <param name="r"></param>
         /// <returns></returns>
-        public bool InsertUsers(WXQ.Enties.Users m)
+        public bool InsertUsers(WXQ.Enties.Users m, WXQ.Enties.UserExtendInfo model)
         {
             UsersManager UsersManager = new UsersManager();
             m.AddUser = this.OpUserId.ToString();
             m.Password = CommonLib.Helpers.Encrypt.Sha256(passwordRndSeed + m.Password);
 
-            return UsersManager.Insert(m);
+            int userId=  UsersManager.InsertReturnInt(m);
+            if (userId>0)
+            {
+                UserExtendinfoManager extendinfoManager = new UserExtendinfoManager();
+                model.UserId = userId;
+
+                extendinfoManager.Insert(model);
+
+            }
+            
+
+
+
+            return userId>0;
         }
 
         /// <summary>
@@ -51,12 +64,19 @@ namespace WXQ.BusinessCore.systemmanage
         /// </summary>
         /// <param name="r"></param>
         /// <returns></returns>
-        public bool UpdateUsers(WXQ.Enties.Users m)
+        public bool UpdateUsers(WXQ.Enties.Users m, WXQ.Enties.UserExtendInfo model)
         {
             UsersManager UsersManager = new UsersManager();
 
             m.RowVersion = m.RowVersion + 1;
             m.UpdateUser = this.OpUserId.ToString();
+
+
+            UserExtendinfoManager extendinfoManager = new UserExtendinfoManager();
+            model.UserId = m.ID;
+
+            extendinfoManager.Update(model);
+
             return UsersManager.Db.Updateable<WXQ.Enties.Users>(m).SetColumns(it => new WXQ.Enties.Users()
             {
                 HeadImage = m.HeadImage,
