@@ -407,5 +407,138 @@
             返回的数据结果
             </summary>
         </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.Password">
+            <summary>
+            Desc:密码
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.HeadImage">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.AddDateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.RsState">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.UpdateDateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.AddUser">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.UpdateUser">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.RowVersion">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.ID">
+            <summary>
+            Desc:主键
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.Introduction">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.UserName">
+            <summary>
+            Desc:用户名
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.NickName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.TelePhone">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.RelationPerson">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.Url">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.UserKey">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.Sex">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.Sequence">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd.IsMustUseKey">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
     </members>
 </doc>

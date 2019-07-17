@@ -62,14 +62,14 @@ namespace WXQ.InOutPutEntites.Input.SystemManage.User
         /// Default:
         /// Nullable:True
         /// </summary>           
-        public byte UserKey { get; set; } = 0;
+        public byte UserKey { get; set; } = 2;
 
         /// <summary>
         /// Desc:
         /// Default:
         /// Nullable:True
         /// </summary>           
-        public byte Sex { get; set; } = 0;
+        public byte Sex { get; set; } = 1;
 
         /// <summary>
         /// Desc:
@@ -85,7 +85,7 @@ namespace WXQ.InOutPutEntites.Input.SystemManage.User
         /// Default:
         /// Nullable:True
         /// </summary>           
-        public byte IsMustUseKey { get; set; } = 0;
+        public byte IsMustUseKey { get; set; } = 2;
 
     }
 
