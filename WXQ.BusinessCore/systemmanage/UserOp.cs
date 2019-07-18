@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using WXQ.InOutPutEntites.Output.SystemManage.User;
 namespace WXQ.BusinessCore.systemmanage
 {
     public class UserOp:OpBase
@@ -74,6 +74,13 @@ namespace WXQ.BusinessCore.systemmanage
 
             UserExtendinfoManager extendinfoManager = new UserExtendinfoManager();
             model.UserId = m.ID;
+            var  ltUserExtent=  extendinfoManager.GetList(ue => ue.UserId == m.ID);
+            if (ltUserExtent!=null&& ltUserExtent.Count>0)
+            {
+                model.Id = ltUserExtent[0].Id;
+            }
+
+
 
             extendinfoManager.Update(model);
 
@@ -237,6 +244,38 @@ namespace WXQ.BusinessCore.systemmanage
         /// <param name="rsState">记录状态</param>
         /// <returns></returns>
 
+        public ListResult<UserIncludeExtentd> GetUserIncludeExtentdList(string userName, PageModel pageModel, int rsState = 1)
+        {
+            UsersManager UsersManager = new UsersManager();
+            ListResult<UserIncludeExtentd> result = new ListResult<UserIncludeExtentd>();
+
+            System.Linq.Expressions.Expression<Func<UserIncludeExtentd, bool>> express = Expressionable.Create<UserIncludeExtentd>()
+                          .AndIF(!string.IsNullOrEmpty(userName), m => SqlFunc.Contains(m.NickName, userName) || SqlFunc.Contains(m.UserName, userName))
+                          .AndIF(rsState > 1, it => it.RsState == rsState).ToExpression();//拼接表达式
+
+            var q = UsersManager.Db.Queryable<WXQ.Enties.Users, WXQ.Enties.UserExtendInfo>((u, e) => new object[] {
+             JoinType.Left,u.ID==e.UserId}).Select((u, e) => new UserIncludeExtentd { ID = u.ID, Password = "", AddDateTime = u.AddDateTime, RsState = u.RsState,
+                 Introduction = u.Introduction,
+                 UserName = u.UserName,
+                 NickName = u.NickName,
+                 TelePhone = e.TelePhone,
+                 RelationPerson = e.RelationPerson,
+                 UserKey = e.UserKey,
+                 Sex = e.Sex,
+                 IsMustUseKey = e.IsMustUseKey
+             }).Where(express);
+            List<UserIncludeExtentd> list =      q.ToPageList(pageModel.PageIndex,pageModel.PageSize);
+           
+
+            result.Result = list;
+
+
+            result.PageSize = pageModel.PageSize;
+            result.PageIndex = pageModel.PageIndex;
+            result.Total = q.Count();
+            return result;
+        }
+
         public ListResult<WXQ.Enties.Users> GetUserList(string userName, PageModel pageModel, int rsState = 1)
         {
             UsersManager UsersManager = new UsersManager();
@@ -256,6 +295,14 @@ namespace WXQ.BusinessCore.systemmanage
             return result;
         }
 
+
+
+
+
+
+
+
+        
         /// <summary>
         /// 根据用户id批量获取用户
         /// </summary>

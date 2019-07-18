@@ -106,7 +106,7 @@ namespace WebApi.Controllers.systemmanage
                 WXQ.BusinessCore.systemmanage.UserOp op = new WXQ.BusinessCore.systemmanage.UserOp();
 
                 SqlSugar.PageModel pagemodel = TypeAdapter.Adapt<WXQ.InOutPutEntites.Input.PageInput, SqlSugar.PageModel>(model.Page);
-                ListResult<WXQ.Enties.Users> rv = op.GetUserList(model.UserName, pagemodel, model.RsState);
+                ListResult<WXQ.InOutPutEntites.Output.SystemManage.User.UserIncludeExtentd> rv = op.GetUserIncludeExtentdList(model.UserName, pagemodel, model.RsState);
 
                 if (rv == null)
                 {
