@@ -66,6 +66,7 @@ namespace WXQ.BusinessCore.systemmanage
         /// <returns></returns>
         public bool UpdateUsers(WXQ.Enties.Users m, WXQ.Enties.UserExtendInfo model)
         {
+            bool result = true;
             UsersManager UsersManager = new UsersManager();
 
             m.RowVersion = m.RowVersion + 1;
@@ -78,13 +79,18 @@ namespace WXQ.BusinessCore.systemmanage
             if (ltUserExtent!=null&& ltUserExtent.Count>0)
             {
                 model.Id = ltUserExtent[0].Id;
+                result= extendinfoManager.Update(model);
+            }
+            else
+            {
+                result= extendinfoManager.Insert(model);
             }
 
 
 
-            extendinfoManager.Update(model);
+            
 
-            return UsersManager.Db.Updateable<WXQ.Enties.Users>(m).SetColumns(it => new WXQ.Enties.Users()
+            return result&&UsersManager.Db.Updateable<WXQ.Enties.Users>(m).SetColumns(it => new WXQ.Enties.Users()
             {
                 HeadImage = m.HeadImage,
                 Introduction = m.Introduction
