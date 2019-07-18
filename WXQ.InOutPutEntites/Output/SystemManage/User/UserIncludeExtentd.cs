@@ -114,6 +114,9 @@ namespace WXQ.InOutPutEntites.Output.SystemManage.User
         /// </summary>           
         public string Url { get; set; }
 
+
+
+
         /// <summary>
         /// Desc:
         /// Default:
