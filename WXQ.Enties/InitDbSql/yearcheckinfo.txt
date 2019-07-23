@@ -68,10 +68,14 @@
     `WYBS` varchar(60) NULL COMMENT '唯一标识',
     `DWSXT` varchar(12) NULL COMMENT '单位所属系统',
     PRIMARY KEY (`UserSn`) 
-);
-
-comment = '行政职位信息表';
-
+);
+
+
+
+comment = '行政职位信息表';
+
+
+
 CREATE TABLE `tb_degreeinfo` 
 (
     `RYBSF` varchar(64) NOT NULL COMMENT '人员标识符',
@@ -87,10 +91,14 @@ CREATE TABLE `tb_degreeinfo`
     `XWZCXH` bit NULL COMMENT '学位主次序号',
     `WYBS` varchar(64) NULL COMMENT '唯一标识',
     PRIMARY KEY (`RYBSF`) 
-);
-
-comment = '学位信息表';
-
+);
+
+
+
+comment = '学位信息表';
+
+
+
 CREATE TABLE `tb_departmentrole` 
 (
     `Id` int AUTO_INCREMENT NOT NULL,
@@ -103,10 +111,14 @@ CREATE TABLE `tb_departmentrole`
     `RowVersion` int NULL,
     `RsState` tinyint(3) UNSIGNED NOT NULL,
     PRIMARY KEY (`Id`) 
-);
-
-comment = '';
-
+);
+
+
+
+comment = '';
+
+
+
 CREATE TABLE `tb_educationinfo2` 
 (
     `RYBSF` varchar(64) NULL COMMENT '人员标识符',
@@ -127,10 +139,14 @@ CREATE TABLE `tb_educationinfo2`
     `JYLB` varchar(20) NULL COMMENT '教育类别',
     `ZZJHPX` bit NULL COMMENT '组织计划培训',
     `WYBS` varchar(64) NULL COMMENT '唯一标识' 
-);
-
-comment = '学历信息表';
-
+);
+
+
+
+comment = '学历信息表';
+
+
+
 CREATE TABLE `tb_experienceinfo` 
 (
     `RYBSF` varchar(255) NOT NULL COMMENT '人员标识符',
@@ -138,10 +154,14 @@ CREATE TABLE `tb_experienceinfo`
     `JLZS` varchar(8000) NULL COMMENT '经历综述',
     `RZZS` varchar(255) NULL COMMENT '任职综述',
     PRIMARY KEY (`RYBSF`) 
-);
-
-comment = '经历表';
-
+);
+
+
+
+comment = '经历表';
+
+
+
 CREATE TABLE `tb_familymemberinfo` 
 (
     `RYBSF` varchar(100) NOT NULL COMMENT '人员标识符',
@@ -168,10 +188,14 @@ CREATE TABLE `tb_familymemberinfo`
     `SFZHM` varchar(20) NULL COMMENT '身份证号码',
     `WYBS` varchar(64) NULL COMMENT '唯一标识',
     PRIMARY KEY (`RYBSF`) 
-);
-
-comment = '家庭成员表';
-
+);
+
+
+
+comment = '家庭成员表';
+
+
+
 CREATE TABLE `tb_orgcheckinfo` 
 (
     `RYBSF` varchar(255) NULL COMMENT '人员标识符',
@@ -182,10 +206,14 @@ CREATE TABLE `tb_orgcheckinfo`
     `KHLB` varchar(4) NULL COMMENT '考核类别',
     `WYBS` varchar(64) NOT NULL COMMENT '唯一标识',
     PRIMARY KEY (`WYBS`) 
-);
-
-comment = '组织考核考察信息表';
-
+);
+
+
+
+comment = '组织考核考察信息表';
+
+
+
 CREATE TABLE `tb_professionalskill` 
 (
     `RYBSF` varchar(40) NOT NULL COMMENT '人员标识符',
@@ -198,10 +226,14 @@ CREATE TABLE `tb_professionalskill`
     `DJLXH` int NULL COMMENT '多记录序号',
     `WYBS` varchar(60) NULL COMMENT '唯一标识',
     PRIMARY KEY (`RYBSF`) 
-);
-
-comment = '专业技术信息表';
-
+);
+
+
+
+comment = '专业技术信息表';
+
+
+
 CREATE TABLE `tb_rankinfo` 
 (
     `RYBSF` varchar(60) NOT NULL COMMENT '人员标识符',
@@ -218,10 +250,14 @@ CREATE TABLE `tb_rankinfo`
     `DJLXH` int NULL COMMENT '多记录序号',
     `WYBS` varchar(64) NULL COMMENT '唯一标识',
     PRIMARY KEY (`RYBSF`) 
-);
-
-comment = '';
-
+);
+
+
+
+comment = '';
+
+
+
 CREATE TABLE `tb_resumeinfo` 
 (
     `RYBSF` varchar(255) NULL COMMENT '人员标识符',
@@ -237,10 +273,14 @@ CREATE TABLE `tb_resumeinfo`
     `TJBS` bit NULL COMMENT '统计标识',
     `DJLXH` int NULL COMMENT '多记录序号',
     `WYBS` varchar(64) NULL COMMENT '唯一标识' 
-);
-
-comment = '履历信息表';
-
+);
+
+
+
+comment = '履历信息表';
+
+
+
 CREATE TABLE `tb_rewardsinfo` 
 (
     `RYBSF` varchar(255) NOT NULL COMMENT '人员标识符',
@@ -259,10 +299,14 @@ CREATE TABLE `tb_rewardsinfo`
     `DJLXH` int NULL COMMENT '多记录序号',
     `WYBS` varchar(64) NULL COMMENT '唯一标识',
     PRIMARY KEY (`RYBSF`) 
-);
-
-comment = '奖惩信息表';
-
+);
+
+
+
+comment = '奖惩信息表';
+
+
+
 CREATE TABLE `tb_traininfo` 
 (
     `RYBSF` varchar(255) NOT NULL COMMENT '人员标识符',
@@ -297,10 +341,14 @@ CREATE TABLE `tb_traininfo`
     `KHQK` varchar(60) NULL COMMENT '考核情况',
     `WYBS` varchar(64) NULL COMMENT '唯一标识',
     PRIMARY KEY (`RYBSF`) 
-);
-
-comment = '培训信息表';
-
+);
+
+
+
+comment = '培训信息表';
+
+
+
 CREATE TABLE `tb_yearcheckinfo` 
 (
     `RYBSF` varchar(255) NOT NULL COMMENT '人员标识符',
@@ -311,7 +359,11 @@ CREATE TABLE `tb_yearcheckinfo`
     `DJLXH` int NULL COMMENT '多记录序号',
     `WYBS` varchar(64) NULL COMMENT '唯一标识',
     PRIMARY KEY (`RYBSF`) 
-);
-
-comment = '年度审核表';
-
+);
+
+
+
+comment = '年度审核表';
+
+
+

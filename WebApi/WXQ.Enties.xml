@@ -94,6 +94,1686 @@
             停用
             </summary>
         </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.UserSn">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZJGMC">
+            <summary>
+            任职机构名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZJGMCLB">
+            <summary>
+            任职机构名称类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZJGSZZQ">
+            <summary>
+            任职机构所在政区
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZJGLSGX">
+            <summary>
+            任职机构隶属关系
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZJGJB">
+            <summary>
+            任职机构级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZJGXZLB">
+            <summary>
+            任职机构性质类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZJGSHY">
+            <summary>
+            任职机构所属行业
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZJGTJBS">
+            <summary>
+            任职机构统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.ZWDM">
+            <summary>
+            职务代码
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.ZWMC">
+            <summary>
+            职务名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.ZWSM">
+            <summary>
+            职务说明
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.BZCYLB">
+            <summary>
+            班子成员类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.ZWBC2">
+            <summary>
+            职务补充2
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.ZJ">
+            <summary>
+            职级
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.DZWZCXH">
+            <summary>
+            多职务主次序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.JTNPLSX">
+            <summary>
+            集体内排列顺序
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.SZGZXTGLZNLB">
+            <summary>
+            所在工作系统管理职能类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.ZGGZ">
+            <summary>
+            主管（从事）工作
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.ZYLB">
+            <summary>
+            职业类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.CSZY">
+            <summary>
+            从事专业
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.JDHTMRZDJGMC">
+            <summary>
+            决定或提名任职的机关名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.JDHTMRZDRQ">
+            <summary>
+            决定或提名任职的日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.JDHTMRZDWH">
+            <summary>
+            决定或提名任职的文号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.PZRZJGMCBC">
+            <summary>
+            批准任职机关名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.PZRZJGMC">
+            <summary>
+            批准任职机关名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.PZRZDRQ">
+            <summary>
+            批准任职的日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.PZRZDWH">
+            <summary>
+            批准任职的文号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZFS">
+            <summary>
+            任职方式
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZBDLB">
+            <summary>
+            任职变动类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.SFPGTB">
+            <summary>
+            是否破格提拔
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.LXRGZQRQ">
+            <summary>
+            连续任该职起始日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZZT">
+            <summary>
+            任职状态
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.JDHTMMZDJGMC">
+            <summary>
+            决定或提名免职的机关名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.JDHTMMZDRQ">
+            <summary>
+            决定或提名免职的日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.JDHTMMZDWH">
+            <summary>
+            决定或提名免职的文号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.PZMZDJGMC">
+            <summary>
+            批准免职的机关名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.PZMZDRQ">
+            <summary>
+            批准免职的日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.PZMZDWH">
+            <summary>
+            批准免职的文号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.MZFS">
+            <summary>
+            免职方式
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.MZBDLB">
+            <summary>
+            免职变动类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.SFTBLL">
+            <summary>
+            是否同步履历
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.FSGGB">
+            <summary>
+            非省管干部
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.BZQK">
+            <summary>
+            班子情况
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.TJBS">
+            <summary>
+            统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.SFHBJL">
+            <summary>
+            是否回避交流
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.ZGGZLB">
+            <summary>
+            主管工作类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.SYQJSRQ">
+            <summary>
+            试（聘）用期结束日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZJGMCBC">
+            <summary>
+            任职机构名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.MCZWBS">
+            <summary>
+            名册职务标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.LDZWB">
+            <summary>
+            领导职务标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.FBZCY">
+            <summary>
+            非班子成员
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.JLLB">
+            <summary>
+            交流类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.SFCZRQGS">
+            <summary>
+            是否存在任前公示
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.BDWZWTJBS">
+            <summary>
+            本单位职务统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.JDHTMRZDJGMCBC">
+            <summary>
+            决定或提名任职的机关名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZYYLB">
+            <summary>
+            任职原因类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.JDHTMMZDJGMCBC">
+            <summary>
+            决定或提名免职的机关名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.PZMZDJGMCBC">
+            <summary>
+            批准免职的机关名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.MZYYLB">
+            <summary>
+            免职原因类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.SFHZ">
+            <summary>
+            是否换届
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.HJSJ">
+            <summary>
+            换届时间
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.RZNX">
+            <summary>
+            任职年限
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.ZXRZNX">
+            <summary>
+            最新任职年限
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.DJLXH">
+            <summary>
+            多记录序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.AdministrativeJobInfo.DWSXT">
+            <summary>
+            单位所属系统
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DegreeInfo.RYBSF">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DegreeInfo.XW">
+            <summary>
+            学位
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DegreeInfo.XWXXSJ">
+            <summary>
+            学位学习时间
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DegreeInfo.XWSYRQ">
+            <summary>
+            学位授予日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DegreeInfo.XWSYDW">
+            <summary>
+            学位授予单位
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DegreeInfo.XWSYDWSZZQ">
+            <summary>
+            学位授予单位所在政区
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DegreeInfo.TJBS">
+            <summary>
+            统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DegreeInfo.DJLXH">
+            <summary>
+            多记录序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DegreeInfo.XWJB">
+            <summary>
+            学位级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DegreeInfo.JYFS">
+            <summary>
+            教育方式
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DegreeInfo.XWZCXH">
+            <summary>
+            学位主次序号
+            </summary>
+        </member>
+        <member name="T:WXQ.Enties.DbModels.DepartmentInfo">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWMCJP">
+            <summary>
+            单位名称简拼
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWDM">
+            <summary>
+            单位代码
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YPFZS">
+            <summary>
+            应配副职数
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCLPZWH">
+            <summary>
+            单位成立批准文号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWMCBC">
+            <summary>
+            单位名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWJC3">
+            <summary>
+            单位简称三
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.GKGLDWMC">
+            <summary>
+            归口管理单位名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSSXT">
+            <summary>
+            单位所属系统
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.GKGLDWMCBC">
+            <summary>
+            归口管理单位名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YPZSBC">
+            <summary>
+            应配职数补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWMCLB">
+            <summary>
+            单位名称类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YZGDYBSS">
+            <summary>
+            有中共党员标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YPZZS">
+            <summary>
+            应配正职数
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LDBZXGDWMC">
+            <summary>
+            领导班子协管单位名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWBGYY">
+            <summary>
+            单位变更原因
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.GBGLDWBS">
+            <summary>
+            干部管理单位标示
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSZZQ">
+            <summary>
+            单位所在政区
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWXZLB">
+            <summary>
+            单位性质类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWBM">
+            <summary>
+            单位编码
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.XYFZS">
+            <summary>
+            现有副职数
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCXPZWH">
+            <summary>
+            单位撤销批准文号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSHY">
+            <summary>
+            单位所属行业
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.JGTJBS">
+            <summary>
+            机构统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LDBZZGDWMCBC">
+            <summary>
+            领导班子主管单位名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LSDWMCBC">
+            <summary>
+            隶属单位名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DGDWBS">
+            <summary>
+            党管单位标示
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWJB">
+            <summary>
+            单位级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWJC">
+            <summary>
+            单位简称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWGZZN">
+            <summary>
+            单位工作职能
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWGLCCBS">
+            <summary>
+            单位管理层次标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSSBMTJBS">
+            <summary>
+            单位所属部门统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCXPZJGMCBC">
+            <summary>
+            单位撤销批准机关名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YZGZZBS">
+            <summary>
+            有中共组织标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.GKGLCS">
+            <summary>
+            归口管理处室
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.FSJZS">
+            <summary>
+            副书记职数
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWBZ">
+            <summary>
+            单位备注
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LDBZZGDWMC">
+            <summary>
+            领导班子主管单位名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.ZP">
+            <summary>
+            照片
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LSDWMC">
+            <summary>
+            隶属单位名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.XYZZS">
+            <summary>
+            现有正职数
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWYX">
+            <summary>
+            单位影像
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCLPZRQ">
+            <summary>
+            单位成立批准日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWLSGX">
+            <summary>
+            单位隶属关系
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCXPZJGMC">
+            <summary>
+            单位撤销批准机关名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCLPZJGMCBC">
+            <summary>
+            单位成立批准机关名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWGLZNLB">
+            <summary>
+            单位管理职能类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCLPZJGMC">
+            <summary>
+            单位成立批准机关名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSSXTMC">
+            <summary>
+            单位所属系统（名册）
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWFZR">
+            <summary>
+            单位负责人
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWMC">
+            <summary>
+            单位名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.FRDWBS">
+            <summary>
+            法人单位标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YLSDWGXBS">
+            <summary>
+            与隶属单位关系标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LDBZXGDWMCBC">
+            <summary>
+            领导班子协管单位名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCXPZRQ">
+            <summary>
+            单位撤销批准日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSM">
+            <summary>
+            单位缩名
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.RYBSF">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.XLMC">
+            <summary>
+            学历名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.RXRQ">
+            <summary>
+            入学日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.BYRQ">
+            <summary>
+            毕（肄）业日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.XZ">
+            <summary>
+            学制（年）
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.XXMC">
+            <summary>
+            学校（单位）名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.XXSZZQ">
+            <summary>
+            学校（单位）所在政区
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.CXDWLB">
+            <summary>
+            从学单位类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.SXZYMC">
+            <summary>
+            所学专业名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.SXZYLB">
+            <summary>
+            所学专业类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.XXWCQK">
+            <summary>
+            学习完成情况
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.XLBC">
+            <summary>
+            学历补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.XLXXTJBS">
+            <summary>
+            学历信息统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.DJLXH">
+            <summary>
+            多记录序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.XLJB">
+            <summary>
+            学历级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.JYLB">
+            <summary>
+            教育类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.EducationInfo2.ZZJHPX">
+            <summary>
+            组织计划培训
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ExperienceInfo.JLZSSM">
+            <summary>
+            经历综述说明
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ExperienceInfo.JLZS">
+            <summary>
+            经历综述
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ExperienceInfo.RZZS">
+            <summary>
+            任职综述
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYBSF">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYXM">
+            <summary>
+            人员姓名
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYYGRGXMC">
+            <summary>
+            人员与该人关系名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.CW">
+            <summary>
+            称 谓
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYCSRQ">
+            <summary>
+            人员出生日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYGZDWMCBC">
+            <summary>
+            人员工作单位名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYGZDWMC">
+            <summary>
+            人员工作单位名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYGZDWSZZQ">
+            <summary>
+            人员工作单位所在政区
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYGJ">
+            <summary>
+            人员国籍
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYMZ">
+            <summary>
+            人员民族
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYXL">
+            <summary>
+            人员学历
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYZZMM">
+            <summary>
+            人员政治面貌
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYSF">
+            <summary>
+            人员身份
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYZW">
+            <summary>
+            人员职务
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYZJ">
+            <summary>
+            人员职级
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYXZ">
+            <summary>
+            人员现状
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.RYBZ">
+            <summary>
+            人员备注
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.XH">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.XB">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.TJBS">
+            <summary>
+            统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.DJLXH">
+            <summary>
+            多记录序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.FamilyMemberInfo.SFZHM">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.OrgCheckInfo.RYBSF">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.OrgCheckInfo.DJLXH">
+            <summary>
+            多记录序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.OrgCheckInfo.TJBS">
+            <summary>
+            统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.OrgCheckInfo.KHJG">
+            <summary>
+            考核结果
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.OrgCheckInfo.KHND">
+            <summary>
+            考核年度
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.OrgCheckInfo.KHLB">
+            <summary>
+            考核类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ProfessionalSkill.RYBSF">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ProfessionalSkill.ZYJSRZZG">
+            <summary>
+            专业技术任职资格（职称）
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ProfessionalSkill.HDZGRQ">
+            <summary>
+            获得资格日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ProfessionalSkill.HDZGTJ">
+            <summary>
+            获得资格途径
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ProfessionalSkill.PWHHKSMC">
+            <summary>
+            评委会或考试名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ProfessionalSkill.ZCJB">
+            <summary>
+            职称级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ProfessionalSkill.TJBS">
+            <summary>
+            统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ProfessionalSkill.DJLXH">
+            <summary>
+            多记录序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.RYBSF">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.ZWJB">
+            <summary>
+            职位级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.ZJPZRQ">
+            <summary>
+            职级批准日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.ZJPZJGMCBC">
+            <summary>
+            职级批准机关名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.ZJPZJGMC">
+            <summary>
+            职级批准机关名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.ZJPZWH">
+            <summary>
+            职级批准文号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.ZJZT">
+            <summary>
+            职级状态
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.ZJZZRQ">
+            <summary>
+            职级终止日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.ZJPZSZJGMC">
+            <summary>
+            职级批准时所在机构名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.ZJDYPZSDZW">
+            <summary>
+            职级待遇批准时的职务
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.TJBS">
+            <summary>
+            统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RankInfo.DJLXH">
+            <summary>
+            多记录序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.RYBSF">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.QSRQ">
+            <summary>
+            起始日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.JZRQ">
+            <summary>
+            截止日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.SZDWJSF">
+            <summary>
+            所在单位及身份（职务)
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.SZDWSZZQ">
+            <summary>
+            所在单位所在政区
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.SFHZW">
+            <summary>
+            身份或职务
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.ZWJB">
+            <summary>
+            职务级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.LLJB">
+            <summary>
+            履历类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.LLBC">
+            <summary>
+            履历补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.LLBCFZSXL">
+            <summary>
+            履历补充（非正式学历）
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.TJBS">
+            <summary>
+            统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.ResumeInfo.DJLXH">
+            <summary>
+            多记录序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.RYBSF">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.JCLB">
+            <summary>
+            奖惩类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.JCMCBC">
+            <summary>
+            奖惩名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.JCMC">
+            <summary>
+            奖惩名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.JCPZRQ">
+            <summary>
+            奖惩批准日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.JCPZJGMCBC">
+            <summary>
+            奖惩批准机关名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.JCPZJGMC">
+            <summary>
+            奖惩批准机关名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.PZJCJGJB">
+            <summary>
+            批准奖惩机关级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.JCSZWCC">
+            <summary>
+            奖惩时职务层次
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.JCYY">
+            <summary>
+            奖惩原因
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.JCSM">
+            <summary>
+            奖惩说明
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.JCCXRQ">
+            <summary>
+            奖惩撤销日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.TJBS">
+            <summary>
+            统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.RewardsInfo.DJLXH">
+            <summary>
+            多记录序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.RYBSF">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXLB">
+            <summary>
+            培训类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXLGZT">
+            <summary>
+            培训离岗状态
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXQSRQ">
+            <summary>
+            培训起始日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXJSRQ">
+            <summary>
+            培训结束日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXZBDWMCBC">
+            <summary>
+            培训主办单位名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXZBDWMC">
+            <summary>
+            培训主办单位名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXZBDWJB">
+            <summary>
+            培训主办单位级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.CXDWMCBC">
+            <summary>
+            从学单位名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.CXDWMC">
+            <summary>
+            从学单位名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.CXDWSZZQ">
+            <summary>
+            从学单位所在政区
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.CXDWLB">
+            <summary>
+            从学单位类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXBMC">
+            <summary>
+            培训班名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXBLB">
+            <summary>
+            培训班类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXZYMC">
+            <summary>
+            培训专业名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXZYLB">
+            <summary>
+            培训专业类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXWCQK">
+            <summary>
+            培训完成情况
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.TJBS">
+            <summary>
+            统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXJGLB">
+            <summary>
+            培训机构类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.DJLXH">
+            <summary>
+            多记录序号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXXS">
+            <summary>
+            培训形式
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.CGPXJNXXTS">
+            <summary>
+            出国培训境内学习天数
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.CGPXJWXXTS">
+            <summary>
+            出国培训境外学习天数
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.KCSXXM">
+            <summary>
+            考察实习项目
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.TGJXJDW">
+            <summary>
+            提供奖学金（经费赞助）单位
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.BZ">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.ZZBMRK">
+            <summary>
+            组织（人事）部门认可
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.PXQKSM">
+            <summary>
+            培训情况说明
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.XS">
+            <summary>
+            学时
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.TrainInfo.KHQK">
+            <summary>
+            考核情况
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UserSn">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UserName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UserNamePY">
+            <summary>
+            名字对应拼音
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Birthday">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Nation">
+            <summary>
+            民族
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.OrganizationName">
+            <summary>
+            单位名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.OrganizationExtendInfo">
+            <summary>
+            单位名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.JobLevel">
+            <summary>
+            职级
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.JobName">
+            <summary>
+            职务名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Family">
+            <summary>
+            家庭出身
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Composition">
+            <summary>
+            成分
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PositionalTitles">
+            <summary>
+            职称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.TakeOffice">
+            <summary>
+            任现职时间
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Health">
+            <summary>
+            健康
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.EducationalBackground">
+            <summary>
+            学历
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.School">
+            <summary>
+            毕业学校
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.EducationalLevel">
+            <summary>
+            学历级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Degree">
+            <summary>
+            学位
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Marital">
+            <summary>
+            婚姻状况
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Major">
+            <summary>
+            专业
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Worktime">
+            <summary>
+            乡镇工作时间
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.JoinJobTime">
+            <summary>
+            参加工作时间
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.WorkTimeCorrect">
+            <summary>
+            工龄计算矫正值
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PoliticsStatus">
+            <summary>
+            政治面貌
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.JoinOrgDate">
+            <summary>
+            参加组织日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PoliticsRemarkTag">
+            <summary>
+            政治面貌注释标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Identity">
+            <summary>
+            个人身份
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.IdentityBeginDate">
+            <summary>
+            现身份起始日期
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyNameOfOrgAffiliation">
+            <summary>
+            人事关系所在单位名称
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyNameClassOfOrgAffiliation">
+            <summary>
+            人事关系所在单位名称类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyAreaOfOrgAffiliation">
+            <summary>
+            人事关系所在单位所在政区
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.BelongTOCompanyOfOrgAffiliation">
+            <summary>
+            人事关系所在单位隶属关系
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.ManageClass">
+            <summary>
+            管理类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyLevelOfOrgAffiliation">
+            <summary>
+            人事关系所在单位级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyNatureOfOrgAffiliation">
+            <summary>
+            人事关系所在单位性质类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyIndustryOfOrgAffiliation">
+            <summary>
+            人事关系所在单位所属行业
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.RegisteredNature">
+            <summary>
+            户口性质
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.RegisteredAreaCode">
+            <summary>
+            户口所在地代码
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.RegisteredArea">
+            <summary>
+            户口所在地
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UserIdCode">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Specialty">
+            <summary>
+            特长
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Hobby">
+            <summary>
+            爱好
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Duty">
+            <summary>
+            现任职务
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.MediaInfoFlag">
+            <summary>
+            声像信息标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.OtherDuty">
+            <summary>
+            其他任职情况
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.DisplayType">
+            <summary>
+            显示方式
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.BaseWorkDate">
+            <summary>
+            基层工作时间
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.JoinArmyType">
+            <summary>
+            进入干部队伍方式
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PostDuty">
+            <summary>
+            工作岗位
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyOfSalary">
+            <summary>
+            工资关系所在单位
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Photo">
+            <summary>
+            照片
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.AviMpeg">
+            <summary>
+            录像mpeg
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UserManageState">
+            <summary>
+            人员管理状态
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.LeaderType">
+            <summary>
+            干部类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PartyManageState">
+            <summary>
+            党员管理状态
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.NativePlaceReplenish">
+            <summary>
+            籍贯补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PartyCode">
+            <summary>
+            人员所在党组织代码
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.BirthPlaceReplenish">
+            <summary>
+            出生地补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.GovernorCompany">
+            <summary>
+            主管单位
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.StatisticsRefCompany">
+            <summary>
+            统计关系所在单位
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.WorkerSn">
+            <summary>
+            职工号
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PublicServantRegDate">
+            <summary>
+            公务员登记时间
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyNameReplenishOfOrgAffiliation">
+            <summary>
+            人事关系所在单位名称补充
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PartyFlag">
+            <summary>
+            干部党员标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.TitleLevel">
+            <summary>
+            职称级别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Syn">
+            <summary>
+            同步
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UniquenessId">
+            <summary>
+            全局唯一标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.RightCheck">
+            <summary>
+            权限检测
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CentralizedAdjust">
+            <summary>
+            归口调整
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.ProvinceCityDate">
+            <summary>
+            省/市管时间
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CanGong">
+            <summary>
+            参公
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.YearCheckInfo.RYBSF">
+            <summary>
+            人员标识符
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.YearCheckInfo.KHLB">
+            <summary>
+            考核类别
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.YearCheckInfo.KHND">
+            <summary>
+            考核年度
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.YearCheckInfo.KHJG">
+            <summary>
+            考核结果
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.YearCheckInfo.TJBS">
+            <summary>
+            统计标识
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.YearCheckInfo.DJLXH">
+            <summary>
+            多记录序号
+            </summary>
+        </member>
         <member name="T:WXQ.Enties.Department">
             <summary>
             
@@ -834,371 +2514,6 @@
             Default:
             Nullable:True
             </summary>           
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UserSn">
-            <summary>
-            人员标识符
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UserName">
-            <summary>
-            姓名
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UserNamePY">
-            <summary>
-            名字对应拼音
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Sex">
-            <summary>
-            性别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Birthday">
-            <summary>
-            出生日期
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Nation">
-            <summary>
-            民族
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.OrganizationName">
-            <summary>
-            单位名称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.OrganizationExtendInfo">
-            <summary>
-            单位名称补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.JobLevel">
-            <summary>
-            职级
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.JobName">
-            <summary>
-            职务名称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Family">
-            <summary>
-            家庭出身
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Composition">
-            <summary>
-            成分
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PositionalTitles">
-            <summary>
-            职称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.TakeOffice">
-            <summary>
-            任现职时间
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Health">
-            <summary>
-            健康
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.EducationalBackground">
-            <summary>
-            学历
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.School">
-            <summary>
-            毕业学校
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.EducationalLevel">
-            <summary>
-            学历级别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Degree">
-            <summary>
-            学位
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Marital">
-            <summary>
-            婚姻状况
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Major">
-            <summary>
-            专业
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Worktime">
-            <summary>
-            乡镇工作时间
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.JoinJobTime">
-            <summary>
-            参加工作时间
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.WorkTimeCorrect">
-            <summary>
-            工龄计算矫正值
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PoliticsStatus">
-            <summary>
-            政治面貌
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.JoinOrgDate">
-            <summary>
-            参加组织日期
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PoliticsRemarkTag">
-            <summary>
-            政治面貌注释标识
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Identity">
-            <summary>
-            个人身份
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.IdentityBeginDate">
-            <summary>
-            现身份起始日期
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyNameOfOrgAffiliation">
-            <summary>
-            人事关系所在单位名称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyNameClassOfOrgAffiliation">
-            <summary>
-            人事关系所在单位名称类别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyAreaOfOrgAffiliation">
-            <summary>
-            人事关系所在单位所在政区
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.BelongTOCompanyOfOrgAffiliation">
-            <summary>
-            人事关系所在单位隶属关系
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.ManageClass">
-            <summary>
-            管理类别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyLevelOfOrgAffiliation">
-            <summary>
-            人事关系所在单位级别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyNatureOfOrgAffiliation">
-            <summary>
-            人事关系所在单位性质类别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyIndustryOfOrgAffiliation">
-            <summary>
-            人事关系所在单位所属行业
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.RegisteredNature">
-            <summary>
-            户口性质
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.RegisteredAreaCode">
-            <summary>
-            户口所在地代码
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.RegisteredArea">
-            <summary>
-            户口所在地
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UserIdCode">
-            <summary>
-            身份证号码
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Specialty">
-            <summary>
-            特长
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Hobby">
-            <summary>
-            爱好
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Duty">
-            <summary>
-            现任职务
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.MediaInfoFlag">
-            <summary>
-            声像信息标识
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.OtherDuty">
-            <summary>
-            其他任职情况
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.DisplayType">
-            <summary>
-            显示方式
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.BaseWorkDate">
-            <summary>
-            基层工作时间
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.JoinArmyType">
-            <summary>
-            进入干部队伍方式
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PostDuty">
-            <summary>
-            工作岗位
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyOfSalary">
-            <summary>
-            工资关系所在单位
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Photo">
-            <summary>
-            照片
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.AviMpeg">
-            <summary>
-            录像mpeg
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UserManageState">
-            <summary>
-            人员管理状态
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.LeaderType">
-            <summary>
-            干部类别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PartyManageState">
-            <summary>
-            党员管理状态
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.NativePlaceReplenish">
-            <summary>
-            籍贯补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PartyCode">
-            <summary>
-            人员所在党组织代码
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.BirthPlaceReplenish">
-            <summary>
-            出生地补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.GovernorCompany">
-            <summary>
-            主管单位
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.StatisticsRefCompany">
-            <summary>
-            统计关系所在单位
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.WorkerSn">
-            <summary>
-            职工号
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PublicServantRegDate">
-            <summary>
-            公务员登记时间
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CompanyNameReplenishOfOrgAffiliation">
-            <summary>
-            人事关系所在单位名称补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.PartyFlag">
-            <summary>
-            干部党员标识
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.TitleLevel">
-            <summary>
-            职称级别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Syn">
-            <summary>
-            同步
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Remark">
-            <summary>
-            备注
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.UniquenessId">
-            <summary>
-            全局唯一标识
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.RightCheck">
-            <summary>
-            权限检测
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CentralizedAdjust">
-            <summary>
-            归口调整
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.ProvinceCityDate">
-            <summary>
-            省/市管时间
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.CanGong">
-            <summary>
-            参公
-            </summary>
         </member>
         <member name="T:WXQ.Enties.UserDepartment">
             <summary>
