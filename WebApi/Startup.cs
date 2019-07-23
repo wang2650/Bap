@@ -66,7 +66,7 @@ namespace WebApi
             NLog.LogManager.Configuration.Variables["ConnectionStrings"] = AppConfigurtaionServices.Configuration.GetConnectionString("wxqconn");
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);  //避免日志中的中文输出乱码
 
-            // app.UseCors("LimitRequests");//将 CORS 中间件添加到 web 应用程序管线中, 以允许跨域请求。
+             app.UseCors("LimitRequests");//将 CORS 中间件添加到 web 应用程序管线中, 以允许跨域请求。
             // 跳转https
             //app.UseHttpsRedirection();
             // 使用静态文件
@@ -105,7 +105,7 @@ namespace WebApi
                 c.AddPolicy("LimitRequests", policy =>
                 {
                     policy
-                    .WithOrigins("http://127.0.0.1:1818", "http://localhost:8080")//支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
+                    .WithOrigins("http://127.0.0.1:8889", "http://localhost:8889")//支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
                     .AllowAnyHeader()//Ensures that the policy allows any header.
                     .AllowAnyMethod();
                 });
