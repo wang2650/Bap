@@ -38,6 +38,18 @@ namespace WXQ.Enties.DbModels
         /// </summary>
         public string Birthday { set; get; }
 
+
+        /// <summary>
+        /// 籍贯
+        /// </summary>
+        public string Native { get; set; }
+
+        /// <summary>
+        /// 出生地
+        /// </summary>
+        public string BirthPlace { get; set; }
+
+
         /// <summary>
         /// 民族
         /// </summary>

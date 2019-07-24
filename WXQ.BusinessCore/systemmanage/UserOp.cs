@@ -254,7 +254,7 @@ namespace WXQ.BusinessCore.systemmanage
         {
             UsersManager UsersManager = new UsersManager();
             ListResult<UserIncludeExtentd> result = new ListResult<UserIncludeExtentd>();
-
+            int total = 0;
             System.Linq.Expressions.Expression<Func<UserIncludeExtentd, bool>> express = Expressionable.Create<UserIncludeExtentd>()
                           .AndIF(!string.IsNullOrEmpty(userName), m => SqlFunc.Contains(m.NickName, userName) || SqlFunc.Contains(m.UserName, userName))
                           .AndIF(rsState > 1, it => it.RsState == rsState).ToExpression();//拼接表达式
@@ -270,7 +270,7 @@ namespace WXQ.BusinessCore.systemmanage
                  Sex = e.Sex,
                  IsMustUseKey = e.IsMustUseKey
              }).Where(express);
-            List<UserIncludeExtentd> list =      q.ToPageList(pageModel.PageIndex,pageModel.PageSize);
+            List<UserIncludeExtentd> list =      q.ToPageList(pageModel.PageIndex,pageModel.PageSize,ref total);
            
 
             result.Result = list;
@@ -278,7 +278,7 @@ namespace WXQ.BusinessCore.systemmanage
 
             result.PageSize = pageModel.PageSize;
             result.PageIndex = pageModel.PageIndex;
-            result.Total = q.Count();
+            result.Total = total;
             return result;
         }
 

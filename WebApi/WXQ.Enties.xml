@@ -1404,6 +1404,16 @@
             出生日期
             </summary>
         </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Native">
+            <summary>
+            籍贯
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.UserBaseInfo.BirthPlace">
+            <summary>
+            出生地
+            </summary>
+        </member>
         <member name="P:WXQ.Enties.DbModels.UserBaseInfo.Nation">
             <summary>
             民族
