@@ -97,5 +97,17 @@ namespace WXQ.BusinessCore.CommonManager
        
 
         }
-    }
+        /// <summary>
+        /// 获取字典的分组列表
+        /// </summary>
+        /// <param name="pageModel"></param>
+        /// <param name="GroupName"></param>
+        /// <returns></returns>
+        public ListResult<WXQ.Enties.Dict> GetDictGroup( PageModel pageModel, string GroupName)
+        {
+
+            return GetDictList(GroupName,pageModel);
+
+        }
+        }
 }

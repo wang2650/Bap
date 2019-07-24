@@ -247,6 +247,48 @@ namespace WebApi.Controllers.configmanager
         }
 
 
+        /// <summary>
+        /// 搜索列表
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [AllowAnonymous]
+        [WebApi.Common.Log]
+        [Route("GetDictList")]
+        public JsonResult GetDictGroup([FromForm]  WXQ.InOutPutEntites.Input.configmanager.Dict.GetDictListInput model)
+        {
+            ResponseResult result = new ResponseResult();
+
+            GetDictListInputModelValidation validator = new GetDictListInputModelValidation();
+            ValidationResult vr = validator.Validate(model);
+
+            if (!vr.IsValid)
+            {
+                result.Code = ResponseResultMessageDefine.ParaError;
+                result.Errors = vr.Errors.Select(e => e.ErrorMessage).ToList();
+            }
+            else
+            {
+                model.GroupName = string.IsNullOrEmpty(model.GroupName) ? "dictgroup" : model.GroupName;
+                WXQ.BusinessCore.CommonManager.DictOp op = new WXQ.BusinessCore.CommonManager.DictOp();
+
+                SqlSugar.PageModel pagemodel = TypeAdapter.Adapt<WXQ.InOutPutEntites.Input.PageInput, SqlSugar.PageModel>(model.Page);
+                ListResult<WXQ.Enties.Dict> rv = op.GetDictGroup( pagemodel,model.GroupName);
+
+                if (rv == null)
+                {
+                    result.Code = ResponseResultMessageDefine.OpLost;
+                    result.Errors.Add(ResponseResultMessageDefine.OpLostMessage);
+                }
+                else
+                {
+                    result.Data = rv;
+                }
+            }
+
+            return Json(result);
+        }
 
 
 
