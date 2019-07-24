@@ -1,0 +1,369 @@
+﻿CREATE TABLE `tb_administrativejobinfo` 
+(
+    `UserSn` varchar(40) NOT NULL COMMENT '人员标识符',
+    `RZJGMC` varchar(40) NULL COMMENT '任职机构名称',
+    `RZJGMCLB` varchar(10) NULL COMMENT '任职机构名称类别',
+    `RZJGSZZQ` varchar(10) NULL COMMENT '任职机构所在政区',
+    `RZJGLSGX` varchar(10) NULL COMMENT '任职机构隶属关系',
+    `RZJGJB` varchar(10) NULL COMMENT '任职机构级别',
+    `RZJGXZLB` varchar(10) NULL COMMENT '任职机构性质类别',
+    `RZJGSHY` varchar(10) NULL COMMENT '任职机构所属行业',
+    `RZJGTJBS` varchar(10) NULL COMMENT '任职机构统计标识',
+    `ZWDM` varchar(400) NULL COMMENT '职务代码',
+    `ZWMC` varchar(20) NULL COMMENT '职务名称',
+    `ZWSM` varchar(200) NULL COMMENT '职务说明',
+    `BZCYLB` varchar(20) NULL COMMENT '班子成员类别',
+    `ZWBC2` varchar(255) NULL COMMENT '职务补充2',
+    `ZJ` varchar(20) NULL COMMENT '职级',
+    `DZWZCXH` int NULL COMMENT '多职务主次序号',
+    `JTNPLSX` int NULL COMMENT '集体内排列顺序',
+    `SZGZXTGLZNLB` varchar(20) NULL COMMENT '所在工作系统管理职能类别',
+    `ZGGZ` varchar(255) NULL COMMENT '主管（从事）工作',
+    `ZYLB` varchar(20) NULL COMMENT '职业类别',
+    `CSZY` varchar(20) NULL COMMENT '从事专业',
+    `JDHTMRZDJGMC` varchar(40) NULL COMMENT '决定或提名任职的机关名称',
+    `JDHTMRZDRQ` date NULL COMMENT '决定或提名任职的日期',
+    `JDHTMRZDWH` varchar(50) NULL COMMENT '决定或提名任职的文号',
+    `PZRZJGMCBC` varchar(120) NULL COMMENT '批准任职机关名称补充',
+    `PZRZJGMC` varchar(40) NULL COMMENT '批准任职机关名称',
+    `PZRZDRQ` date NULL COMMENT '批准任职的日期',
+    `PZRZDWH` varchar(80) NULL COMMENT '批准任职的文号',
+    `RZFS` varchar(10) NULL COMMENT '任职方式',
+    `RZBDLB` varchar(10) NULL COMMENT '任职变动类别',
+    `SFPGTB` bit NULL COMMENT '是否破格提拔',
+    `LXRGZQRQ` date NULL COMMENT '连续任该职起始日期',
+    `RZZT` varchar(10) NULL COMMENT '任职状态',
+    `JDHTMMZDJGMC` varchar(40) NULL COMMENT '决定或提名免职的机关名称',
+    `JDHTMMZDRQ` date NULL COMMENT '决定或提名免职的日期',
+    `JDHTMMZDWH` varchar(80) NULL COMMENT '决定或提名免职的文号',
+    `PZMZDJGMC` varchar(40) NULL COMMENT '批准免职的机关名称',
+    `PZMZDRQ` date NULL COMMENT '批准免职的日期',
+    `PZMZDWH` varchar(80) NULL COMMENT '批准免职的文号',
+    `MZFS` varchar(10) NULL COMMENT '免职方式',
+    `MZBDLB` varchar(255) NULL COMMENT '免职变动类别',
+    `SFTBLL` varchar(10) NULL COMMENT '是否同步履历',
+    `FSGGB` varchar(10) NULL COMMENT '非省管干部',
+    `BZQK` varchar(2000) NULL COMMENT '班子情况',
+    `TJBS` bit NULL COMMENT '统计标识',
+    `SFHBJL` bit NULL COMMENT '是否回避交流',
+    `ZGGZLB` varchar(60) NULL COMMENT '主管工作类别',
+    `SYQJSRQ` date NULL COMMENT '试（聘）用期结束日期',
+    `RZJGMCBC` varchar(60) NULL COMMENT '任职机构名称补充',
+    `MCZWBS` tinyint(3) UNSIGNED NULL COMMENT '名册职务标识',
+    `LDZWB` varchar(10) NULL COMMENT '领导职务标识',
+    `FBZCY` bit NULL COMMENT '非班子成员',
+    `JLLB` varchar(10) NULL COMMENT '交流类别',
+    `SFCZRQGS` bit NULL COMMENT '是否存在任前公示',
+    `BDWZWTJBS` bit NULL COMMENT '本单位职务统计标识',
+    `JDHTMRZDJGMCBC` varchar(200) NULL COMMENT '决定或提名任职的机关名称补充',
+    `RZYYLB` varchar(10) NULL COMMENT '任职原因类别',
+    `JDHTMMZDJGMCBC` varchar(200) NULL COMMENT '决定或提名免职的机关名称补充',
+    `PZMZDJGMCBC` varchar(255) NULL COMMENT '批准免职的机关名称补充',
+    `MZYYLB` varchar(10) NULL COMMENT '免职原因类别',
+    `SFHZ` bit NULL COMMENT '是否换届',
+    `HJSJ` date NULL COMMENT '换届时间',
+    `RZNX` varchar(10) NULL COMMENT '任职年限',
+    `ZXRZNX` varchar(10) NULL COMMENT '最新任职年限',
+    `DJLXH` int NULL COMMENT '多记录序号',
+    `WYBS` varchar(60) NULL COMMENT '唯一标识',
+    `DWSXT` varchar(12) NULL COMMENT '单位所属系统',
+    PRIMARY KEY (`UserSn`) 
+);
+
+
+
+comment = '行政职位信息表';
+
+
+
+CREATE TABLE `tb_degreeinfo` 
+(
+    `RYBSF` varchar(64) NOT NULL COMMENT '人员标识符',
+    `XW` varchar(255) NULL COMMENT '学位',
+    `XWXXSJ` varchar(100) NULL COMMENT '学位学习时间',
+    `XWSYRQ` date NULL COMMENT '学位授予日期',
+    `XWSYDW` varchar(255) NULL COMMENT '学位授予单位',
+    `XWSYDWSZZQ` varchar(20) NULL COMMENT '学位授予单位所在政区',
+    `TJBS` bit NULL COMMENT '统计标识',
+    `DJLXH` int NULL COMMENT '多记录序号',
+    `XWJB` varchar(20) NULL COMMENT '学位级别',
+    `JYFS` varchar(20) NULL COMMENT '教育方式',
+    `XWZCXH` bit NULL COMMENT '学位主次序号',
+    `WYBS` varchar(64) NULL COMMENT '唯一标识',
+    PRIMARY KEY (`RYBSF`) 
+);
+
+
+
+comment = '学位信息表';
+
+
+
+CREATE TABLE `tb_departmentrole` 
+(
+    `Id` int AUTO_INCREMENT NOT NULL,
+    `RoleId` int NULL,
+    `DepartmentId` int NULL,
+    `AddDateTime` timestamp NULL,
+    `UpdateDateTime` timestamp NULL,
+    `AddUser` varchar(50) NULL,
+    `UpdateUser` varchar(50) NULL,
+    `RowVersion` int NULL,
+    `RsState` tinyint(3) UNSIGNED NOT NULL,
+    PRIMARY KEY (`Id`) 
+);
+
+
+
+comment = '';
+
+
+
+CREATE TABLE `tb_educationinfo2` 
+(
+    `RYBSF` varchar(64) NULL COMMENT '人员标识符',
+    `XLMC` varchar(40) NULL COMMENT '学历名称',
+    `RXRQ` date NULL COMMENT '入学日期',
+    `BYRQ` date NULL COMMENT '毕（肄）业日期',
+    `XZ` varchar(10) NULL COMMENT '学制（年）',
+    `XXMC` varchar(50) NULL COMMENT '学校（单位）名称',
+    `XXSZZQ` varchar(50) NULL COMMENT '学校（单位）所在政区',
+    `CXDWLB` varchar(20) NULL COMMENT '从学单位类别',
+    `SXZYMC` varchar(50) NULL COMMENT '所学专业名称',
+    `SXZYLB` varchar(50) NULL COMMENT '所学专业类别',
+    `XXWCQK` varchar(30) NULL COMMENT '学习完成情况',
+    `XLBC` varchar(255) NULL COMMENT '学历补充',
+    `XLXXTJBS` bit NULL COMMENT '学历信息统计标识',
+    `DJLXH` int NULL COMMENT '多记录序号',
+    `XLJB` varchar(20) NULL COMMENT '学历级别',
+    `JYLB` varchar(20) NULL COMMENT '教育类别',
+    `ZZJHPX` bit NULL COMMENT '组织计划培训',
+    `WYBS` varchar(64) NULL COMMENT '唯一标识' 
+);
+
+
+
+comment = '学历信息表';
+
+
+
+CREATE TABLE `tb_experienceinfo` 
+(
+    `RYBSF` varchar(255) NOT NULL COMMENT '人员标识符',
+    `JLZSSM` varchar(100) NULL COMMENT '经历综述说明',
+    `JLZS` varchar(8000) NULL COMMENT '经历综述',
+    `RZZS` varchar(255) NULL COMMENT '任职综述',
+    PRIMARY KEY (`RYBSF`) 
+);
+
+
+
+comment = '经历表';
+
+
+
+CREATE TABLE `tb_familymemberinfo` 
+(
+    `RYBSF` varchar(100) NOT NULL COMMENT '人员标识符',
+    `RYXM` varchar(32) NULL COMMENT '人员姓名',
+    `RYYGRGXMC` varchar(10) NULL COMMENT '人员与该人关系名称',
+    `CW` varchar(20) NULL COMMENT '称 谓',
+    `RYCSRQ` date NULL COMMENT '人员出生日期',
+    `RYGZDWMCBC` varchar(255) NULL COMMENT '人员工作单位名称补充',
+    `RYGZDWMC` varchar(32) NULL COMMENT '人员工作单位名称',
+    `RYGZDWSZZQ` varchar(12) NULL COMMENT '人员工作单位所在政区',
+    `RYGJ` varchar(12) NULL COMMENT '人员国籍',
+    `RYMZ` varchar(12) NULL COMMENT '人员民族',
+    `RYXL` varchar(12) NULL COMMENT '人员学历',
+    `RYZZMM` varchar(12) NULL COMMENT '人员政治面貌',
+    `RYSF` varchar(80) NULL COMMENT '人员身份',
+    `RYZW` varchar(80) NULL COMMENT '人员职务',
+    `RYZJ` varchar(10) NULL COMMENT '人员职级',
+    `RYXZ` varchar(10) NULL COMMENT '人员现状',
+    `RYBZ` varchar(50) NULL COMMENT '人员备注',
+    `XH` int NULL COMMENT '序号',
+    `XB` varchar(5) NULL COMMENT '性别',
+    `TJBS` bit NULL COMMENT '统计标识',
+    `DJLXH` int NULL COMMENT '多记录序号',
+    `SFZHM` varchar(20) NULL COMMENT '身份证号码',
+    `WYBS` varchar(64) NULL COMMENT '唯一标识',
+    PRIMARY KEY (`RYBSF`) 
+);
+
+
+
+comment = '家庭成员表';
+
+
+
+CREATE TABLE `tb_orgcheckinfo` 
+(
+    `RYBSF` varchar(255) NULL COMMENT '人员标识符',
+    `DJLXH` int NULL COMMENT '多记录序号',
+    `TJBS` int NULL COMMENT '统计标识',
+    `KHJG` varchar(4) NULL COMMENT '考核结果',
+    `KHND` int NULL COMMENT '考核年度',
+    `KHLB` varchar(4) NULL COMMENT '考核类别',
+    `WYBS` varchar(64) NOT NULL COMMENT '唯一标识',
+    PRIMARY KEY (`WYBS`) 
+);
+
+
+
+comment = '组织考核考察信息表';
+
+
+
+CREATE TABLE `tb_professionalskill` 
+(
+    `RYBSF` varchar(40) NOT NULL COMMENT '人员标识符',
+    `ZYJSRZZG` varchar(10) NULL COMMENT '专业技术任职资格（职称）',
+    `HDZGRQ` date NULL COMMENT '获得资格日期',
+    `HDZGTJ` varchar(10) NULL COMMENT '获得资格途径',
+    `PWHHKSMC` varchar(2000) NULL COMMENT '评委会或考试名称',
+    `ZCJB` varchar(5) NULL COMMENT '职称级别',
+    `TJBS` bit NULL COMMENT '统计标识',
+    `DJLXH` int NULL COMMENT '多记录序号',
+    `WYBS` varchar(60) NULL COMMENT '唯一标识',
+    PRIMARY KEY (`RYBSF`) 
+);
+
+
+
+comment = '专业技术信息表';
+
+
+
+CREATE TABLE `tb_rankinfo` 
+(
+    `RYBSF` varchar(60) NOT NULL COMMENT '人员标识符',
+    `ZWJB` varchar(20) NULL COMMENT '职位级别',
+    `ZJPZRQ` date NULL COMMENT '职级批准日期',
+    `ZJPZJGMCBC` varchar(255) NULL COMMENT '职级批准机关名称补充',
+    `ZJPZJGMC` varchar(40) NULL COMMENT '职级批准机关名称',
+    `ZJPZWH` varchar(80) NULL COMMENT '职级批准文号',
+    `ZJZT` varchar(4) NULL COMMENT '职级状态',
+    `ZJZZRQ` date NULL COMMENT '职级终止日期',
+    `ZJPZSZJGMC` varchar(150) NULL COMMENT '职级批准时所在机构名称',
+    `ZJDYPZSDZW` varchar(80) NULL COMMENT '职级待遇批准时的职务',
+    `TJBS` bit NULL COMMENT '统计标识',
+    `DJLXH` int NULL COMMENT '多记录序号',
+    `WYBS` varchar(64) NULL COMMENT '唯一标识',
+    PRIMARY KEY (`RYBSF`) 
+);
+
+
+
+comment = '';
+
+
+
+CREATE TABLE `tb_resumeinfo` 
+(
+    `RYBSF` varchar(255) NULL COMMENT '人员标识符',
+    `QSRQ` date NULL COMMENT '起始日期',
+    `JZRQ` date NULL COMMENT '截止日期',
+    `SZDWJSF` varchar(60) NULL COMMENT '所在单位及身份（职务)',
+    `SZDWSZZQ` varchar(120) NULL COMMENT '所在单位所在政区',
+    `SFHZW` varchar(120) NULL COMMENT '身份或职务',
+    `ZWJB` varchar(100) NULL COMMENT '职务级别',
+    `LLJB` varchar(60) NULL COMMENT '履历类别',
+    `LLBC` varchar(400) NULL COMMENT '履历补充',
+    `LLBCFZSXL` varchar(200) NULL COMMENT '履历补充（非正式学历）',
+    `TJBS` bit NULL COMMENT '统计标识',
+    `DJLXH` int NULL COMMENT '多记录序号',
+    `WYBS` varchar(64) NULL COMMENT '唯一标识' 
+);
+
+
+
+comment = '履历信息表';
+
+
+
+CREATE TABLE `tb_rewardsinfo` 
+(
+    `RYBSF` varchar(255) NOT NULL COMMENT '人员标识符',
+    `JCLB` varchar(6) NULL COMMENT '奖惩类别',
+    `JCMCBC` varchar(120) NULL COMMENT '奖惩名称补充',
+    `JCMC` varchar(60) NULL COMMENT '奖惩名称',
+    `JCPZRQ` date NULL COMMENT '奖惩批准日期',
+    `JCPZJGMCBC` varchar(60) NULL COMMENT '奖惩批准机关名称补充',
+    `JCPZJGMC` varchar(40) NULL COMMENT '奖惩批准机关名称',
+    `PZJCJGJB` varchar(60) NULL COMMENT '批准奖惩机关级别',
+    `JCSZWCC` varchar(10) NULL COMMENT '奖惩时职务层次',
+    `JCYY` varchar(400) NULL COMMENT '奖惩原因',
+    `JCSM` varchar(60) NULL COMMENT '奖惩说明',
+    `JCCXRQ` date NULL COMMENT '奖惩撤销日期',
+    `TJBS` bit NULL COMMENT '统计标识',
+    `DJLXH` int NULL COMMENT '多记录序号',
+    `WYBS` varchar(64) NULL COMMENT '唯一标识',
+    PRIMARY KEY (`RYBSF`) 
+);
+
+
+
+comment = '奖惩信息表';
+
+
+
+CREATE TABLE `tb_traininfo` 
+(
+    `RYBSF` varchar(255) NOT NULL COMMENT '人员标识符',
+    `PXLB` varchar(10) NULL COMMENT '培训类别',
+    `PXLGZT` varchar(10) NULL COMMENT '培训离岗状态',
+    `PXQSRQ` date NULL COMMENT '培训起始日期',
+    `PXJSRQ` date NULL COMMENT '培训结束日期',
+    `PXZBDWMCBC` varchar(120) NULL COMMENT '培训主办单位名称补充',
+    `PXZBDWMC` varchar(120) NULL COMMENT '培训主办单位名称',
+    `PXZBDWJB` varchar(60) NULL COMMENT '培训主办单位级别',
+    `CXDWMCBC` varchar(120) NULL COMMENT '从学单位名称补充',
+    `CXDWMC` varchar(60) NULL COMMENT '从学单位名称',
+    `CXDWSZZQ` varchar(20) NULL COMMENT '从学单位所在政区',
+    `CXDWLB` varchar(60) NULL COMMENT '从学单位类别',
+    `PXBMC` varchar(60) NULL COMMENT '培训班名称',
+    `PXBLB` varchar(30) NULL COMMENT '培训班类别',
+    `PXZYMC` varchar(60) NULL COMMENT '培训专业名称',
+    `PXZYLB` varchar(60) NULL COMMENT '培训专业类别',
+    `PXWCQK` varchar(4) NULL COMMENT '培训完成情况',
+    `TJBS` bit NULL COMMENT '统计标识',
+    `PXJGLB` varchar(60) NULL COMMENT '培训机构类别',
+    `DJLXH` int NULL COMMENT '多记录序号',
+    `PXXS` varchar(60) NULL COMMENT '培训形式',
+    `CGPXJNXXTS` int NULL COMMENT '出国培训境内学习天数',
+    `CGPXJWXXTS` int NULL COMMENT '出国培训境外学习天数',
+    `KCSXXM` varchar(60) NULL COMMENT '考察实习项目',
+    `TGJXJDW` varchar(60) NULL COMMENT '提供奖学金（经费赞助）单位',
+    `BZ` varchar(800) NULL COMMENT '备注',
+    `ZZBMRK` varchar(10) NULL COMMENT '组织（人事）部门认可',
+    `PXQKSM` varchar(800) NULL COMMENT '培训情况说明',
+    `XS` varchar(4) NULL COMMENT '学时',
+    `KHQK` varchar(60) NULL COMMENT '考核情况',
+    `WYBS` varchar(64) NULL COMMENT '唯一标识',
+    PRIMARY KEY (`RYBSF`) 
+);
+
+
+
+comment = '培训信息表';
+
+
+
+CREATE TABLE `tb_yearcheckinfo` 
+(
+    `RYBSF` varchar(255) NOT NULL COMMENT '人员标识符',
+    `KHLB` varchar(10) NULL COMMENT '考核类别',
+    `KHND` int NULL COMMENT '考核年度',
+    `KHJG` varchar(4) NULL COMMENT '考核结果',
+    `TJBS` bit NULL COMMENT '统计标识',
+    `DJLXH` int NULL COMMENT '多记录序号',
+    `WYBS` varchar(64) NULL COMMENT '唯一标识',
+    PRIMARY KEY (`RYBSF`) 
+);
+
+
+
+comment = '年度审核表';
+
+
+

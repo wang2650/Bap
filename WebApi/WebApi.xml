@@ -184,6 +184,13 @@
             <param name="model"></param>
             <returns></returns>
         </member>
+        <member name="M:WebApi.Controllers.configmanager.DictController.GetGroupList(WXQ.InOutPutEntites.Input.configmanager.Dict.GetDictListInput)">
+            <summary>
+            搜索列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
         <member name="T:WebApi.Controllers.FileHandle.FileHandleController">
             <summary>
             文件控制

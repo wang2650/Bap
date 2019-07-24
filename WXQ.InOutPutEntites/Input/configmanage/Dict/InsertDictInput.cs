@@ -57,8 +57,8 @@ namespace WXQ.InOutPutEntites.Input.configmanager.Dict
             CascadeMode = CascadeMode.StopOnFirstFailure;
             RuleFor(x => x.DictKey).NotEmpty().WithMessage("key不能为空");
             RuleFor(x => x.DictValue).NotEmpty().WithMessage("value不能为空");
-            RuleFor(x => x.OrderBy).NotEmpty().WithMessage("排序不能为空");
-            RuleFor(x => x.GroupName).NotEmpty().WithMessage("描述不能为空");
+          
+            RuleFor(x => x.GroupName).NotEmpty().WithMessage("组名不能为空");
 
 
         }
