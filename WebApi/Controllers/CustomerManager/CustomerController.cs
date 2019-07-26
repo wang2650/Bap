@@ -33,7 +33,7 @@ namespace WebApi.Controllers.Customer
             ResponseResult result = new ResponseResult();
 
             var boundary = this.Request.GetMultipartBoundary();
-            string targetDirectory = "aaa";
+            string targetDirectory = "\\wwwroot\\uploadfiles";
             //检查相应目录
             if (!Directory.Exists(targetDirectory))
             {
