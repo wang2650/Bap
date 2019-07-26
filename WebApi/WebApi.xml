@@ -191,6 +191,13 @@
             <param name="model"></param>
             <returns></returns>
         </member>
+        <member name="M:WebApi.Controllers.Customer.CustomerController.UploadHeadImage">
+            <summary>
+            上传头像
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
         <member name="T:WebApi.Controllers.FileHandle.FileHandleController">
             <summary>
             文件控制

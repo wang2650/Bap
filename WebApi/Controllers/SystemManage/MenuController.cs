@@ -26,9 +26,9 @@ namespace WebApi.Controllers.systemmanage
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        [AllowAnonymous]
         [WebApi.Common.Log]
         [Route("InsertMenu")]
+        [Authorize("common")]
         public JsonResult InsertMenu([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Menu.InsertMenuInput model)
         {
             ResponseResult result = new ResponseResult();
@@ -77,6 +77,7 @@ namespace WebApi.Controllers.systemmanage
         [HttpGet]
         [WebApi.Common.Log]
         [Route("DeleteMenuByMenuId")]
+        [Authorize("common")]
         public JsonResult DeleteMenuByMenuId([FromQuery]  int MenuId)
         {
             ResponseResult result = new ResponseResult();
@@ -111,6 +112,7 @@ namespace WebApi.Controllers.systemmanage
         [HttpPost]
         [WebApi.Common.Log]
         [Route("UpdateMenu")]
+        [Authorize("common")]
         public JsonResult UpdateMenu([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Menu.UpdateMenuInput model)
         {
             ResponseResult result = new ResponseResult();
