@@ -33,7 +33,7 @@ namespace WebApi.Controllers.Customer
             ResponseResult result = new ResponseResult();
 
             var boundary = this.Request.GetMultipartBoundary();
-            string targetDirectory = "\\wwwroot\\uploadfiles";
+            string targetDirectory = "wwwroot/uploadfiles";
             //检查相应目录
             if (!Directory.Exists(targetDirectory))
             {
@@ -56,9 +56,10 @@ namespace WebApi.Controllers.Customer
                         var fileSection = section.AsFileSection();
                      
                         var fileName = fileSection.FileName;
+                        fileName = authStr;
                         var mimeType = fileSection.Section.ContentType;
                         filePath = Path.Combine(targetDirectory, fileName);
-                 
+                        result.Data = "uploadfiles/" + authStr + "?rd=" + new Guid().ToString();
                         using (var writeStream = System.IO.File.Create(filePath))
                         {
                             const int bufferSize = 1024;
