@@ -20,14 +20,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using WebApi.Common;
-
-using WebApi.Common.MiddleWare;
 using WXQ.Enties.CommonObj;
 
 namespace WebApi
 {
-
-
     //swagger 默认地址 localhost:5000/index.html
     public class Startup
     {
@@ -57,7 +53,7 @@ namespace WebApi
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint($"/swagger/V1/swagger.json", $"{ApiName}");
-                c.RoutePrefix = ""; //路径配置，设置为空，表示直接在根域名（localhost:8001）访问该文件,注意localhost:8001/swagger是访问不到的，去launchSettings.json把launchUrl去掉
+                c.RoutePrefix = "swagger"; //路径配置，设置为空，表示直接在根域名（localhost:8001）访问该文件,注意localhost:8001/swagger是访问不到的，去launchSettings.json把launchUrl去掉
             });
 
             #endregion Swagger
@@ -66,14 +62,14 @@ namespace WebApi
             NLog.LogManager.Configuration.Variables["ConnectionStrings"] = AppConfigurtaionServices.Configuration.GetConnectionString("wxqconn");
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);  //避免日志中的中文输出乱码
 
-             app.UseCors("LimitRequests");//将 CORS 中间件添加到 web 应用程序管线中, 以允许跨域请求。
+            app.UseCors("AllRequests");//将 CORS 中间件添加到 web 应用程序管线中, 以允许跨域请求。
             // 跳转https
             //app.UseHttpsRedirection();
             // 使用静态文件
             app.UseStaticFiles();
             // 使用cookie
             app.UseCookiePolicy();
-            app.UseResponseTimeMiddleWare();
+            // app.UseResponseTimeMiddleWare();
             // 返回错误码
             app.UseStatusCodePages();//把错误码返回前台，比如是404
             app.UseMvc();
@@ -84,32 +80,33 @@ namespace WebApi
         {
             //services.AddSingleton
 
-            services.AddMvc(
-                o =>
-                {
-                    // 全局异常过滤
-                    o.Filters.Add(typeof(GlobalExceptionsFilter));
-                }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddControllersAsServices()
-                 .AddJsonOptions(options => { options.SerializerSettings.ContractResolver = new DefaultContractResolver(); }); ;
             services.AddCors(c =>
             {
                 c.AddPolicy("AllRequests", policy =>
                 {
                     policy
-                    .AllowAnyOrigin()//允许任何源
+                    .WithOrigins("http://127.0.0.1:80", "http://127.0.0.1:8889", "http://127.0.0.1", "http://127.0.0.1:5000")
                     .AllowAnyMethod()//允许任何方式
-                    .AllowAnyHeader()//允许任何头
-                    .AllowCredentials();//允许cookie
+                    .AllowAnyHeader();//允许任何头
+
                 });
-                //一般采用这种方法  iis也可以设置
-                c.AddPolicy("LimitRequests", policy =>
-                {
-                    policy
-                    .WithOrigins("http://127.0.0.1:8889", "http://localhost:8889")//支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
-                    .AllowAnyHeader()//Ensures that the policy allows any header.
-                    .AllowAnyMethod();
-                });
+                ////一般采用这种方法  iis也可以设置
+                //c.AddPolicy("LimitRequests", policy =>
+                //{
+                //    policy
+                //    .WithOrigins("http://127.0.0.1:80",  "http://127.0.0.1:8889","http://127.0.0.1","http://127.0.0.1:5000"
+                //    ,"127.0.0.1:80/", "127.0.0.1:8889/", "127.0.0.1", "127.0.0.1/", "127.0.0.1:5000/", "127.0.0.1:5000")//支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
+                //    .AllowAnyHeader()//Ensures that the policy allows any header.
+                //    .AllowAnyMethod();
+                //});
             }).AddMvcCore().AddFluentValidation().AddApiExplorer();
+            services.AddMvc(
+           o =>
+           {
+               // 全局异常过滤
+               o.Filters.Add(typeof(GlobalExceptionsFilter));
+           }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddControllersAsServices()
+            .AddJsonOptions(options => { options.SerializerSettings.ContractResolver = new DefaultContractResolver(); });
 
             #region Swagger UI Service
 

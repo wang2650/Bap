@@ -1,6 +1,7 @@
 ﻿using FluentValidation.Results;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace WebApi.Controllers.systemmanage
     /// <summary>
     /// 菜单模块
     /// </summary>
+
     [Route("Api/SystemManage/Department")]
     [ApiController]
     public class DepartmentController : Controller

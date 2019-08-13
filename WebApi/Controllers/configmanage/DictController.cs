@@ -1,6 +1,7 @@
 ﻿using FluentValidation.Results;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace WebApi.Controllers.configmanager
     /// <summary>
     /// 字典管理
     /// </summary>
+
     [Route("Api/Configmanage/Dict")]
     [ApiController]
     public class DictController : Controller
@@ -142,7 +144,7 @@ namespace WebApi.Controllers.configmanager
             ResponseResult result = new ResponseResult();
 
    
-            if (Id>0)
+            if (Id<=0)
             {
                 result.Code = ResponseResultMessageDefine.ParaError;
                 result.Errors.Add("字典id错误");

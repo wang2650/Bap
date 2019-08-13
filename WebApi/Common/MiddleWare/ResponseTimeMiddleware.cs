@@ -21,9 +21,9 @@ namespace WebApi.Common.MiddleWare
         {
 
 
-            context.Response.Headers["server"] = "Tengine/1.1";
-            context.Response.Headers["x-powered-by"] = "";
-            context.Response.Headers["x-powered-by"] = "wxq";
+            //context.Response.Headers["server"] = "Tengine/1.1";
+            //context.Response.Headers["x-powered-by"] = "";
+            //context.Response.Headers["x-powered-by"] = "wxq";
             // Start the Timer using Stopwatch  
             var watch = new Stopwatch();
             watch.Start();

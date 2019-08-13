@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -11,6 +12,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using WebApi.Common;
+using WXQ.Enties.CommonObj;
 using WXQ.InOutPutEntites.Output;
 
 namespace WebApi.Controllers.Customer
@@ -24,6 +26,7 @@ namespace WebApi.Controllers.Customer
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
+        [EnableCors("AllRequests")]
         [HttpPost]
         [AllowAnonymous]
         [WebApi.Common.Log]
@@ -33,7 +36,7 @@ namespace WebApi.Controllers.Customer
             ResponseResult result = new ResponseResult();
 
             var boundary = this.Request.GetMultipartBoundary();
-            string targetDirectory = "\\wwwroot\\uploadfiles";
+            string targetDirectory = "wwwroot\\uploadfiles";
             //检查相应目录
             if (!Directory.Exists(targetDirectory))
             {
@@ -46,25 +49,28 @@ namespace WebApi.Controllers.Customer
             {
                 CancellationToken cancellationToken = new System.Threading.CancellationToken();
                 var section = await reader.ReadNextSectionAsync(cancellationToken);
-         
+
                 while (section != null)
                 {
                     ContentDispositionHeaderValue header = section.GetContentDispositionHeader();
-              
+
                     if (header.FileName.HasValue || header.FileNameStar.HasValue)
                     {
                         var fileSection = section.AsFileSection();
-                     
-                        var fileName = fileSection.FileName;
+
+                        var fileName = Microsoft.Extensions.Primitives.StringValues.IsNullOrEmpty( authStr)? "default.jpg" : authStr.ToString();
+                            //fileSection.FileName;
                         var mimeType = fileSection.Section.ContentType;
                         filePath = Path.Combine(targetDirectory, fileName);
-                 
+
                         using (var writeStream = System.IO.File.Create(filePath))
                         {
                             const int bufferSize = 1024;
                             await fileSection.FileStream.CopyToAsync(writeStream, bufferSize, cancellationToken);
+                            result.Data = "上传成功";
                         }
                     }
+                 
                     //else
                     //{
                     //  取formdata中的信息 
@@ -72,7 +78,7 @@ namespace WebApi.Controllers.Customer
                     //    var name = formDataSection.Name;
                     //    var value = await formDataSection.GetValueAsync();
                     //    uploadSectionInfo.Dicts.Add(new KV(name, value));
-                      
+
                     //}
                     section = await reader.ReadNextSectionAsync(cancellationToken);
                 }
@@ -83,9 +89,11 @@ namespace WebApi.Controllers.Customer
                 {
                     System.IO.File.Delete(filePath);
                 }
+                result.Code = ResponseResultMessageDefine.OpLost;
+                result.Errors.Add(ResponseResultMessageDefine.OpLostMessage);
                 //return (false, "用户取消操作", null);
             }
-  
+
 
             return Json(result);
         }

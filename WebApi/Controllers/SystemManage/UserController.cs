@@ -2,6 +2,7 @@
 using FluentValidation.Results;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
 using System;
@@ -17,6 +18,7 @@ namespace WebApi.Controllers.systemmanage
     /// <summary>
     /// 用户模块
     /// </summary>
+    [DisableCors]
     [Route("Api/SystemManage/User")]
     [ApiController]
     public class UserController : Controller
@@ -230,7 +232,46 @@ namespace WebApi.Controllers.systemmanage
 
             return Json(result);
         }
+        [HttpPost]
+        [AllowAnonymous]
+        [WebApi.Common.Log]
+        [Route("Login2")]
+        public JsonResult Login2([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.User.LoginInput model)
+        {
+            ResponseResult result = new ResponseResult();
 
+            LoginInputModelValidation validator = new LoginInputModelValidation();
+            ValidationResult vr = validator.Validate(model);
+
+            if (!vr.IsValid)
+            {
+                result.Code = ResponseResultMessageDefine.ParaError;
+                result.Errors = vr.Errors.Select(e => e.ErrorMessage).ToList();
+            }
+            else
+            {
+                WXQ.BusinessCore.systemmanage.UserOp op = new WXQ.BusinessCore.systemmanage.UserOp();
+
+                WXQ.Enties.Users userModel = op.Login(model.UserName, model.PassWord);
+
+                if (userModel != null && userModel.ID > 0)
+                {
+                    TokenModelJWT jwtUser = new TokenModelJWT
+                    {
+                        Uid = userModel.ID
+                    };
+
+                    result.Data = JwtHelper.SerializeJWT(jwtUser);
+                }
+                else
+                {
+                    result.Code = ResponseResultMessageDefine.OpLost;
+                    result.Errors.Add(ResponseResultMessageDefine.OpLostMessage);
+                }
+            }
+
+            return Json(result);
+        }
         /// <summary>
         /// 修改密码
         /// </summary>

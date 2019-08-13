@@ -1,6 +1,7 @@
 ﻿using FluentValidation.Results;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace WebApi.Controllers.systemmanage
     /// <summary>
     /// 角色模块
     /// </summary>
+
     [Route("Api/SystemManage/Role")]
     [ApiController]
     public class RoleController : Controller
