@@ -244,55 +244,6 @@
             Nullable:True
             </summary>           
         </member>
-        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.InsertInput.TelePhone">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.InsertInput.RelationPerson">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.InsertInput.Url">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.InsertInput.UserKey">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.InsertInput.Sex">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.InsertInput.Sequence">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.InsertInput.IsMustUseKey">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
         <member name="P:WXQ.InOutPutEntites.Input.SystemManage.User.UpdateInput.Introduction">
             <summary>
             Desc:介绍

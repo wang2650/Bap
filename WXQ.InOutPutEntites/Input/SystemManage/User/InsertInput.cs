@@ -36,57 +36,7 @@ namespace WXQ.InOutPutEntites.Input.SystemManage.User
         /// </summary>           
         public string HeadImage { get; set; }
 
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>           
-        public string TelePhone { get; set; } = "";
-
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>           
-        public string RelationPerson { get; set; } = "";
-
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>           
-        public string Url { get; set; } = "";
-
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>           
-        public byte UserKey { get; set; } = 2;
-
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>           
-        public byte Sex { get; set; } = 1;
-
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>           
-        public short Sequence { get; set; } = 0;
-
-
-
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:True
-        /// </summary>           
-        public byte IsMustUseKey { get; set; } = 2;
-
+      
     }
 
 

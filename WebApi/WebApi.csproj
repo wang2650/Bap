@@ -1,5 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
-
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
@@ -64,6 +63,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\uploadfiles\" />
+    <Folder Include="vuespa\" />
   </ItemGroup>
 
 </Project>

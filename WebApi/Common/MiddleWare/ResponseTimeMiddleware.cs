@@ -19,11 +19,10 @@ namespace WebApi.Common.MiddleWare
         }
         public Task InvokeAsync(HttpContext context)
         {
+            context.Response.Headers["Access-Control-Allow-Origin"] = "*";
+            context.Response.Headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS, DELETE";
+            context.Response.Headers["Access-Control-Allow-Headers"] = "*";
 
-
-            context.Response.Headers["server"] = "Tengine/1.1";
-            context.Response.Headers["x-powered-by"] = "";
-            context.Response.Headers["x-powered-by"] = "wxq";
             // Start the Timer using Stopwatch  
             var watch = new Stopwatch();
             watch.Start();
