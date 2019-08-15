@@ -67,8 +67,7 @@ public class WXQDbContext <T> where T : class, new()
    public SimpleClient<Role> roleDb { get { return new SimpleClient<Role>(Db); } }//用来处理role表的常用操作
    public SimpleClient<RoleMenu> rolemenuDb { get { return new SimpleClient<RoleMenu>(Db); } }//用来处理rolemenu表的常用操作
    public SimpleClient<UserDepartment> userdepartmentDb { get { return new SimpleClient<UserDepartment>(Db); } }//用来处理userdepartment表的常用操作
-   public SimpleClient<UserExtendInfo> userextendinfoDb { get { return new SimpleClient<UserExtendInfo>(Db); } }//用来处理userextendinfo表的常用操作
-   public SimpleClient<UserRole> userroleDb { get { return new SimpleClient<UserRole>(Db); } }//用来处理userrole表的常用操作
+    public SimpleClient<UserRole> userroleDb { get { return new SimpleClient<UserRole>(Db); } }//用来处理userrole表的常用操作
    public SimpleClient<Users> UsersDb { get { return new SimpleClient<Users>(Db); } }//用来处理users表的常用操作
 
 

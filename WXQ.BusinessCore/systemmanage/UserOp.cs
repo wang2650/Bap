@@ -37,24 +37,13 @@ namespace WXQ.BusinessCore.systemmanage
         /// </summary>
         /// <param name="r"></param>
         /// <returns></returns>
-        public bool InsertUsers(WXQ.Enties.Users m, WXQ.Enties.UserExtendInfo model)
+        public bool InsertUsers(WXQ.Enties.Users m)
         {
             UsersManager UsersManager = new UsersManager();
             m.AddUser = this.OpUserId.ToString();
             m.Password = CommonLib.Helpers.Encrypt.Sha256(passwordRndSeed + m.Password);
 
             int userId=  UsersManager.InsertReturnInt(m);
-            if (userId>0)
-            {
-                UserExtendinfoManager extendinfoManager = new UserExtendinfoManager();
-                model.UserId = userId;
-
-                extendinfoManager.Insert(model);
-
-            }
-            
-
-
 
             return userId>0;
         }
@@ -64,33 +53,15 @@ namespace WXQ.BusinessCore.systemmanage
         /// </summary>
         /// <param name="r"></param>
         /// <returns></returns>
-        public bool UpdateUsers(WXQ.Enties.Users m, WXQ.Enties.UserExtendInfo model)
+        public bool UpdateUsers(WXQ.Enties.Users m)
         {
-            bool result = true;
+           
             UsersManager UsersManager = new UsersManager();
 
             m.RowVersion = m.RowVersion + 1;
             m.UpdateUser = this.OpUserId.ToString();
 
-
-            UserExtendinfoManager extendinfoManager = new UserExtendinfoManager();
-            model.UserId = m.ID;
-            var  ltUserExtent=  extendinfoManager.GetList(ue => ue.UserId == m.ID);
-            if (ltUserExtent!=null&& ltUserExtent.Count>0)
-            {
-                model.Id = ltUserExtent[0].Id;
-                result= extendinfoManager.Update(model);
-            }
-            else
-            {
-                result= extendinfoManager.Insert(model);
-            }
-
-
-
-            
-
-            return result&&UsersManager.Db.Updateable<WXQ.Enties.Users>(m).SetColumns(it => new WXQ.Enties.Users()
+            return UsersManager.Db.Updateable<WXQ.Enties.Users>(m).SetColumns(it => new WXQ.Enties.Users()
             {
                 HeadImage = m.HeadImage,
                 Introduction = m.Introduction
@@ -242,45 +213,7 @@ namespace WXQ.BusinessCore.systemmanage
 
         }
 
-        /// <summary>
-        /// 查找用户
-        /// </summary>
-        /// <param name="userName">用户名或昵称</param>
-        /// <param name="pageModel">分页</param>
-        /// <param name="rsState">记录状态</param>
-        /// <returns></returns>
-
-        public ListResult<UserIncludeExtentd> GetUserIncludeExtentdList(string userName, PageModel pageModel, int rsState = 1)
-        {
-            UsersManager UsersManager = new UsersManager();
-            ListResult<UserIncludeExtentd> result = new ListResult<UserIncludeExtentd>();
-            int total = 0;
-            System.Linq.Expressions.Expression<Func<UserIncludeExtentd, bool>> express = Expressionable.Create<UserIncludeExtentd>()
-                          .AndIF(!string.IsNullOrEmpty(userName), m => SqlFunc.Contains(m.NickName, userName) || SqlFunc.Contains(m.UserName, userName))
-                          .AndIF(rsState > 1, it => it.RsState == rsState).ToExpression();//拼接表达式
-
-            var q = UsersManager.Db.Queryable<WXQ.Enties.Users, WXQ.Enties.UserExtendInfo>((u, e) => new object[] {
-             JoinType.Left,u.ID==e.UserId}).Select((u, e) => new UserIncludeExtentd { ID = u.ID, Password = "", AddDateTime = u.AddDateTime, RsState = u.RsState,
-                 Introduction = u.Introduction,
-                 UserName = u.UserName,
-                 NickName = u.NickName,
-                 TelePhone = e.TelePhone,
-                 RelationPerson = e.RelationPerson,
-                 UserKey = e.UserKey,
-                 Sex = e.Sex,
-                 IsMustUseKey = e.IsMustUseKey
-             }).Where(express);
-            List<UserIncludeExtentd> list =      q.ToPageList(pageModel.PageIndex,pageModel.PageSize,ref total);
-           
-
-            result.Result = list;
-
-
-            result.PageSize = pageModel.PageSize;
-            result.PageIndex = pageModel.PageIndex;
-            result.Total = total;
-            return result;
-        }
+     
 
         public ListResult<WXQ.Enties.Users> GetUserList(string userName, PageModel pageModel, int rsState = 1)
         {
