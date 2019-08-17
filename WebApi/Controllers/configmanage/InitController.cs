@@ -21,6 +21,7 @@ namespace WebApi.Controllers.configmanage
         [Route("InitDataBase")]
         public JsonResult InitDataBase()
         {
+
             ResponseResult result = new ResponseResult();
             Logger logger = LogManager.GetLogger("initlog");
         
