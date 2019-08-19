@@ -50,6 +50,10 @@ namespace WXQ.BusinessCore.systemmanage
         private List<string> CreateTable(List<string> result)
         {
             DatabaseManager dbManager = new DatabaseManager();
+            try
+            {
+
+            
             dbManager.Db.CodeFirst.InitTables(typeof(WXQ.Enties.Department));
             result.Add("Department 创建完成");
 
@@ -91,18 +95,29 @@ namespace WXQ.BusinessCore.systemmanage
 
             dbManager.Db.CodeFirst.InitTables(typeof(WXQ.Enties.Users));
             result.Add("Users 创建完成");
+            }
+            catch (Exception ex)
+            {
+                result.Add("创建表错误"+ex.Message);
 
+            }
             return result;
         }
 
         private List<string> CreateUser(List<string> result)
         {
+
+            UsersManager UsersManager = new UsersManager();
+
+             UsersManager.Delete(um=> um.UsersId > 0);
+
             WXQ.BusinessCore.systemmanage.UserOp op = new UserOp(0);
+
             WXQ.Enties.Users u = new Enties.Users();
             u.NickName = "超级管理员";
             u.UserName = "administrator";
             u.Introduction = "这是一个超级管理员账号，不要删除";
-            u.Password = "e0662446dc3e1fe50801cae1b6e01b336263a9772cafe5abbf7ae677ae61c5e9";//密码12345678
+            u.Password = "12345678";//密码12345678
 
            if (op.InsertUsers(u))
             {
@@ -117,6 +132,11 @@ namespace WXQ.BusinessCore.systemmanage
         }
         private List<string> CreateDepartment(List<string> result)
         {
+            DepartmentManager   UsersManager = new DepartmentManager();
+
+            UsersManager.Delete(um => um.UsersId > 0);
+
+
             WXQ.BusinessCore.systemmanage.DepartmentOp op = new DepartmentOp(0);
             WXQ.Enties.Department department = new Enties.Department();
             department.ParentId = 0;

@@ -16,9 +16,9 @@ namespace WXQ.Enties
 
            }
         /// <summary>
-        /// 用户
+        /// 密码
         /// </summary>           
-        [SugarColumn(Length = 20, IsNullable = false, ColumnDescription = "用户")] public string Password {get;set;} = string.Empty;
+        [SugarColumn(Length = 100, IsNullable = false, ColumnDescription = "密码")] public string Password {get;set;} = string.Empty;
 
         /// <summary>
         /// 头像

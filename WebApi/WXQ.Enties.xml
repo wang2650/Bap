@@ -501,7 +501,7 @@
         </member>
         <member name="P:WXQ.Enties.Users.Password">
             <summary>
-            用户
+            密码
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Users.HeadImage">

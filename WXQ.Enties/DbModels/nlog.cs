@@ -18,7 +18,7 @@ namespace WXQ.Enties
         /// <summary>
         ///记录日期
         /// </summary>           
-        [SugarColumn(Length = 100, IsNullable = false   ,ColumnDescription = "记录日期")] public DateTime Logged { get; set; } = DateTime.Now;
+        [SugarColumn( IsNullable = false   ,ColumnDescription = "记录日期")] public DateTime Logged { get; set; } = DateTime.Now;
 
         /// <summary>
         /// 日志级别:

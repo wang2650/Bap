@@ -140,6 +140,9 @@ namespace WXQ.BusinessCore.systemmanage
                 .Where(u => u.UsersId == m.UsersId).ExecuteCommand() > 0;
         }
 
+
+    
+
         /// <summary>
         /// 删除用户根据主键
         /// </summary>
