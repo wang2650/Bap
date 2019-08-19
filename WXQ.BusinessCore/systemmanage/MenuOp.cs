@@ -26,7 +26,13 @@ namespace WXQ.BusinessCore.systemmanage
 
             return MenuManager.Insert(model);
         }
+        public int InsertMenuReturnId(WXQ.Enties.Menu model)
+        {
+            model.AddUser = this.OpUserId.ToString();
+            MenuManager MenuManager = new MenuManager();
 
+            return MenuManager.InsertReturnInt(model);
+        }
         /// <summary>
         /// 修改菜单
         /// </summary>

@@ -78,7 +78,7 @@ namespace WXQ.BusinessCore.systemmanage
             ListResult<WXQ.Enties.Department> result = new ListResult<Enties.Department>
             {
                 Result = DepartmentManager.Db.Queryable<Enties.Department>().WhereIF(!string.IsNullOrEmpty(departmentName), m => SqlFunc.Contains(m.DepartmentName, departmentName))
-                    .WhereIF(rsState > -1, it => it.ParentId == parentId)
+                    .WhereIF(parentId > -1, it => it.ParentId == parentId)
                     .WhereIF(rsState > 1, it => it.RsState == rsState)
                    .ToPageList(pageIndex, pageSize, ref totalRs),
 
