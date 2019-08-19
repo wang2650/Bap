@@ -6,99 +6,45 @@ using SqlSugar;
 namespace WXQ.Enties
 {
     ///<summary>
-    ///
+    ///用户
     ///</summary>
-    [SugarTable("tb_users")]
-    public partial class Users
+    [SugarTable("tb_users", "用户")]
+    public partial class Users : WXQ.Enties.DbModels.BaseModel
     {
            public Users(){
 
 
            }
-           /// <summary>
-           /// Desc:密码
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string Password {get;set;}
+        /// <summary>
+        /// 密码
+        /// </summary>           
+        [SugarColumn(Length = 100, IsNullable = false, ColumnDescription = "密码")] public string Password {get;set;} = string.Empty;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string HeadImage {get;set;}
+        /// <summary>
+        /// 头像
+        /// </summary>           
+        [SugarColumn(Length = 100, IsNullable = false, ColumnDescription = "头像")] public string HeadImage {get;set;} = string.Empty;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public DateTime? AddDateTime {get;set;}
+        /// <summary>
+        /// 主键
+        /// </summary>           
+        [SugarColumn(IsPrimaryKey=true,IsIdentity= true, ColumnDescription = "主键")]
+           public int UsersId {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public byte? RsState {get;set;}
+        /// <summary>
+        /// 介绍
+        /// </summary>           
+        [SugarColumn(Length = 200, IsNullable = false, ColumnDescription = "介绍")] public string Introduction {get;set;} = string.Empty;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public DateTime? UpdateDateTime {get;set;}
+        /// <summary>
+        ///用户名
+        /// </summary>           
+        [SugarColumn(Length = 20, IsNullable = false, ColumnDescription = "用户名")] public string UserName {get;set;} = string.Empty;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string AddUser {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string UpdateUser {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public int? RowVersion {get;set;}
-
-           /// <summary>
-           /// Desc:主键
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
-           [SugarColumn(IsPrimaryKey=true,IsIdentity=true)]
-           public int ID {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string Introduction {get;set;}
-
-           /// <summary>
-           /// Desc:用户名
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string UserName {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string NickName {get;set;}
+        /// <summary>
+        /// 昵称
+        /// </summary>           
+        [SugarColumn(Length = 20, IsNullable = false, ColumnDescription = "昵称")] public string NickName {get;set;} = string.Empty;
 
     }
 }

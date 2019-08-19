@@ -13,7 +13,7 @@ namespace WXQ.InOutPutEntites.Input.SystemManage.User
 
     public class UpdateUsersStateInput
     {
-        public int ID { get; set; }
+        public int UserID { get; set; }
 
         /// <summary>
         /// Desc:版本号
@@ -32,7 +32,7 @@ namespace WXQ.InOutPutEntites.Input.SystemManage.User
         public UpdateUsersStateInputModelValidation()
         {
             CascadeMode = CascadeMode.StopOnFirstFailure;
-            RuleFor(x => x.ID).NotEmpty().WithMessage("用户id不能为空");
+            RuleFor(x => x.UserID).NotEmpty().WithMessage("用户id不能为空");
             RuleFor(x => x.RowVersion).NotEmpty().WithMessage("版本号不能为空");
             RuleFor(x => x.RsState).NotEmpty().WithMessage("状态值不能为空");
 

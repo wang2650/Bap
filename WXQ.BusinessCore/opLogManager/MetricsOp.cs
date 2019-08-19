@@ -35,8 +35,8 @@ namespace WXQ.BusinessCore.opLogManager
 
             System.Linq.Expressions.Expression<Func<Enties.Metrics, bool>> express = Expressionable.Create<WXQ.Enties.Metrics>()
                           .AndIF(!string.IsNullOrEmpty(methodName), m => SqlFunc.Contains(m.MethodName, methodName))
-                          .AndIF(bgDt < DateTime.Now, m => m.CreateDateTIme >= bgDt)
-                          .AndIF(endDt >= bgDt, m => m.CreateDateTIme <= endDt)
+                          .AndIF(bgDt < DateTime.Now, m => m.AddDateTime >= bgDt)
+                          .AndIF(endDt >= bgDt, m => m.AddDateTime <= endDt)
                            .AndIF(CostTime > 0, m => m.CostTime > CostTime)
                           .ToExpression();//拼接表达式
             result.Result= metricsManager.GetPageList(express, pageModel);
@@ -63,8 +63,8 @@ namespace WXQ.BusinessCore.opLogManager
 
             System.Linq.Expressions.Expression<Func<Enties.Metrics, bool>> express = Expressionable.Create<WXQ.Enties.Metrics>()
                           .AndIF(!string.IsNullOrEmpty(methodName), m => SqlFunc.Contains(m.MethodName, methodName))
-                          .AndIF(bgDt < DateTime.Now, m => m.CreateDateTIme >= bgDt)
-                          .AndIF(endDt >= bgDt, m => m.CreateDateTIme <= endDt)
+                          .AndIF(bgDt < DateTime.Now, m => m.AddDateTime >= bgDt)
+                          .AndIF(endDt >= bgDt, m => m.AddDateTime <= endDt)
                            .AndIF(CostTime > 0, m => m.CostTime > CostTime)
                           .ToExpression();//拼接表达式
          return   metricsManager.Delete(express);

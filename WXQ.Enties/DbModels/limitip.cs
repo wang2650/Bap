@@ -6,50 +6,31 @@ using SqlSugar;
 namespace WXQ.Enties
 {
     ///<summary>
-    ///
+    /// ip地址限制
     ///</summary>
-    [SugarTable("tb_limitip")]
-    public partial class LimitIp
+    [SugarTable("tb_limitip", "ip地址限制")]
+    public partial class LimitIp : WXQ.Enties.DbModels.BaseModel
     {
            public LimitIp(){
 
 
            }
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string IpEnd {get;set;}
+        /// <summary>
+        /// 截止ip
+        /// </summary>           
+        [SugarColumn(Length = 50, IsNullable = false   ,ColumnDescription = "截止ip")] public string IpEnd {get;set; } = string.Empty;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public short? RelationType {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public int? RelationId {get;set;}
+        /// <summary>
+        /// 主键
+        /// </summary>           
+        [SugarColumn(IsPrimaryKey=true,IsIdentity=true   ,ColumnDescription = "主键")]
+           public int LimitId {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
-           [SugarColumn(IsPrimaryKey=true,IsIdentity=true)]
-           public int Id {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string IPBegin {get;set;}
+        /// <summary>
+        /// 起始ip
+        /// </summary>           
+        [SugarColumn(Length = 50, IsNullable = false   ,ColumnDescription = "起始ip")] public string IPBegin {get;set; } = string.Empty;
 
     }
 }

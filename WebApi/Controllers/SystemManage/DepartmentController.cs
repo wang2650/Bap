@@ -34,7 +34,7 @@ namespace WebApi.Controllers.systemmanage
         [Authorize("common")]
         [WebApi.Common.Log]
         [Route("InsertDepartment")]
-        public JsonResult InsertDepartment([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Department.InsertDepartmentInput model)
+        public JsonResult InsertDepartment([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Department.InsertDepartmentInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -83,7 +83,7 @@ namespace WebApi.Controllers.systemmanage
         [Authorize("common")]
         [WebApi.Common.Log]
         [Route("UpdateDepartment")]
-        public JsonResult UpdateDepartment([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Department.UpdateDepartmentInput model)
+        public JsonResult UpdateDepartment([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Department.UpdateDepartmentInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -102,7 +102,7 @@ namespace WebApi.Controllers.systemmanage
 
                 WXQ.Enties.Department r = new WXQ.Enties.Department
                 {
-                    Id=model.Id,
+                    DepartmentId=model.DepartmentId,
                     UpdateDateTime = DateTime.Now,
                     UpdateUser = this.User.Identity.Name,
                     Description = model.Description,
@@ -173,7 +173,7 @@ namespace WebApi.Controllers.systemmanage
         [HttpPost]
         [Route("GetDepartmentList")]
         [WebApi.Common.Log]
-        public JsonResult GetDepartmentList([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Department.GetDepartmentListInput model)
+        public JsonResult GetDepartmentList([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Department.GetDepartmentListInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -216,7 +216,7 @@ namespace WebApi.Controllers.systemmanage
         [HttpPost]
         [Route("GetDepartmentListByUserId")]
         [WebApi.Common.Log]
-        public JsonResult GetDepartmentListByUserId([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Department.GetDepartmentListByUserIdInput model)
+        public JsonResult GetDepartmentListByUserId([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Department.GetDepartmentListByUserIdInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -342,7 +342,7 @@ namespace WebApi.Controllers.systemmanage
         /// <returns></returns>
         [HttpPost]
         [Route("GetUserListByDepartmentId")]
-        public JsonResult GetUserListByDepartmentId([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Department.GetUserListByDepartmentIdInput model)
+        public JsonResult GetUserListByDepartmentId([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Department.GetUserListByDepartmentIdInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -385,7 +385,7 @@ namespace WebApi.Controllers.systemmanage
         [Route("AddUserForDepartment")]
         [WebApi.Common.Log]
         [Authorize("common")]
-        public JsonResult AddUserForDepartment([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Department.ModifyUserForDepartmentInput model)
+        public JsonResult AddUserForDepartment([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Department.ModifyUserForDepartmentInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -428,7 +428,7 @@ namespace WebApi.Controllers.systemmanage
         [Route("RemoveUserForDepartment")]
         [WebApi.Common.Log]
         [Authorize("common")]
-        public JsonResult RemoveUserForDepartment([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Department.ModifyUserForDepartmentInput model)
+        public JsonResult RemoveUserForDepartment([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Department.ModifyUserForDepartmentInput model)
         {
             ResponseResult result = new ResponseResult();
 

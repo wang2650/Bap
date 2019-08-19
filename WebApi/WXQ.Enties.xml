@@ -94,1250 +94,439 @@
             停用
             </summary>
         </member>
+        <member name="P:WXQ.Enties.DbModels.BaseModel.AddDateTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.BaseModel.UpdateDateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.BaseModel.AddUser">
+            <summary>
+            添加人
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.BaseModel.UpdateUser">
+            <summary>
+            更新人
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.BaseModel.RsState">
+            <summary>
+            记录状态
+            </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.BaseModel.RowVersion">
+             <summary>
+            版本号
+             </summary>
+        </member>
         <member name="T:WXQ.Enties.Department">
             <summary>
-            
+            部门
             </summary>
         </member>
         <member name="P:WXQ.Enties.Department.DepartmentName">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+            Desc:部门名
+            </summary>
         </member>
         <member name="P:WXQ.Enties.Department.Description">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+              描述
+            </summary>
         </member>
-        <member name="P:WXQ.Enties.Department.AddDateTime">
+        <member name="P:WXQ.Enties.Department.DepartmentId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Department.UpdateDateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Department.AddUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Department.UpdateUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Department.Id">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Department.RowVersion">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+            主键
+            </summary>
         </member>
         <member name="P:WXQ.Enties.Department.ParentId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Department.RsState">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="T:WXQ.Enties.DbModels.DepartmentInfo">
-            <summary>
-            单位
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWMCJP">
-            <summary>
-            单位名称简拼
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWDM">
-            <summary>
-            单位代码
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YPFZS">
-            <summary>
-            应配副职数
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCLPZWH">
-            <summary>
-            单位成立批准文号
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWMCBC">
-            <summary>
-            单位名称补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWJC3">
-            <summary>
-            单位简称三
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.GKGLDWMC">
-            <summary>
-            归口管理单位名称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSSXT">
-            <summary>
-            单位所属系统
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.GKGLDWMCBC">
-            <summary>
-            归口管理单位名称补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YPZSBC">
-            <summary>
-            应配职数补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWMCLB">
-            <summary>
-            单位名称类别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YZGDYBSS">
-            <summary>
-            有中共党员标识
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YPZZS">
-            <summary>
-            应配正职数
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LDBZXGDWMC">
-            <summary>
-            领导班子协管单位名称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWBGYY">
-            <summary>
-            单位变更原因
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.GBGLDWBS">
-            <summary>
-            干部管理单位标示
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSZZQ">
-            <summary>
-            单位所在政区
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWXZLB">
-            <summary>
-            单位性质类别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWBM">
-            <summary>
-            单位编码
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.XYFZS">
-            <summary>
-            现有副职数
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCXPZWH">
-            <summary>
-            单位撤销批准文号
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSHY">
-            <summary>
-            单位所属行业
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.JGTJBS">
-            <summary>
-            机构统计标识
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LDBZZGDWMCBC">
-            <summary>
-            领导班子主管单位名称补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LSDWMCBC">
-            <summary>
-            隶属单位名称补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DGDWBS">
-            <summary>
-            党管单位标示
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWJB">
-            <summary>
-            单位级别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWJC">
-            <summary>
-            单位简称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWGZZN">
-            <summary>
-            单位工作职能
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWGLCCBS">
-            <summary>
-            单位管理层次标识
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSSBMTJBS">
-            <summary>
-            单位所属部门统计标识
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCXPZJGMCBC">
-            <summary>
-            单位撤销批准机关名称补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YZGZZBS">
-            <summary>
-            有中共组织标识
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.GKGLCS">
-            <summary>
-            归口管理处室
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.FSJZS">
-            <summary>
-            副书记职数
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWBZ">
-            <summary>
-            单位备注
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LDBZZGDWMC">
-            <summary>
-            领导班子主管单位名称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.ZP">
-            <summary>
-            照片
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LSDWMC">
-            <summary>
-            隶属单位名称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.XYZZS">
-            <summary>
-            现有正职数
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWYX">
-            <summary>
-            单位影像
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCLPZRQ">
-            <summary>
-            单位成立批准日期
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWLSGX">
-            <summary>
-            单位隶属关系
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCXPZJGMC">
-            <summary>
-            单位撤销批准机关名称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCLPZJGMCBC">
-            <summary>
-            单位成立批准机关名称补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWGLZNLB">
-            <summary>
-            单位管理职能类别
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCLPZJGMC">
-            <summary>
-            单位成立批准机关名称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSSXTMC">
-            <summary>
-            单位所属系统（名册）
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWFZR">
-            <summary>
-            单位负责人
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWMC">
-            <summary>
-            单位名称
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.FRDWBS">
-            <summary>
-            法人单位标识
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.YLSDWGXBS">
-            <summary>
-            与隶属单位关系标识
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.LDBZXGDWMCBC">
-            <summary>
-            领导班子协管单位名称补充
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWCXPZRQ">
-            <summary>
-            单位撤销批准日期
-            </summary>
-        </member>
-        <member name="P:WXQ.Enties.DbModels.DepartmentInfo.DWSM">
-            <summary>
-            单位缩名
+            父id
             </summary>
         </member>
         <member name="T:WXQ.Enties.DepartmentRole">
             <summary>
-            
+            部门角色关系
             </summary>
         </member>
         <member name="P:WXQ.Enties.DepartmentRole.DepartmentId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            部门id
             </summary>           
         </member>
-        <member name="P:WXQ.Enties.DepartmentRole.AddDateTime">
+        <member name="P:WXQ.Enties.DepartmentRole.DepartmentRoleId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.DepartmentRole.UpdateDateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.DepartmentRole.AddUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.DepartmentRole.UpdateUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.DepartmentRole.RowVersion">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.DepartmentRole.Id">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.DepartmentRole.RsState">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
+            主键
             </summary>           
         </member>
         <member name="P:WXQ.Enties.DepartmentRole.RoleId">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+             <summary>
+            角色id
+             </summary>           
         </member>
         <member name="T:WXQ.Enties.Dict">
             <summary>
-            
+            字典
             </summary>
         </member>
         <member name="P:WXQ.Enties.Dict.DictValue">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            字典值
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Dict.GroupName">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+             <summary>
+            分组
+             </summary>           
         </member>
         <member name="P:WXQ.Enties.Dict.DictType">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Dict.CreateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
+            数据类型
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Dict.OrderBy">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+             <summary>
+            排序
+             </summary>           
         </member>
-        <member name="P:WXQ.Enties.Dict.CreateUser">
+        <member name="P:WXQ.Enties.Dict.DictId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Dict.UpdateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Dict.Id">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Dict.UpdateUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
+            主键
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Dict.DictKey">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            字典key
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Dict.Description">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            描述
             </summary>           
         </member>
         <member name="T:WXQ.Enties.LimitIp">
             <summary>
-            
+             ip地址限制
             </summary>
         </member>
         <member name="P:WXQ.Enties.LimitIp.IpEnd">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            截止ip
             </summary>           
         </member>
-        <member name="P:WXQ.Enties.LimitIp.RelationType">
+        <member name="P:WXQ.Enties.LimitIp.LimitId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.LimitIp.RelationId">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.LimitIp.Id">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
+            主键
             </summary>           
         </member>
         <member name="P:WXQ.Enties.LimitIp.IPBegin">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            起始ip
             </summary>           
         </member>
         <member name="T:WXQ.Enties.Menu">
             <summary>
-            
+            菜单
             </summary>
         </member>
         <member name="P:WXQ.Enties.Menu.Description">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            描述
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Menu.Url">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            地址
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Menu.ParentId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Menu.RsState">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Menu.AddDateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
+            父id
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Menu.Icon">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            图标
             </summary>           
         </member>
-        <member name="P:WXQ.Enties.Menu.UpdateDateTime">
+        <member name="P:WXQ.Enties.Menu.MenuId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Menu.AddUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Menu.UpdateUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Menu.Id">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Menu.RowVersion">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
+            主键
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Menu.MenuName">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            菜单名称
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Menu.MenuType">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            菜单类型
             </summary>           
         </member>
         <member name="T:WXQ.Enties.MenuPageElement">
             <summary>
-            
+            页面元素
             </summary>
         </member>
         <member name="P:WXQ.Enties.MenuPageElement.ElementName">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            页面元素名称
             </summary>           
         </member>
         <member name="P:WXQ.Enties.MenuPageElement.Description">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            描述
             </summary>           
         </member>
-        <member name="P:WXQ.Enties.MenuPageElement.AddDateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.MenuPageElement.UpdateDateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.MenuPageElement.AddUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.MenuPageElement.UpdateUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.MenuPageElement.Id">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.MenuPageElement.RowVersion">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+        <member name="P:WXQ.Enties.MenuPageElement.MenuPageElementId">
+             <summary>
+            主键
+             </summary>           
         </member>
         <member name="P:WXQ.Enties.MenuPageElement.MenuId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.MenuPageElement.RsState">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
+            菜单id
             </summary>           
         </member>
         <member name="T:WXQ.Enties.Metrics">
             <summary>
-            
+            方法度量值
             </summary>
-        </member>
-        <member name="P:WXQ.Enties.Metrics.CreateDateTIme">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
         </member>
         <member name="P:WXQ.Enties.Metrics.CostTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            消耗时间
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Metrics.AppId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            应用id
             </summary>           
         </member>
-        <member name="P:WXQ.Enties.Metrics.Id">
+        <member name="P:WXQ.Enties.Metrics.MetricsId">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            主键
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Metrics.MethodName">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            方法名
             </summary>           
         </member>
         <member name="T:WXQ.Enties.nlog">
             <summary>
-            
+            日志
             </summary>
         </member>
         <member name="P:WXQ.Enties.nlog.Logged">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+             <summary>
+            记录日期
+             </summary>           
         </member>
         <member name="P:WXQ.Enties.nlog.Level">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            日志级别:
             </summary>           
         </member>
         <member name="P:WXQ.Enties.nlog.Message">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+             <summary>
+            消息内容:
+             </summary>           
         </member>
         <member name="P:WXQ.Enties.nlog.Logger">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            日志名
             </summary>           
         </member>
         <member name="P:WXQ.Enties.nlog.CallSite">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            调用网站
             </summary>           
         </member>
-        <member name="P:WXQ.Enties.nlog.Id">
+        <member name="P:WXQ.Enties.nlog.NlogId">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            主键
             </summary>           
         </member>
         <member name="P:WXQ.Enties.nlog.Application">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            应用名
             </summary>           
         </member>
         <member name="T:WXQ.Enties.OpLog">
             <summary>
-            
+             操作日志
             </summary>
         </member>
         <member name="P:WXQ.Enties.OpLog.ControllerName">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            控制器
             </summary>           
         </member>
         <member name="P:WXQ.Enties.OpLog.CreateDateTime">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            创建日期
             </summary>           
         </member>
         <member name="P:WXQ.Enties.OpLog.OpUser">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            操作者
             </summary>           
         </member>
         <member name="P:WXQ.Enties.OpLog.ParaValue">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+             <summary>
+            参数
+             </summary>           
         </member>
         <member name="P:WXQ.Enties.OpLog.AppId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            应用id
             </summary>           
         </member>
         <member name="P:WXQ.Enties.OpLog.Ip">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            ip
             </summary>           
         </member>
-        <member name="P:WXQ.Enties.OpLog.Id">
+        <member name="P:WXQ.Enties.OpLog.OpLogId">
             <summary>
-            Desc:
-            Default:
-            Nullable:False
+            主键
             </summary>           
         </member>
         <member name="P:WXQ.Enties.OpLog.Brower">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            浏览器
             </summary>           
         </member>
         <member name="P:WXQ.Enties.OpLog.MethodName">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            方法名
             </summary>           
         </member>
         <member name="P:WXQ.Enties.OpLog.navigator">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+             <summary>
+            导航
+             </summary>           
         </member>
         <member name="T:WXQ.Enties.Role">
             <summary>
-            
+            角色
             </summary>
         </member>
         <member name="P:WXQ.Enties.Role.Description">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            描述
             </summary>           
         </member>
-        <member name="P:WXQ.Enties.Role.AddDateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Role.UpdateDateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Role.AddUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Role.UpdateUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Role.RowVersion">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Role.Id">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Role.RsState">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+        <member name="P:WXQ.Enties.Role.RoleId">
+             <summary>
+            主键Id
+             </summary>           
         </member>
         <member name="P:WXQ.Enties.Role.RoleName">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            角色名
             </summary>           
         </member>
         <member name="T:WXQ.Enties.RoleMenu">
             <summary>
-            
+            角色菜单关联
             </summary>
         </member>
         <member name="P:WXQ.Enties.RoleMenu.MenuId">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+             <summary>
+            菜单id
+             </summary>           
         </member>
-        <member name="P:WXQ.Enties.RoleMenu.AddDateTime">
+        <member name="P:WXQ.Enties.RoleMenu.RoleMenuId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.RoleMenu.UpdateDateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.RoleMenu.AddUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.RoleMenu.UpdateUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.RoleMenu.RowVersion">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.RoleMenu.Id">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.RoleMenu.RsState">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
+            主键
             </summary>           
         </member>
         <member name="P:WXQ.Enties.RoleMenu.RoleId">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+             <summary>
+            角色id
+             </summary>           
         </member>
         <member name="T:WXQ.Enties.UserDepartment">
             <summary>
-            
+            用户部门表
             </summary>
         </member>
         <member name="P:WXQ.Enties.UserDepartment.DepartmentId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            部门id
             </summary>           
         </member>
-        <member name="P:WXQ.Enties.UserDepartment.AddDateTime">
+        <member name="P:WXQ.Enties.UserDepartment.UserDepartmentId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserDepartment.UpdateDateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserDepartment.AddUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserDepartment.UpdateUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserDepartment.RowVersion">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserDepartment.Id">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserDepartment.RsState">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
+            主键
             </summary>           
         </member>
         <member name="P:WXQ.Enties.UserDepartment.UserId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            用户id
             </summary>           
         </member>
         <member name="T:WXQ.Enties.UserRole">
             <summary>
-            
+             用户角色表
             </summary>
         </member>
         <member name="P:WXQ.Enties.UserRole.UserId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            用户id
             </summary>           
         </member>
-        <member name="P:WXQ.Enties.UserRole.AddDateTime">
+        <member name="P:WXQ.Enties.UserRole.UserRoleId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserRole.UpdateDateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserRole.AddUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserRole.UpdateUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserRole.RowVersion">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserRole.Id">
-            <summary>
-            Desc:
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.UserRole.RsState">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
+            主键
             </summary>           
         </member>
         <member name="P:WXQ.Enties.UserRole.RoleId">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
+             <summary>
+            角色id
+             </summary>           
         </member>
         <member name="T:WXQ.Enties.Users">
             <summary>
-            
+            用户
             </summary>
         </member>
         <member name="P:WXQ.Enties.Users.Password">
             <summary>
-            Desc:密码
-            Default:
-            Nullable:True
+            密码
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Users.HeadImage">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            头像
             </summary>           
         </member>
-        <member name="P:WXQ.Enties.Users.AddDateTime">
+        <member name="P:WXQ.Enties.Users.UsersId">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Users.RsState">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Users.UpdateDateTime">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Users.AddUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Users.UpdateUser">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Users.RowVersion">
-            <summary>
-            Desc:
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:WXQ.Enties.Users.ID">
-            <summary>
-            Desc:主键
-            Default:
-            Nullable:False
+            主键
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Users.Introduction">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            介绍
             </summary>           
         </member>
         <member name="P:WXQ.Enties.Users.UserName">
-            <summary>
-            Desc:用户名
-            Default:
-            Nullable:True
-            </summary>           
+             <summary>
+            用户名
+             </summary>           
         </member>
         <member name="P:WXQ.Enties.Users.NickName">
             <summary>
-            Desc:
-            Default:
-            Nullable:True
+            昵称
             </summary>           
         </member>
     </members>

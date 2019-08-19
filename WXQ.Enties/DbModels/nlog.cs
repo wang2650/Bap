@@ -6,64 +6,50 @@ using SqlSugar;
 namespace WXQ.Enties
 {
     ///<summary>
-    ///
+    ///日志
     ///</summary>
-    [SugarTable("tb_nlog")]
-    public partial class nlog
+    [SugarTable("tb_nlog", "日志")]
+    public partial class nlog : WXQ.Enties.DbModels.BaseModel
     {
            public nlog(){
 
 
            }
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public DateTime? Logged {get;set;}
+        /// <summary>
+        ///记录日期
+        /// </summary>           
+        [SugarColumn( IsNullable = false   ,ColumnDescription = "记录日期")] public DateTime Logged { get; set; } = DateTime.Now;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string Level {get;set;}
+        /// <summary>
+        /// 日志级别:
+        /// </summary>           
+        [SugarColumn(Length = 100, IsNullable = false   ,ColumnDescription = "日志级别")] public string Level {get;set;} = string.Empty;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string Message {get;set;}
+        /// <summary>
+        ///消息内容:
+        /// </summary>           
+        [SugarColumn(Length = 2000, IsNullable = false   ,ColumnDescription = "消息内容")] public string Message {get;set;} = string.Empty;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string Logger {get;set;}
+        /// <summary>
+        /// 日志名
+        /// </summary>           
+        [SugarColumn(Length = 100, IsNullable = false   ,ColumnDescription = "日志名")] public string Logger {get;set;} = string.Empty;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string CallSite {get;set;}
+        /// <summary>
+        /// 调用网站
+        /// </summary>           
+        [SugarColumn(Length = 100, IsNullable = false   ,ColumnDescription = "调用网站")] public string CallSite {get;set;} = string.Empty;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
-           [SugarColumn(IsPrimaryKey=true,IsIdentity=true)]
-           public int Id {get;set;}
+        /// <summary>
+        /// 主键
+        /// </summary>           
+        [SugarColumn(IsPrimaryKey=true,IsIdentity=true   ,ColumnDescription = "主键")]
+           public int NlogId {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string Application {get;set;}
+        /// <summary>
+        /// 应用名
+        /// </summary>           
+        [SugarColumn(Length = 100, IsNullable = false   ,ColumnDescription = "应用名")] public string Application {get;set;} = string.Empty;
 
     }
 }

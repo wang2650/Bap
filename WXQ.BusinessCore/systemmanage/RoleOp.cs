@@ -26,7 +26,7 @@ namespace WXQ.BusinessCore.systemmanage
             int totalRs = 0;
 
             result.Result = roleManager.Db.Queryable<WXQ.Enties.DepartmentRole, WXQ.Enties.Role>((dr, r) => new object[] {
-                    JoinType.Left,dr.RoleId==r.Id})
+                    JoinType.Left,dr.RoleId==r.RoleId})
                   .Where((dr, r) => r.RsState == rsState && dr.DepartmentId == departmentId)
                   .WhereIF(!string.IsNullOrEmpty(roleName), (dr, r) => SqlFunc.Contains(r.RoleName, roleName))
                   .Select((dr, r) => r).ToPageList(pageModel.PageIndex, pageModel.PageSize, ref totalRs);
@@ -72,7 +72,7 @@ namespace WXQ.BusinessCore.systemmanage
         {
             RoleManager roleManager = new RoleManager();
             r.UpdateUser = this.OpUserId.ToString();
-            return roleManager.Db.Updateable(r).Where(m => m.Id == r.Id).ExecuteCommand() > 0;
+            return roleManager.Db.Updateable(r).Where(m => m.RoleId == r.RoleId).ExecuteCommand() > 0;
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace WXQ.BusinessCore.systemmanage
 
             RoleManager roleManager = new RoleManager();
             result.Result = roleManager.Db.Queryable<WXQ.Enties.UserRole, WXQ.Enties.Role>((ur, r) => new object[] {
-                    JoinType.Left,ur.RoleId==r.Id})
+                    JoinType.Left,ur.RoleId==r.RoleId})
                     .Where((ur, r) => ur.UserId == userId)
                   .Select((ur, r) => r).ToPageList(pageIndex, pageSize, ref totalRs);
             result.PageSize = pageSize;
@@ -133,7 +133,7 @@ namespace WXQ.BusinessCore.systemmanage
 
             RoleManager roleManager = new RoleManager();
             result.Result = roleManager.Db.Queryable<WXQ.Enties.UserRole, WXQ.Enties.Users>((ur, r) => new object[] {
-                    JoinType.Left,ur.UserId==r.ID})
+                    JoinType.Left,ur.UserId==r.UsersId})
                     .Where((ur, r) => ur.RoleId == roleId)
                   .Select((ur, r) => r).ToPageList(pageIndex, pageSize, ref totalRs);
             result.PageSize = pageSize;

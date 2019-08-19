@@ -6,85 +6,38 @@ using SqlSugar;
 namespace WXQ.Enties
 {
     ///<summary>
-    ///
+    ///页面元素
     ///</summary>
-    [SugarTable("tb_menupageelement")]
-    public partial class MenuPageElement
+    [SugarTable("tb_menupageelement", "页面元素")]
+    public partial class MenuPageElement : WXQ.Enties.DbModels.BaseModel
     {
            public MenuPageElement(){
 
 
            }
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string ElementName {get;set;}
+        /// <summary>
+        /// 页面元素名称
+        /// </summary>           
+        [SugarColumn(Length = 100, IsNullable = false   ,ColumnDescription = "页面元素名称")] public string ElementName {get;set; } = string.Empty;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string Description {get;set;}
+        /// <summary>
+        /// 描述
+        /// </summary>           
+        [SugarColumn(Length = 100, IsNullable = false   ,ColumnDescription = "描述")] public string Description {get;set; } = string.Empty;
 
+       
            /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
+           ///主键
            /// </summary>           
-           public DateTime? AddDateTime {get;set;}
+           [SugarColumn(IsPrimaryKey=true,IsIdentity=true   ,ColumnDescription = "主键")]
+           public int MenuPageElementId {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public DateTime? UpdateDateTime {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string AddUser {get;set;}
+        /// <summary>
+        /// 菜单id
+        /// </summary>           
+        [SugarColumn(IsNullable = false   ,ColumnDescription = "菜单id")] public int MenuId { get; set; } = -1;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string UpdateUser {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
-           [SugarColumn(IsPrimaryKey=true,IsIdentity=true)]
-           public int Id {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public int? RowVersion {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public int? MenuId {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public byte? RsState {get;set;}
 
     }
 }

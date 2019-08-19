@@ -32,7 +32,7 @@ namespace WebApi.Controllers.systemmanage
         [Authorize("common")]
         [WebApi.Common.Log]
         [Route("InsertRole")]
-        public JsonResult InsertRole([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Role.InsertRoleInput model)
+        public JsonResult InsertRole([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Role.InsertRoleInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -77,7 +77,7 @@ namespace WebApi.Controllers.systemmanage
         [Authorize("common")]
         [WebApi.Common.Log]
         [Route("UpdateRole")]
-        public JsonResult UpdateRole([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Role.UpdateRoleInput model)
+        public JsonResult UpdateRole([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Role.UpdateRoleInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -95,7 +95,7 @@ namespace WebApi.Controllers.systemmanage
        
                 WXQ.Enties.Role r = new WXQ.Enties.Role
                 {
-                    Id = model.Id,
+                    RoleId = model.RoleId,
                     AddDateTime = DateTime.Now,
                     AddUser = userId.ToString(),
                     Description = model.Description,
@@ -159,7 +159,7 @@ namespace WebApi.Controllers.systemmanage
         [HttpPost]
         [Route("GetRoleList")]
         [WebApi.Common.Log]
-        public JsonResult GetRoleList([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Role.GetRoleListInput model)
+        public JsonResult GetRoleList([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Role.GetRoleListInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -202,7 +202,7 @@ namespace WebApi.Controllers.systemmanage
         [HttpPost]
         [Route("GetRoleListByUserId")]
         [WebApi.Common.Log]
-        public JsonResult GetRoleListByUserId([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Role.GetRoleListByUserIdInput model)
+        public JsonResult GetRoleListByUserId([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Role.GetRoleListByUserIdInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -246,7 +246,7 @@ namespace WebApi.Controllers.systemmanage
         [HttpPost]
         [Route("GetUsersListByRoleId")]
         [WebApi.Common.Log]
-        public JsonResult GetUsersListByRoleId([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Role.GetUsersListByRoleIdInput model)
+        public JsonResult GetUsersListByRoleId([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Role.GetUsersListByRoleIdInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -289,7 +289,7 @@ namespace WebApi.Controllers.systemmanage
         [Route("AddUserForRole")]
         [WebApi.Common.Log]
         [Authorize("common")]
-        public JsonResult AddUserForRole([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Role.AddUserForRoleInput model)
+        public JsonResult AddUserForRole([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Role.AddUserForRoleInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -335,7 +335,7 @@ namespace WebApi.Controllers.systemmanage
         [Route("RemoveUserFromRole")]
         [WebApi.Common.Log]
         [Authorize("common")]
-        public JsonResult RemoveUserFromRole([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Role.AddUserForRoleInput model)
+        public JsonResult RemoveUserFromRole([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Role.AddUserForRoleInput model)
         {
             ResponseResult result = new ResponseResult();
 

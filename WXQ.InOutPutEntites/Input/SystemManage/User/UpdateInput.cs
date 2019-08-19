@@ -10,7 +10,7 @@ namespace WXQ.InOutPutEntites.Input.SystemManage.User
 
     public class UpdateInput
     {
-        public int ID { get; set; }
+        public int UserID { get; set; }
 
         public string UserName { get; set; }
 
@@ -96,7 +96,7 @@ namespace WXQ.InOutPutEntites.Input.SystemManage.User
         public UpdateInputModelValidation()
         {
             CascadeMode = CascadeMode.StopOnFirstFailure;
-            RuleFor(x => x.ID).NotEmpty().WithMessage("用户id不能为空");
+            RuleFor(x => x.UserID).NotEmpty().WithMessage("用户id不能为空");
             RuleFor(x => x.UserName).NotEmpty().WithMessage("用户名不能为空").Length(6, 20).WithMessage("用户名长度必须在6-20位之间");
             RuleFor(x => x.PassWord).NotEmpty().WithMessage("密码不能为空").Length(8, 32).WithMessage("密码长度必须8-32位之间");
 

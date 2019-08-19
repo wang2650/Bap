@@ -26,7 +26,13 @@ namespace WXQ.BusinessCore.systemmanage
 
             return MenuManager.Insert(model);
         }
+        public int InsertMenuReturnId(WXQ.Enties.Menu model)
+        {
+            model.AddUser = this.OpUserId.ToString();
+            MenuManager MenuManager = new MenuManager();
 
+            return MenuManager.InsertReturnInt(model);
+        }
         /// <summary>
         /// 修改菜单
         /// </summary>
@@ -36,7 +42,7 @@ namespace WXQ.BusinessCore.systemmanage
         {
             MenuManager MenuManager = new MenuManager();
             model.UpdateUser = this.OpUserId.ToString();
-            return MenuManager.Db.Updateable(model).Where(m => m.Id == model.Id).ExecuteCommand() > 0;
+            return MenuManager.Db.Updateable(model).Where(m => m.MenuId == model.MenuId).ExecuteCommand() > 0;
         }
 
         /// <summary>
@@ -89,7 +95,7 @@ namespace WXQ.BusinessCore.systemmanage
                         {
                             icon = rootItems[i].Icon,
                             title = rootItems[i].MenuName,
-                            subs = GetMenuTree(menuList, rootItems[i].Id, i)
+                            subs = GetMenuTree(menuList, rootItems[i].MenuId, i)
                         };
 
                         if (menuTree.subs != null && menuTree.subs.Count > 0)
@@ -171,7 +177,7 @@ namespace WXQ.BusinessCore.systemmanage
             int totalRs = 0;
             MenuManager MenuManager = new MenuManager();
             result.Result = MenuManager.Db.Queryable<WXQ.Enties.RoleMenu, WXQ.Enties.Menu>((um, m) => new object[] {
-                    JoinType.Left,um.MenuId==m.Id})
+                    JoinType.Left,um.MenuId==m.MenuId})
                     .Where((um, m) => um.RoleId == roleId)
                   .Select((um, m) => m).ToPageList(pageIndex, pageSize, ref totalRs);
             result.PageSize = pageSize;
@@ -192,7 +198,7 @@ namespace WXQ.BusinessCore.systemmanage
             var  menusQuery = MenuManager.Db.Queryable<WXQ.Enties.Menu>();
 
                 
-             var lt=   MenuManager.Db.Queryable(menusQuery, rmQuery, JoinType.Left, (m, rm) => m.Id == rm.MenuId&& rm.RoleId==roleId).Select((m, rm) => new  { m.Id, m.MenuName, m.Url, m.Icon, rm.RoleId  }).ToList();//left join
+             var lt=   MenuManager.Db.Queryable(menusQuery, rmQuery, JoinType.Left, (m, rm) => m.MenuId == rm.MenuId&& rm.RoleId==roleId).Select((m, rm) => new  { m.MenuId, m.MenuName, m.Url, m.Icon, rm.RoleId  }).ToList();//left join
 
             if (lt!=null&&lt.Count>0)
             {
@@ -202,7 +208,7 @@ namespace WXQ.BusinessCore.systemmanage
                 foreach (var  d in lt)
                 {
                     WXQ.Enties.Menu m = new Enties.Menu();
-                    m.Id = d.Id;
+                    m.MenuId = d.MenuId;
                     m.MenuName = d.MenuName;
                     m.Url = d.Url;
                     m.Icon = d.Icon;
@@ -237,7 +243,7 @@ namespace WXQ.BusinessCore.systemmanage
             int totalRs = 0;
             MenuManager MenuManager = new MenuManager();
             result.Result = MenuManager.Db.Queryable<WXQ.Enties.RoleMenu, WXQ.Enties.Menu, WXQ.Enties.UserRole>((um, m, ur) => new object[] {
-                    JoinType.Left,um.MenuId==m.Id,
+                    JoinType.Left,um.MenuId==m.MenuId,
                     JoinType.Left,um.RoleId==ur.RoleId
             })
                     .Where((um, m, ur) => ur.UserId == userId)
@@ -259,7 +265,7 @@ namespace WXQ.BusinessCore.systemmanage
 
             MenuManager MenuManager = new MenuManager();
             result.Result = GetMenuTree( MenuManager.Db.Queryable<WXQ.Enties.RoleMenu, WXQ.Enties.Menu, WXQ.Enties.UserRole>((um, m, ur) => new object[] {
-                    JoinType.Left,um.MenuId==m.Id,
+                    JoinType.Left,um.MenuId==m.MenuId,
                     JoinType.Left,um.RoleId==ur.RoleId
             })
                     .Where((um, m, ur) => ur.UserId == userId&& m.MenuType==1)
@@ -284,7 +290,7 @@ namespace WXQ.BusinessCore.systemmanage
             MenuManager MenuManager = new MenuManager();
 
             List<WXQ.Enties.Menu> lt = MenuManager.Db.Queryable<WXQ.Enties.RoleMenu, WXQ.Enties.Menu, WXQ.Enties.UserRole, WXQ.Enties.DepartmentRole>((um, m, ur, dr) => new object[] {
-                    JoinType.Left,um.MenuId==m.Id,
+                    JoinType.Left,um.MenuId==m.MenuId,
                     JoinType.Left,um.RoleId==ur.RoleId,
                     JoinType.Left,um.RoleId==dr.RoleId
 
@@ -297,7 +303,7 @@ namespace WXQ.BusinessCore.systemmanage
                 foreach (var m in lt)
                 {
                     WXQ.Enties.CommonObj.TreeNode n = new Enties.CommonObj.TreeNode();
-                    n.id = m.Id;
+                    n.id = m.MenuId;
                     n.label = m.MenuName;
                     n.ParentId = m.ParentId;
                     result.Add(n);
@@ -325,7 +331,7 @@ namespace WXQ.BusinessCore.systemmanage
 
             MenuManager MenuManager = new MenuManager();
             result=MenuManager.Db.Queryable<WXQ.Enties.RoleMenu, WXQ.Enties.Menu, WXQ.Enties.UserRole>((um, m, ur) => new object[] {
-                    JoinType.Left,um.MenuId==m.Id,
+                    JoinType.Left,um.MenuId==m.MenuId,
                     JoinType.Left,um.RoleId==ur.RoleId
             })
                     .Where((um, m, ur) => ur.UserId == userId)
@@ -351,7 +357,7 @@ namespace WXQ.BusinessCore.systemmanage
             int totalRs = 0;
             MenuManager MenuManager = new MenuManager();
             result.Result = MenuManager.Db.Queryable<WXQ.Enties.RoleMenu, WXQ.Enties.Role>((um, m) => new object[] {
-                    JoinType.Left,um.RoleId==m.Id})
+                    JoinType.Left,um.RoleId==m.RoleId})
                     .Where((um, m) => um.MenuId == menuId)
                   .Select((um, m) => m).ToPageList(pageIndex, pageSize, ref totalRs);
             result.PageSize = pageSize;
