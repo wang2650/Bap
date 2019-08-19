@@ -33,7 +33,7 @@ namespace WebApi.Controllers.configmanager
         [WebApi.Common.Log]
         [Route("InsertDict")]
         [Authorize("common")]
-        public JsonResult InsertDict([FromBody]  WXQ.InOutPutEntites.Input.configmanager.Dict.InsertDictInput model)
+        public JsonResult InsertDict([FromForm]  WXQ.InOutPutEntites.Input.configmanager.Dict.InsertDictInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -86,7 +86,7 @@ namespace WebApi.Controllers.configmanager
         [WebApi.Common.Log]
         [Route("UpdateDict")]
         [Authorize("common")]
-        public JsonResult UpdateDict([FromBody]  WXQ.InOutPutEntites.Input.configmanager.Dict.UpdateDictInput model)
+        public JsonResult UpdateDict([FromForm]  WXQ.InOutPutEntites.Input.configmanager.Dict.UpdateDictInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -215,7 +215,7 @@ namespace WebApi.Controllers.configmanager
         [AllowAnonymous]
         [WebApi.Common.Log]
         [Route("GetDictList")]
-        public JsonResult GetDictList([FromBody]  WXQ.InOutPutEntites.Input.configmanager.Dict.GetDictListInput model)
+        public JsonResult GetDictList([FromForm]  WXQ.InOutPutEntites.Input.configmanager.Dict.GetDictListInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -258,7 +258,7 @@ namespace WebApi.Controllers.configmanager
         [AllowAnonymous]
         [WebApi.Common.Log]
         [Route("GetGroupList")]
-        public JsonResult GetGroupList([FromBody]  WXQ.InOutPutEntites.Input.configmanager.Dict.GetDictListInput model)
+        public JsonResult GetGroupList([FromForm]  WXQ.InOutPutEntites.Input.configmanager.Dict.GetDictListInput model)
         {
             ResponseResult result = new ResponseResult();
 

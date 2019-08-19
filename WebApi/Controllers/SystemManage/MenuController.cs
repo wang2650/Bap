@@ -31,7 +31,7 @@ namespace WebApi.Controllers.systemmanage
         [WebApi.Common.Log]
         [Route("InsertMenu")]
         [Authorize("common")]
-        public JsonResult InsertMenu([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Menu.InsertMenuInput model)
+        public JsonResult InsertMenu([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Menu.InsertMenuInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -115,7 +115,7 @@ namespace WebApi.Controllers.systemmanage
         [WebApi.Common.Log]
         [Route("UpdateMenu")]
         [Authorize("common")]
-        public JsonResult UpdateMenu([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Menu.UpdateMenuInput model)
+        public JsonResult UpdateMenu([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Menu.UpdateMenuInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -164,7 +164,7 @@ namespace WebApi.Controllers.systemmanage
         [HttpPost]
         [Route("GetMenuList")]
         [WebApi.Common.Log]
-        public JsonResult GetMenuList([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Menu.GetMenuListInput model)
+        public JsonResult GetMenuList([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Menu.GetMenuListInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -207,7 +207,7 @@ namespace WebApi.Controllers.systemmanage
         [HttpPost]
         [Route("GetMenuListByRoleId")]
         [WebApi.Common.Log]
-        public JsonResult GetMenuListByRoleId([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Menu.GetMenuListByRoleIdInput model)
+        public JsonResult GetMenuListByRoleId([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Menu.GetMenuListByRoleIdInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -250,7 +250,7 @@ namespace WebApi.Controllers.systemmanage
         [HttpPost]
         [Route("GetMenuListByUserId")]
         [WebApi.Common.Log]
-        public JsonResult GetMenuListByUserId([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Menu.GetMenuListByUserIdInput model)
+        public JsonResult GetMenuListByUserId([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Menu.GetMenuListByUserIdInput model)
         {
             ResponseResult result = new ResponseResult();
 
@@ -548,7 +548,7 @@ namespace WebApi.Controllers.systemmanage
         [Route("ModifyMentForRole")]
         [Authorize("common")]
         [WebApi.Common.Log]
-        public JsonResult ModifyMentForRole([FromBody]  WXQ.InOutPutEntites.Input.SystemManage.Menu.ModifyMentForRoleInput model)
+        public JsonResult ModifyMentForRole([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Menu.ModifyMentForRoleInput model)
         {
             ResponseResult result = new ResponseResult();
 

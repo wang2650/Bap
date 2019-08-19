@@ -31,7 +31,7 @@ namespace WXQ.BusinessCore.systemmanage
                 result.Concat(CreateDepartment(result));
                 // 创建角色
                 result.Concat(CreateRole(result));
-                // 创建部门
+                // 创建菜单
                 result.Concat(CreateMenu(result));
 
                 // 创建关联关系
