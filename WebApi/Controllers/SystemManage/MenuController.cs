@@ -134,7 +134,7 @@ namespace WebApi.Controllers.systemmanage
 
                 WXQ.Enties.Menu r = new WXQ.Enties.Menu
                 {
-                    Id = model.MenuId,
+                    MenuId = model.MenuId,
                     UpdateDateTime = DateTime.Now,
                     UpdateUser = this.User.Identity.Name,
                     Description = model.Description,
@@ -361,7 +361,7 @@ namespace WebApi.Controllers.systemmanage
                     
                     
                 var allnodes=     op.GetMenuTreeByUserId(userId,departmentId);
-                var  selectednodes= op.GetMenuListByRoleId(roleId,1,2000).Result.Select(m=>m.Id).ToList();
+                var  selectednodes= op.GetMenuListByRoleId(roleId,1,2000).Result.Select(m=>m.MenuId).ToList();
 
                
 

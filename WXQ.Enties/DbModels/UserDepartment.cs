@@ -6,78 +6,32 @@ using SqlSugar;
 namespace WXQ.Enties
 {
     ///<summary>
-    ///
+    ///用户部门表
     ///</summary>
-    [SugarTable("tb_userdepartment")]
-    public partial class UserDepartment
+    [SugarTable("tb_userdepartment", "用户部门表")]
+    public partial class UserDepartment : WXQ.Enties.DbModels.BaseModel
     {
            public UserDepartment(){
 
 
            }
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public int DepartmentId {get;set;}
+        /// <summary>
+        /// 部门id
+        /// </summary>           
+        [SugarColumn(IsNullable = false, ColumnDescription = "部门id")] public int DepartmentId { get; set; } = -1;
 
+       
            /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
+           /// 主键
            /// </summary>           
-           public DateTime? AddDateTime {get;set;}
+           [SugarColumn(IsPrimaryKey=true,IsIdentity= true, ColumnDescription = "主键")]
+           public int UserDepartmentId {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public DateTime? UpdateDateTime {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string AddUser {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string UpdateUser {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public int? RowVersion {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
-           [SugarColumn(IsPrimaryKey=true,IsIdentity=true)]
-           public int Id {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public byte? RsState {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public int UserId {get;set;}
+        /// <summary>
+        /// 用户id
+        /// </summary>           
+        [SugarColumn(IsNullable = false, ColumnDescription = "用户id")] public int UserId {get;set;} = -1;
 
     }
 }

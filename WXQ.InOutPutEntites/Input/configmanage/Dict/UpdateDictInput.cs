@@ -7,7 +7,7 @@ namespace WXQ.InOutPutEntites.Input.configmanager.Dict
 {
     public class UpdateDictInput
     {
-        public int Id { get; set; }
+        public int DictId { get; set; }
         public string DictKey { get; set; }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace WXQ.InOutPutEntites.Input.configmanager.Dict
         public UpdateDictInputModelValidation()
         {
             CascadeMode = CascadeMode.StopOnFirstFailure;
-            RuleFor(x => x.Id).NotEmpty().WithMessage("id不能为空").GreaterThanOrEqualTo(1).WithMessage("id要大于0"); ;
+            RuleFor(x => x.DictId).NotEmpty().WithMessage("id不能为空").GreaterThanOrEqualTo(1).WithMessage("id要大于0"); ;
             RuleFor(x => x.DictKey).NotEmpty().WithMessage("key不能为空");
          
             RuleFor(x => x.GroupName).NotEmpty().WithMessage("组名不能为空");

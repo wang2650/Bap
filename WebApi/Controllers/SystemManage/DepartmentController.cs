@@ -102,7 +102,7 @@ namespace WebApi.Controllers.systemmanage
 
                 WXQ.Enties.Department r = new WXQ.Enties.Department
                 {
-                    Id=model.Id,
+                    DepartmentId=model.DepartmentId,
                     UpdateDateTime = DateTime.Now,
                     UpdateUser = this.User.Identity.Name,
                     Description = model.Description,

@@ -23,11 +23,11 @@
 
             //        TypeAdapterConfig<TSource, TDestination>
             //.NewConfig()
-            //.Ignore(dest => dest.Id);
+            //.Ignore(dest => dest.UserRoleId);
 
             //        TypeAdapterConfig<TSource, TDestination>
             //.NewConfig()
-            //.Map(dest => dest.Id, src => src.Id)
+            //.Map(dest => dest.UserRoleId, src => src.UserRoleId)
             //.Map(dest => dest.Name, src => src.Name)
             //.IgnoreNonMapped(true);
 

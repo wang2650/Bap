@@ -95,7 +95,7 @@ namespace WebApi.Controllers.systemmanage
        
                 WXQ.Enties.Role r = new WXQ.Enties.Role
                 {
-                    Id = model.Id,
+                    RoleId = model.RoleId,
                     AddDateTime = DateTime.Now,
                     AddUser = userId.ToString(),
                     Description = model.Description,

@@ -8,7 +8,7 @@ namespace WXQ.InOutPutEntites.Input.SystemManage.Department
  public    class UpdateDepartmentInput
     {
 
-        public int Id { get; set; }
+        public int DepartmentId { get; set; }
         public int ParentId { get; set; }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace WXQ.InOutPutEntites.Input.SystemManage.Department
 
             RuleFor(x => x.ParentId).NotEmpty().WithMessage("上级id不能为空").GreaterThanOrEqualTo(0).WithMessage("上级id大于等于0");
 
-            RuleFor(x => x.Id).NotEmpty().WithMessage("部门id不能为空").GreaterThanOrEqualTo(0).WithMessage("部门id大于等于0");
+            RuleFor(x => x.DepartmentId).NotEmpty().WithMessage("部门id不能为空").GreaterThanOrEqualTo(0).WithMessage("部门id大于等于0");
 
         }
 

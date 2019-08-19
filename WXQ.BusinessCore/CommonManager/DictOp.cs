@@ -20,7 +20,7 @@ namespace WXQ.BusinessCore.CommonManager
         public bool InsertDict(WXQ.Enties.Dict model)
         {
             DictManager DictManager = new DictManager();
-            model.CreateUser = this.OpUserId.ToString();
+            model.AddUser = this.OpUserId.ToString();
             return DictManager.Insert(model);
         }
 
@@ -33,7 +33,7 @@ namespace WXQ.BusinessCore.CommonManager
         {
             DictManager DictManager = new DictManager();
             model.UpdateUser = this.OpUserId.ToString();
-            return DictManager.Db.Updateable(model).Where(m => m.Id == model.Id).ExecuteCommand() > 0;
+            return DictManager.Db.Updateable(model).Where(m => m.DictId == model.DictId).ExecuteCommand() > 0;
         }
 
         /// <summary>

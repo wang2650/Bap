@@ -112,7 +112,7 @@ namespace WXQ.BusinessCore.systemmanage
 
             DepartmentManager DepartmentManager = new DepartmentManager();
             result.Result = DepartmentManager.Db.Queryable<WXQ.Enties.UserDepartment, WXQ.Enties.Department>((ud, d) => new object[] {
-                    JoinType.Left,ud.DepartmentId==d.Id})
+                    JoinType.Left,ud.DepartmentId==d.DepartmentId})
                     .Where((ud, d) => ud.UserId == userId)
                   .Select((ud, d) => d).ToPageList(pageIndex, pageSize, ref totalRs);
             result.PageSize = pageSize;
@@ -136,7 +136,7 @@ namespace WXQ.BusinessCore.systemmanage
 
             DepartmentManager DepartmentManager = new DepartmentManager();
             List<Enties.Department> lt = DepartmentManager.Db.Queryable<WXQ.Enties.UserDepartment, WXQ.Enties.Department>((ud, d) => new object[] {
-                    JoinType.Left,ud.DepartmentId==d.Id})
+                    JoinType.Left,ud.DepartmentId==d.DepartmentId})
                     .Where((ud, d) => ud.UserId == userId)
                   .Select((ud, d) => d).ToPageList(pageIndex, pageSize, ref totalRs);
 
@@ -147,10 +147,10 @@ namespace WXQ.BusinessCore.systemmanage
                     WXQ.InOutPutEntites.Output.SystemManage.Department.NodeTree nt = new InOutPutEntites.Output.SystemManage.Department.NodeTree
                     {
                         label = d.DepartmentName,
-                        value = d.Id
+                        value = d.DepartmentId
                     };
 
-                    ListResult<Enties.Department> subnodes = GetDepartmentList("", d.Id, 1, 1000);
+                    ListResult<Enties.Department> subnodes = GetDepartmentList("", d.DepartmentId, 1, 1000);
                     if (subnodes != null && subnodes.Total > 0)
                     {
                         nt.children = new List<InOutPutEntites.Output.SystemManage.Department.NodeTree>();
@@ -159,7 +159,7 @@ namespace WXQ.BusinessCore.systemmanage
                             WXQ.InOutPutEntites.Output.SystemManage.Department.NodeTree subnode = new InOutPutEntites.Output.SystemManage.Department.NodeTree
                             {
                                 label = s.DepartmentName,
-                                value = s.Id
+                                value = s.DepartmentId
                             };
 
                             nt.children.Add(subnode);
@@ -187,7 +187,7 @@ namespace WXQ.BusinessCore.systemmanage
 
             DepartmentManager DepartmentManager = new DepartmentManager();
             result.Result = DepartmentManager.Db.Queryable<WXQ.Enties.UserDepartment, WXQ.Enties.Users>((ud, d) => new object[] {
-                    JoinType.Left,ud.UserId==d.ID})
+                    JoinType.Left,ud.UserId==d.UsersId})
                     .Where((ud, d) => ud.DepartmentId == departmentId)
                   .Select((ud, d) => d).ToPageList(pageIndex, pageSize, ref totalRs);
             foreach (Enties.Users u in result.Result)
@@ -221,7 +221,7 @@ namespace WXQ.BusinessCore.systemmanage
         {
             DepartmentManager DepartmentManager = new DepartmentManager();
             List<int> result = new List<int>();
-            List<int> ltsub = DepartmentManager.Db.Queryable<Enties.Department>().WhereIF(departmentId > -1, it => it.ParentId == departmentId).Select(it => it.Id).ToList();
+            List<int> ltsub = DepartmentManager.Db.Queryable<Enties.Department>().WhereIF(departmentId > -1, it => it.ParentId == departmentId).Select(it => it.DepartmentId).ToList();
             if (ltsub != null && ltsub.Count > 0)
             {
                 foreach (int d in ltsub)
@@ -346,7 +346,7 @@ namespace WXQ.BusinessCore.systemmanage
         {
             DepartmentManager DepartmentManager = new DepartmentManager();
             model.UpdateUser = this.OpUserId.ToString();
-            return DepartmentManager.Db.Updateable(model).Where(m => m.Id == model.Id).ExecuteCommand() > 0;
+            return DepartmentManager.Db.Updateable(model).Where(m => m.DepartmentId == model.DepartmentId).ExecuteCommand() > 0;
         }
 
         /// <summary>

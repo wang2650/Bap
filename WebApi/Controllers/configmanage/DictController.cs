@@ -59,8 +59,8 @@ namespace WebApi.Controllers.configmanager
                     DictType=model.DictType,
                     OrderBy=model.OrderBy,
                     GroupName=model.GroupName,
-                    CreateTime=DateTime.Now,
-                    CreateUser=this.User.Identity.Name
+                    AddDateTime=DateTime.Now,
+                    AddUser=this.User.Identity.Name
                 };
 
                 bool rv = op.InsertDict(r);
@@ -105,14 +105,14 @@ namespace WebApi.Controllers.configmanager
 
                 WXQ.Enties.Dict r = new WXQ.Enties.Dict
                 {
-                    Id=model.Id,
+                    DictId=model.DictId,
                     Description = model.Description,
                     DictKey = model.DictKey,
                     DictValue = model.DictValue,
                     DictType = model.DictType,
                     OrderBy = model.OrderBy,
                     GroupName = model.GroupName,
-                    UpdateTime = DateTime.Now,
+                    UpdateDateTime = DateTime.Now,
                     UpdateUser = this.User.Identity.Name
                 };
 

@@ -37,7 +37,7 @@ namespace WebApi.Common.MiddleWare
                 WXQ.Enties.Metrics m = new WXQ.Enties.Metrics();
                 m.MethodName = context.Request.Path;
                 m.AppId = 1;
-                m.CreateDateTIme = DateTime.Now;
+                m.AddDateTime = DateTime.Now;
                 //秒
                 m.CostTime =Convert.ToInt32 ( responseTimeForCompleteRequest/1000);
 

@@ -71,7 +71,7 @@ namespace WXQ.BusinessCore.systemmanage
                 UpdateUser = m.UpdateUser,
                 RowVersion = m.RowVersion
             })
-                .Where(u => u.ID == m.ID).ExecuteCommand() > 0;
+                .Where(u => u.UsersId == m.UsersId).ExecuteCommand() > 0;
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace WXQ.BusinessCore.systemmanage
                 UpdateUser = m.UpdateUser,
                 RowVersion = m.RowVersion
             })
-                .Where(u => u.ID == m.ID).ExecuteCommand() > 0;
+                .Where(u => u.UsersId == m.UsersId).ExecuteCommand() > 0;
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace WXQ.BusinessCore.systemmanage
                 UpdateUser = m.UpdateUser,
                 RowVersion = m.RowVersion
             })
-                .Where(u => u.ID == m.ID).ExecuteCommand() > 0;
+                .Where(u => u.UsersId == m.UsersId).ExecuteCommand() > 0;
 
             return rv;
         }
@@ -137,7 +137,7 @@ namespace WXQ.BusinessCore.systemmanage
                 RowVersion = m.RowVersion + 1,
                 RsState = m.RsState
             })
-                .Where(u => u.ID == m.ID).ExecuteCommand() > 0;
+                .Where(u => u.UsersId == m.UsersId).ExecuteCommand() > 0;
         }
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace WXQ.BusinessCore.systemmanage
         {
             UsersManager UsersManager = new UsersManager();
 
-            List<Enties.Users> result = UsersManager.GetList(u => userIds.Contains(u.ID));
+            List<Enties.Users> result = UsersManager.GetList(u => userIds.Contains(u.UsersId));
             foreach (Enties.Users u in result)
             {
                 u.Password = "";
@@ -278,7 +278,7 @@ namespace WXQ.BusinessCore.systemmanage
             ISugarQueryable<Enties.Users> u1 = MenuManager.Db.Queryable<Enties.Users>().WhereIF(!string.IsNullOrEmpty(name), u => SqlFunc.Contains(u.NickName, name) || SqlFunc.Contains(u.UserName, name));
 
             ISugarQueryable<Enties.UserDepartment> ud1 = MenuManager.Db.Queryable<Enties.UserDepartment>().Where(ud => ud.DepartmentId == departmentId);
-            var lt = MenuManager.Db.Queryable(u1, ud1, JoinType.Left, (j1, j2) => j1.ID == j2.UserId).OrderBy((j1, j2) => j2.DepartmentId, OrderByType.Desc).Select((j1, j2) => new { j1.ID, j1.UserName, j1.NickName, j2.DepartmentId }).ToPageList(pageIndex, pageSize, ref totalRs);
+            var lt = MenuManager.Db.Queryable(u1, ud1, JoinType.Left, (j1, j2) => j1.UsersId == j2.UserId).OrderBy((j1, j2) => j2.DepartmentId, OrderByType.Desc).Select((j1, j2) => new { j1.UsersId, j1.UserName, j1.NickName, j2.DepartmentId }).ToPageList(pageIndex, pageSize, ref totalRs);
             if (totalRs > 0)
             {
                 result.Result = new List<object>();
@@ -314,7 +314,7 @@ namespace WXQ.BusinessCore.systemmanage
             ISugarQueryable<Enties.Users> u1 = MenuManager.Db.Queryable<Enties.Users>().WhereIF(!string.IsNullOrEmpty(name), u => SqlFunc.Contains(u.NickName, name) || SqlFunc.Contains(u.UserName, name));
 
             ISugarQueryable<Enties.UserRole> ud1 = MenuManager.Db.Queryable<Enties.UserRole>().Where(ud => ud.RoleId == roleId);
-            var lt = MenuManager.Db.Queryable(u1, ud1, JoinType.Left, (j1, j2) => j1.ID == j2.UserId).OrderBy((j1, j2) => j2.RoleId, OrderByType.Desc).Select((j1, j2) => new { j1.ID, j1.UserName, j1.NickName, j2.RoleId }).ToPageList(pageIndex, pageSize, ref totalRs);
+            var lt = MenuManager.Db.Queryable(u1, ud1, JoinType.Left, (j1, j2) => j1.UsersId == j2.UserId).OrderBy((j1, j2) => j2.RoleId, OrderByType.Desc).Select((j1, j2) => new { j1.UsersId, j1.UserName, j1.NickName, j2.RoleId }).ToPageList(pageIndex, pageSize, ref totalRs);
             if (totalRs > 0)
             {
                 result.Result = new List<object>();

@@ -205,11 +205,11 @@ namespace WebApi.Controllers.systemmanage
 
                 WXQ.Enties.Users userModel = op.Login(model.UserName, model.PassWord);
 
-                if (userModel != null && userModel.ID > 0)
+                if (userModel != null && userModel.UsersId > 0)
                 {
                     TokenModelJWT jwtUser = new TokenModelJWT
                     {
-                        Uid = userModel.ID
+                        Uid = userModel.UsersId
                     };
 
                     result.Data = JwtHelper.SerializeJWT(jwtUser);
@@ -245,11 +245,11 @@ namespace WebApi.Controllers.systemmanage
 
                 WXQ.Enties.Users userModel = op.Login(model.UserName, model.PassWord);
 
-                if (userModel != null && userModel.ID > 0)
+                if (userModel != null && userModel.UsersId > 0)
                 {
                     TokenModelJWT jwtUser = new TokenModelJWT
                     {
-                        Uid = userModel.ID
+                        Uid = userModel.UsersId
                     };
 
                     result.Data = JwtHelper.SerializeJWT(jwtUser);
@@ -291,7 +291,7 @@ namespace WebApi.Controllers.systemmanage
 
                 WXQ.Enties.Users m = new WXQ.Enties.Users
                 {
-                    ID = this.User.Identity.Name.ToInt(0),
+                    UsersId = this.User.Identity.Name.ToInt(0),
                     Password=model.PassWord
                 };
 
@@ -371,7 +371,7 @@ namespace WebApi.Controllers.systemmanage
 
                 WXQ.Enties.Users m = new WXQ.Enties.Users
                 {
-                    ID = model.UserId,
+                    UsersId = model.UserId,
                 };
                 //默认密码
                 string newPass = Appsettings.app(new string[] { "AppGlobeConfig", "DefaultPassord" });
@@ -415,7 +415,7 @@ namespace WebApi.Controllers.systemmanage
                 WXQ.BusinessCore.systemmanage.UserOp op = new WXQ.BusinessCore.systemmanage.UserOp(userId);
                 WXQ.Enties.Users userModel = new WXQ.Enties.Users
                 {
-                    ID = model.ID,
+                    UsersId = model.UserID,
                     UpdateDateTime = DateTime.Now,
                     UpdateUser = this.User.Identity.Name,
                     HeadImage = model.HeadImage,
@@ -466,7 +466,7 @@ namespace WebApi.Controllers.systemmanage
                 WXQ.Enties.Users userModel = new WXQ.Enties.Users
                 {
                     UserName=model.UserName,
-                    ID = userId,
+                    UsersId = userId,
                     UpdateDateTime = DateTime.Now,
                     UpdateUser = this.User.Identity.Name,
                     HeadImage = string.IsNullOrEmpty(model.HeadImage)?"0": model.HeadImage,

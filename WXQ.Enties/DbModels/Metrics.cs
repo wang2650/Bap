@@ -6,50 +6,36 @@ using SqlSugar;
 namespace WXQ.Enties
 {
     ///<summary>
-    ///
+    ///方法度量值
     ///</summary>
-    [SugarTable("tb_metrics")]
-    public partial class Metrics
+    [SugarTable("tb_metrics", "方法度量值")]
+    public partial class Metrics : WXQ.Enties.DbModels.BaseModel
     {
            public Metrics(){
 
 
            }
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public DateTime? CreateDateTIme {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public int? CostTime {get;set;}
+        /// <summary>
+        /// 消耗时间
+        /// </summary>           
+        [SugarColumn(IsNullable = false   ,ColumnDescription = "消耗时间")] public int CostTime { get; set; } = -1;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public short? AppId {get;set;}
+        /// <summary>
+        /// 应用id
+        /// </summary>           
+        [SugarColumn(IsNullable = false   ,ColumnDescription = "应用id")] public short AppId {get;set; } = -1;
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
-           [SugarColumn(IsPrimaryKey=true,IsIdentity=true)]
-           public int Id {get;set;}
+        /// <summary>
+        /// 主键
+        /// </summary>           
+        [SugarColumn(IsPrimaryKey=true,IsIdentity=true   ,ColumnDescription = "主键")]
+           public int MetricsId {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string MethodName {get;set;}
+        /// <summary>
+        /// 方法名
+        /// </summary>           
+        [SugarColumn(Length = 100, IsNullable = false   ,ColumnDescription = "方法名")] public string MethodName {get;set;} = string.Empty;
 
     }
 }

@@ -6,78 +6,31 @@ using SqlSugar;
 namespace WXQ.Enties
 {
     ///<summary>
-    ///
+    /// 用户角色表
     ///</summary>
-    [SugarTable("tb_userrole")]
-    public partial class UserRole
+    [SugarTable("tb_userrole", "用户角色表")]
+    public partial class UserRole : WXQ.Enties.DbModels.BaseModel
     {
            public UserRole(){
 
 
            }
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public int UserId {get;set;}
+        /// <summary>
+        /// 用户id
+        /// </summary>           
+        [SugarColumn(IsNullable = false, ColumnDescription = "用户id")] public int UserId { get; set; } = 1;
 
            /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
+           /// 主键
            /// </summary>           
-           public DateTime? AddDateTime {get;set;}
+           [SugarColumn(IsPrimaryKey=true,IsIdentity= true, ColumnDescription = "主键")]
+           public int UserRoleId {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public DateTime? UpdateDateTime {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string AddUser {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public string UpdateUser {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public int? RowVersion {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
-           [SugarColumn(IsPrimaryKey=true,IsIdentity=true)]
-           public int Id {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public byte? RsState {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           public int RoleId {get;set;}
+        /// <summary>
+        ///角色id
+        /// </summary>           
+        [SugarColumn(IsNullable = false, ColumnDescription = "角色id")] public int RoleId { get; set; } = -1;
 
     }
 }
