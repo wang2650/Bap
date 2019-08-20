@@ -400,10 +400,15 @@ namespace WXQ.BusinessCore.systemmanage
             int userId = 0;
             int departmentId = 0;
             int roleId = 0;
-            WXQ.BusinessCore.systemmanage.MenuOp menuOp = new MenuOp(0);
-            WXQ.BusinessCore.systemmanage.DepartmentOp departmentOp = new DepartmentOp(0);
 
-            WXQ.BusinessCore.systemmanage.RoleOp roleOp = new RoleOp(0);
+            WXQ.BusinessCore.systemmanage.DepartmentOp departmentOp = new DepartmentOp(0);
+            ListResult<Enties.Department> departments = departmentOp.GetDepartmentList("", 0, 1, 10);
+            if (departments.Result != null && departments.Result.Count > 0)
+            {
+                departmentId = departments.Result[0].DepartmentId;
+            }
+
+
 
             WXQ.BusinessCore.systemmanage.UserOp userOp = new UserOp(0);
             PageModel pageModel = new PageModel
@@ -416,56 +421,61 @@ namespace WXQ.BusinessCore.systemmanage
             {
                 userId = users.Result[0].UsersId;
             }
-
+            WXQ.BusinessCore.systemmanage.RoleOp roleOp = new RoleOp(0);
             List<Enties.Role> roles = roleOp.GetRoleList();
 
             if (roles!= null && roles.Count > 0)
             {
                 roleId = roles[0].RoleId;
+                #region 角色和用户关系
+
+                if (roleOp.AddUserForRole(roleId, userId))
+                {
+                    result.Add("添加角色和用户关系成功");
+                }
+                else
+                {
+                    result.Add("添加角色和用户关系失败");
+                }
+
+                #endregion 角色和用户关系
             }
 
+
+
+       
+
+
+            return returnvalue;
+        }
+
+        public bool CreateUserDepartment(ref List<string> result)
+        {
+
+            WXQ.BusinessCore.systemmanage.DepartmentOp departmentOp = new DepartmentOp(0);
+
+            int userId = 0;
+            int departmentId = 0;
+            bool returnvalue = true;
             ListResult<Enties.Department> departments = departmentOp.GetDepartmentList("", 0, 1, 10);
             if (departments.Result != null && departments.Result.Count > 0)
             {
                 departmentId = departments.Result[0].DepartmentId;
             }
-
-            #region 角色和部门关系
-
-            DepartmentRoleManager departmentRoleManager = new DepartmentRoleManager();
-            WXQ.Enties.DepartmentRole departmentRole = new Enties.DepartmentRole
+            WXQ.BusinessCore.systemmanage.UserOp userOp = new UserOp(0);
+            PageModel pageModel = new PageModel
             {
-                RoleId = roleId,
-                DepartmentId = departmentId,
-                AddUser = "0"
+                PageIndex = 1,
+                PageSize = 100
             };
 
 
-
-            if (departmentRoleManager.Insert(departmentRole))
+        
+            ListResult<Enties.Users> users = userOp.GetUserList("", pageModel);
+            if (users.Result != null && users.Result.Count > 0)
             {
-                result.Add("添加角色部门关系成功");
+                userId = users.Result[0].UsersId;
             }
-            else
-            {
-                result.Add("添加角色部门关系失败");
-            }
-
-            #endregion 角色和部门关系
-
-            #region 角色和用户关系
-
-            if (roleOp.AddUserForRole(roleId, userId))
-            {
-                result.Add("添加角色和用户关系成功");
-            }
-            else
-            {
-                result.Add("添加角色和用户关系失败");
-            }
-
-            #endregion 角色和用户关系
-
             #region 部门和用户关系
 
             List<int> userIds = new List<int>
@@ -482,9 +492,91 @@ namespace WXQ.BusinessCore.systemmanage
             }
 
             #endregion 部门和用户关系
+       
+        
+            return returnvalue;
+        }
+
+
+        public bool CreateRoleDepartment(ref List<string> result)
+        {
+
+            WXQ.BusinessCore.systemmanage.DepartmentOp departmentOp = new DepartmentOp(0);
+
+            int roleId = 0;
+            int departmentId = 0;
+            bool returnvalue = true;
+            ListResult<Enties.Department> departments = departmentOp.GetDepartmentList("", 0, 1, 10);
+            if (departments.Result != null && departments.Result.Count > 0)
+            {
+                departmentId = departments.Result[0].DepartmentId;
+            }
+            WXQ.BusinessCore.systemmanage.UserOp userOp = new UserOp(0);
+            PageModel pageModel = new PageModel
+            {
+                PageIndex = 1,
+                PageSize = 100
+            };
+            WXQ.BusinessCore.systemmanage.RoleOp roleOp = new RoleOp(0);
+            List<Enties.Role> roles = roleOp.GetRoleList();
+       
+            if (roles != null && roles.Count > 0)
+            {
+                roleId = roles[0].RoleId;
+
+            }
+            #region 部门和用户关系
+            DepartmentRoleManager departmentRoleManager = new DepartmentRoleManager();
+            DepartmentRole dr = new DepartmentRole();
+            dr.RoleId = roleId;
+            dr.DepartmentId = departmentId;
+    
+            if (departmentRoleManager.Insert(dr))
+            {
+                result.Add("添加部门和角色关系成功");
+            }
+            else
+            {
+                result.Add("添加部门和角色关系失败");
+            }
+
+            #endregion 部门和用户关系
+
+
+            return returnvalue;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public bool CreateRoleMenu(ref List<string> result)
+        {
+            WXQ.BusinessCore.systemmanage.RoleOp roleOp = new RoleOp(0);
+            List<Enties.Role> roles = roleOp.GetRoleList();
+            int roleId = 0;
+            if (roles != null && roles.Count > 0)
+            {
+                roleId = roles[0].RoleId;
+
+            }
+
+                PageModel pageModel = new PageModel
+            {
+                PageIndex = 1,
+                PageSize = 10000
+            };
 
             #region 角色菜单关系
-
+            WXQ.BusinessCore.systemmanage.MenuOp menuOp = new MenuOp(0);
             ListResult<Enties.Menu> menus = menuOp.GetMenuList("", "", -1, pageModel);
             if (menus != null && menus.Result.Count > 0)
             {
@@ -502,7 +594,9 @@ namespace WXQ.BusinessCore.systemmanage
 
             #endregion 角色菜单关系
 
-            return returnvalue;
+            return true;
         }
+
+
     }
 }

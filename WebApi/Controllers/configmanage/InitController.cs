@@ -11,7 +11,7 @@ namespace WebApi.Controllers.configmanage
     public class InitController : Controller
     {
         /// <summary>
-        /// 创建表 初始化数据库  执行完请注释掉该方法
+        ///1 创建表 初始化数据库  执行完请注释掉该方法
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -41,7 +41,7 @@ namespace WebApi.Controllers.configmanage
         }
 
         /// <summary>
-        ///清理数据 初始化数据库  执行完请注释掉该方法
+        /// 0 清理数据 初始化数据库  执行完请注释掉该方法
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -72,7 +72,7 @@ namespace WebApi.Controllers.configmanage
 
 
         /// <summary>
-        ///创建基础数据 初始化数据库  执行完请注释掉该方法
+        /// 2 创建基础数据 初始化数据库  执行完请注释掉该方法
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -133,8 +133,104 @@ namespace WebApi.Controllers.configmanage
             }
             return Json(result);
         }
-     
 
+
+        /// <summary>
+        /// 用户部门关系 初始化数据库  执行完请注释掉该方法
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("CreateUserDepartment")]
+        public JsonResult CreateUserDepartment()
+        {
+
+            ResponseResult result = new ResponseResult();
+            Logger logger = LogManager.GetLogger("initlog");
+            try
+            {
+
+                WXQ.BusinessCore.systemmanage.InitOp op = new WXQ.BusinessCore.systemmanage.InitOp(0);
+                System.Collections.Generic.List<string> lt = new System.Collections.Generic.List<string>();
+                op.CreateUserDepartment(ref lt);
+                result.Data = lt;
+
+            }
+            catch (Exception ex)
+            {
+                result.Data = ex.Message;
+
+                logger.Info(ex.Message);
+            }
+            return Json(result);
+        }
+
+
+
+        /// <summary>
+        /// 角色菜单关系 初始化数据库  执行完请注释掉该方法
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("CreateRoleMenu")]
+        public JsonResult CreateRoleMenu()
+        {
+
+            ResponseResult result = new ResponseResult();
+            Logger logger = LogManager.GetLogger("initlog");
+            try
+            {
+
+                WXQ.BusinessCore.systemmanage.InitOp op = new WXQ.BusinessCore.systemmanage.InitOp(0);
+                System.Collections.Generic.List<string> lt = new System.Collections.Generic.List<string>();
+                op.CreateRoleMenu(ref lt);
+                result.Data = lt;
+
+            }
+            catch (Exception ex)
+            {
+                result.Data = ex.Message;
+
+                logger.Info(ex.Message);
+            }
+            return Json(result);
+        }
+
+
+
+        /// <summary>
+        /// 角色部门关系 初始化数据库  执行完请注释掉该方法
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("CreateRoleDepartment")]
+        public JsonResult CreateRoleDepartment()
+        {
+
+            ResponseResult result = new ResponseResult();
+            Logger logger = LogManager.GetLogger("initlog");
+            try
+            {
+
+                WXQ.BusinessCore.systemmanage.InitOp op = new WXQ.BusinessCore.systemmanage.InitOp(0);
+                System.Collections.Generic.List<string> lt = new System.Collections.Generic.List<string>();
+                op.CreateRoleDepartment(ref lt);
+                result.Data = lt;
+
+            }
+            catch (Exception ex)
+            {
+                result.Data = ex.Message;
+
+                logger.Info(ex.Message);
+            }
+            return Json(result);
+        }
+
+
+        
 
     }
 }
