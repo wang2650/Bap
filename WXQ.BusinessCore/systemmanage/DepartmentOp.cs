@@ -285,13 +285,13 @@ namespace WXQ.BusinessCore.systemmanage
                             AddDateTime = dt,
                             AddUser = this.OpUserId.ToString()
                         };
-                        lt.Add(rm);
+                        userDepartmentManager.Db.Insertable<WXQ.Enties.UserDepartment>(rm).AddQueue();
                     }
                    
                 }
                 DeleteUserForDepartment(departmentId, userIds);
 
-                result = result && userDepartmentManager.CurrentDb.InsertRange(lt);
+                result = userDepartmentManager.Db.SaveQueues() > 0;
             }
 
             return result;

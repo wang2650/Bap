@@ -10,16 +10,22 @@ namespace WXQ.BusinessCore.systemmanage
         {
             base.OpUserId = opUserId;
         }
+        public List<WXQ.Enties.Role> GetRoleList()
+        {
+            RoleManager roleManager = new RoleManager();
 
-        /// <summary>
-        /// 获取角色列表
-        /// </summary>
-        /// <param name="roleName">角色名称</param>
-        /// <param name="pageModel">分页</param>
-        /// <param name="departmentId">部门Id</param>
-        /// <param name="rsState">状态</param>
-        /// <returns></returns>
-        public ListResult<WXQ.Enties.Role> GetRoleList(string roleName, PageModel pageModel, int departmentId = -1, int rsState = 1)
+            return roleManager.GetList();
+        }
+
+            /// <summary>
+            /// 获取角色列表
+            /// </summary>
+            /// <param name="roleName">角色名称</param>
+            /// <param name="pageModel">分页</param>
+            /// <param name="departmentId">部门Id</param>
+            /// <param name="rsState">状态</param>
+            /// <returns></returns>
+            public ListResult<WXQ.Enties.Role> GetRoleList(string roleName, PageModel pageModel, int departmentId = -1, int rsState = 1)
         {
             RoleManager roleManager = new RoleManager();
             ListResult<WXQ.Enties.Role> result = new ListResult<Enties.Role>();
@@ -61,6 +67,16 @@ namespace WXQ.BusinessCore.systemmanage
             }
 
             return result;
+        }
+
+        public bool InsertRole(WXQ.Enties.Role r)
+        {
+            RoleManager roleManager = new RoleManager();
+       
+            r.AddUser = this.OpUserId.ToString();
+          
+
+            return  roleManager.InsertReturnInt(r)>0;
         }
 
         /// <summary>
@@ -247,10 +263,15 @@ namespace WXQ.BusinessCore.systemmanage
 
         public bool AddUserForRole(int roleId, int userId)
         {
-            List<int> userIds = new List<int>();
-            userIds.Add(userId);
-   
-            return AddUserForRole(roleId, userIds);
+            UserRoleManager userRoleManager = new UserRoleManager();
+            WXQ.Enties.UserRole rm = new Enties.UserRole
+            {
+                UserId = userId,
+                RoleId = roleId,
+                AddDateTime = DateTime.Now,
+                AddUser = this.OpUserId.ToString()
+            };
+            return userRoleManager.Insert(rm);
         }
 
         /// <summary>
@@ -278,11 +299,11 @@ namespace WXQ.BusinessCore.systemmanage
                             AddDateTime = dt,
                             AddUser = this.OpUserId.ToString()
                         };
-                        lt.Add(rm);
+                        userRoleManager.Db.Insertable<WXQ.Enties.UserRole>(rm).AddQueue(); 
                     }
                 }
-
-                result = result && userRoleManager.CurrentDb.InsertRange(lt);
+                result = userRoleManager.Db.SaveQueues() > 0;
+             
             }
 
             return result;

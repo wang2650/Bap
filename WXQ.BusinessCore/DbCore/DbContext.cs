@@ -175,7 +175,6 @@ public class WXQDbContext <T> where T : class, new()
         return CurrentDb.Delete(whereExpression);
     }
 
-
     /// <summary>
     /// 根据实体更新，实体需要有主键
     /// </summary>

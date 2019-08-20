@@ -191,11 +191,29 @@
             <param name="model"></param>
             <returns></returns>
         </member>
-        <member name="M:WebApi.Controllers.configmanage.InitController.InitDataBase">
+        <member name="M:WebApi.Controllers.configmanage.InitController.CrateTable">
             <summary>
-            初始化数据库  执行完请注释掉该方法
+            创建表 初始化数据库  执行完请注释掉该方法
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.configmanage.InitController.DeleteTableData">
+             <summary>
+            清理数据 初始化数据库  执行完请注释掉该方法
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.configmanage.InitController.CreateBaseData">
+             <summary>
+            创建基础数据 初始化数据库  执行完请注释掉该方法
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.configmanage.InitController.CreateRefData">
+             <summary>
+            创建关联数据 初始化数据库  执行完请注释掉该方法
+             </summary>
+             <returns></returns>
         </member>
         <member name="M:WebApi.Controllers.Customer.CustomerController.UploadHeadImage">
             <summary>
