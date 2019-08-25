@@ -398,16 +398,10 @@ namespace WXQ.BusinessCore.systemmanage
         {
             bool returnvalue = true;
             int userId = 0;
-            int departmentId = 0;
+        
             int roleId = 0;
 
-            WXQ.BusinessCore.systemmanage.DepartmentOp departmentOp = new DepartmentOp(0);
-            ListResult<Enties.Department> departments = departmentOp.GetDepartmentList("", 0, 1, 10);
-            if (departments.Result != null && departments.Result.Count > 0)
-            {
-                departmentId = departments.Result[0].DepartmentId;
-            }
-
+       
 
 
             WXQ.BusinessCore.systemmanage.UserOp userOp = new UserOp(0);

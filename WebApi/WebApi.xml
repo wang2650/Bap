@@ -227,6 +227,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:WebApi.Controllers.configmanage.InitController.CreateRoleDepartment">
+            <summary>
+            角色部门关系 初始化数据库  执行完请注释掉该方法
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:WebApi.Controllers.Customer.CustomerController.UploadHeadImage">
             <summary>
             上传头像
