@@ -374,14 +374,14 @@ namespace WXQ.BusinessCore.systemmanage
         /// <returns></returns>
         public bool ModifyMentForRole(int roleId, List<int> menuIds)
         {
-            bool result = false;
+            bool result = true;
             RoleMenuManager roleMenuManager = new RoleMenuManager();
             //先全删除关系
             result = roleMenuManager.Delete(d => d.RoleId == roleId);
             //添加关系
             if (menuIds != null && menuIds.Count > 0)
             {
-                List<WXQ.Enties.RoleMenu> lt = new List<Enties.RoleMenu>();
+              
                 DateTime dt = DateTime.Now;
                 foreach (int m in menuIds)
                 {
@@ -392,9 +392,10 @@ namespace WXQ.BusinessCore.systemmanage
                         AddDateTime = dt,
                         AddUser = this.OpUserId.ToString()
                     };
-                    lt.Add(rm);
+                    roleMenuManager.Db.Insertable<WXQ.Enties.RoleMenu>(rm).AddQueue();
+                   
                 }
-                result = result && roleMenuManager.CurrentDb.InsertRange(lt);
+                result= roleMenuManager.Db.SaveQueues()>0;
             }
 
             return result;
