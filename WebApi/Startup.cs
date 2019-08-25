@@ -20,6 +20,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using WebApi.Common;
+using WebApi.Common.MiddleWare;
 using WXQ.Enties.CommonObj;
 
 namespace WebApi
@@ -44,7 +45,8 @@ namespace WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-
+            app.UseOptions();
+            app.UseResponseTimeMiddleWare();
             #region Swagger
 
             /*使用NLog*/
@@ -63,14 +65,12 @@ namespace WebApi
             NLog.LogManager.Configuration.Variables["ConnectionStrings"] = AppConfigurtaionServices.Configuration.GetConnectionString("wxqconn");
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);  //避免日志中的中文输出乱码
 
-            app.UseCors("AllRequests");//将 CORS 中间件添加到 web 应用程序管线中, 以允许跨域请求。
             // 跳转https
             //app.UseHttpsRedirection();
             // 使用静态文件
             app.UseStaticFiles();
             // 使用cookie
-            app.UseCookiePolicy();
-            // app.UseResponseTimeMiddleWare();
+           // app.UseCookiePolicy();
             // 返回错误码
             app.UseStatusCodePages();//把错误码返回前台，比如是404
             app.UseMvc();
@@ -83,14 +83,7 @@ namespace WebApi
 
             services.AddCors(c =>
             {
-                c.AddPolicy("AllRequests", policy =>
-                {
-                    policy
-                    .WithOrigins("http://127.0.0.1:80", "http://127.0.0.1:8889", "http://127.0.0.1", "http://127.0.0.1:5000")
-                    .AllowAnyMethod()//允许任何方式
-                    .AllowAnyHeader();//允许任何头
-
-                });
+             
                 ////一般采用这种方法  iis也可以设置
                 //c.AddPolicy("LimitRequests", policy =>
                 //{
