@@ -6,11 +6,12 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
+using System.Data;
 
 /// <summary>
-    /// 读取配置文件
-    /// </summary>
-    public class AppConfigurtaionServices
+/// 读取配置文件
+/// </summary>
+public class AppConfigurtaionServices
     {
         public static IConfiguration Configuration { get; set; }
         static AppConfigurtaionServices()
@@ -39,7 +40,7 @@ public class WXQDbContext <T> where T : class, new()
         Db = new SqlSugarClient(new ConnectionConfig()
         {
             ConnectionString = connstr,
-            DbType = DbType.SqlServer,
+            DbType = SqlSugar.DbType.SqlServer,
             InitKeyType = InitKeyType.Attribute,//从特性读取主键和自增列信息
             IsAutoCloseConnection = true,//开启自动释放模式和EF原理一样我就不多解释了
 
@@ -73,7 +74,28 @@ public class WXQDbContext <T> where T : class, new()
    public SimpleClient<Users> UsersDb { get { return new SimpleClient<Users>(Db); } }//用来处理users表的常用操作
 
 
-   /// <summary>
+    public virtual  int GetInt(string  sql, object para)
+    {
+     return    Db.Ado.GetInt(sql,para);
+    }
+
+    public virtual DataTable GetDataTable(string sql, object para)
+    {
+        return Db.Ado.GetDataTable(sql,para);
+    }
+
+    public  virtual int ExecuteCommand(string  sql, object para)
+    {
+        return Db.Ado.ExecuteCommand(sql, para);
+    }
+
+    public virtual void ExecuteCommandNoReturn(string sql, object para)
+    {
+         Db.Ado.ExecuteCommand(sql, para);
+    }
+
+
+    /// <summary>
     /// 获取所有
     /// </summary>
     /// <returns></returns>
