@@ -28,6 +28,8 @@ public class WXQDbContext <T> where T : class, new()
 {
 
 
+
+
     private string connstr =AppConfigurtaionServices.Configuration.GetConnectionString("wxqconn"); 
     public  WXQDbContext ()
     {
