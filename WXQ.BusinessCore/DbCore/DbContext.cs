@@ -73,27 +73,67 @@ public class WXQDbContext <T> where T : class, new()
     public SimpleClient<UserRole> userroleDb { get { return new SimpleClient<UserRole>(Db); } }//用来处理userrole表的常用操作
    public SimpleClient<Users> UsersDb { get { return new SimpleClient<Users>(Db); } }//用来处理users表的常用操作
 
-
-    public virtual  int GetInt(string  sql, object para)
-    {
-     return    Db.Ado.GetInt(sql,para);
-    }
-
+    /// <summary>
+    /// 返回datatable
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
     public virtual DataTable GetDataTable(string sql, object para)
     {
         return Db.Ado.GetDataTable(sql,para);
     }
-
-    public  virtual int ExecuteCommand(string  sql, object para)
+    /// <summary>
+    /// 返回首行首列
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
+    public  virtual object ExecuteCommand(string  sql, List<SugarParameter> para)
     {
-        return Db.Ado.ExecuteCommand(sql, para);
+       return    Db.Ado.GetScalar( sql,  para);
+    
     }
-
-    public virtual void ExecuteCommandNoReturn(string sql, object para)
+    /// <summary>
+    /// 返回受影响的行数
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
+    public virtual int ExecuteCommandReturnRowsCount(string sql, List<SugarParameter> para)
     {
-         Db.Ado.ExecuteCommand(sql, para);
+       return  Db.Ado.ExecuteCommand(sql, para);
     }
-
+    /// <summary>
+    /// 返回列表
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
+    public virtual List<T> GetList(string sql, List<SugarParameter> para)
+    {
+        return Db.Ado.SqlQuery<T>( sql, para);
+    }
+    /// <summary>
+    /// 返回单条记录
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
+    public virtual T GetSingle(string sql, List<SugarParameter> para)
+    {
+        return Db.Ado.SqlQuerySingle<T>(sql, para);
+    }
+    /// <summary>
+    /// 返回动态对象
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
+    public virtual dynamic GetDynamic(string sql, List<SugarParameter> para)
+    {
+        return Db.Ado.SqlQuery<dynamic>(sql, para);
+    }
 
     /// <summary>
     /// 获取所有
