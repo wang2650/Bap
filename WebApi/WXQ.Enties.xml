@@ -499,7 +499,7 @@
             用户
             </summary>
         </member>
-        <member name="P:WXQ.Enties.Users.Password">
+        <member name="P:WXQ.Enties.Users.PassWord">
             <summary>
             密码
             </summary>           

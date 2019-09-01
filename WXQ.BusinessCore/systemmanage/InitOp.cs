@@ -112,7 +112,7 @@ namespace WXQ.BusinessCore.systemmanage
                 NickName = "超级管理员",
                 UserName = "administrator",
                 Introduction = "这是一个超级管理员账号，不要删除",
-                Password = "12345678"//密码12345678
+                PassWord = "12345678"//密码12345678
             };
             bool returnvalue = op.InsertUsers(u);
             if (returnvalue)

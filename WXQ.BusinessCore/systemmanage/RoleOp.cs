@@ -158,7 +158,7 @@ namespace WXQ.BusinessCore.systemmanage
 
             foreach (Enties.Users u in result.Result)
             {
-                u.Password = "";
+                u.PassWord = "";
             }
 
             return result;
