@@ -6,11 +6,12 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
+using System.Data;
 
 /// <summary>
-    /// 读取配置文件
-    /// </summary>
-    public class AppConfigurtaionServices
+/// 读取配置文件
+/// </summary>
+public class AppConfigurtaionServices
     {
         public static IConfiguration Configuration { get; set; }
         static AppConfigurtaionServices()
@@ -28,6 +29,8 @@ public class WXQDbContext <T> where T : class, new()
 {
 
 
+
+
     private string connstr =AppConfigurtaionServices.Configuration.GetConnectionString("wxqconn"); 
     public  WXQDbContext ()
     {
@@ -37,7 +40,7 @@ public class WXQDbContext <T> where T : class, new()
         Db = new SqlSugarClient(new ConnectionConfig()
         {
             ConnectionString = connstr,
-            DbType = DbType.SqlServer,
+            DbType = SqlSugar.DbType.SqlServer,
             InitKeyType = InitKeyType.Attribute,//从特性读取主键和自增列信息
             IsAutoCloseConnection = true,//开启自动释放模式和EF原理一样我就不多解释了
 
@@ -70,8 +73,69 @@ public class WXQDbContext <T> where T : class, new()
     public SimpleClient<UserRole> userroleDb { get { return new SimpleClient<UserRole>(Db); } }//用来处理userrole表的常用操作
    public SimpleClient<Users> UsersDb { get { return new SimpleClient<Users>(Db); } }//用来处理users表的常用操作
 
+    /// <summary>
+    /// 返回datatable
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
+    public virtual DataTable GetDataTable(string sql, object para)
+    {
+        return Db.Ado.GetDataTable(sql,para);
+    }
+    /// <summary>
+    /// 返回首行首列
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
+    public  virtual object ExecuteCommand(string  sql, List<SugarParameter> para)
+    {
+       return    Db.Ado.GetScalar( sql,  para);
+    
+    }
+    /// <summary>
+    /// 返回受影响的行数
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
+    public virtual int ExecuteCommandReturnRowsCount(string sql, List<SugarParameter> para)
+    {
+       return  Db.Ado.ExecuteCommand(sql, para);
+    }
+    /// <summary>
+    /// 返回列表
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
+    public virtual List<T> GetList(string sql, List<SugarParameter> para)
+    {
+        return Db.Ado.SqlQuery<T>( sql, para);
+    }
+    /// <summary>
+    /// 返回单条记录
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
+    public virtual T GetSingle(string sql, List<SugarParameter> para)
+    {
+        return Db.Ado.SqlQuerySingle<T>(sql, para);
+    }
+    /// <summary>
+    /// 返回动态对象
+    /// </summary>
+    /// <param name="sql"></param>
+    /// <param name="para"></param>
+    /// <returns></returns>
+    public virtual dynamic GetDynamic(string sql, List<SugarParameter> para)
+    {
+        return Db.Ado.SqlQuery<dynamic>(sql, para);
+    }
 
-   /// <summary>
+    /// <summary>
     /// 获取所有
     /// </summary>
     /// <returns></returns>

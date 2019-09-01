@@ -11,7 +11,7 @@ namespace WebApi.Controllers.configmanage
     public class InitController : Controller
     {
         /// <summary>
-        ///1 创建表 初始化数据库  执行完请注释掉该方法
+        ///0 创建表 初始化数据库  执行完请注释掉该方法
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -41,7 +41,7 @@ namespace WebApi.Controllers.configmanage
         }
 
         /// <summary>
-        /// 0 清理数据 初始化数据库  执行完请注释掉该方法
+        /// 1 清理数据 初始化数据库  执行完请注释掉该方法
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -105,7 +105,7 @@ namespace WebApi.Controllers.configmanage
             return Json(result);
         }
         /// <summary>
-        ///创建关联数据 初始化数据库  执行完请注释掉该方法
+        ///3创建关联数据 初始化数据库  执行完请注释掉该方法
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -136,7 +136,7 @@ namespace WebApi.Controllers.configmanage
 
 
         /// <summary>
-        /// 用户部门关系 初始化数据库  执行完请注释掉该方法
+        /// 4用户部门关系 初始化数据库  执行完请注释掉该方法
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -168,7 +168,7 @@ namespace WebApi.Controllers.configmanage
 
 
         /// <summary>
-        /// 角色菜单关系 初始化数据库  执行完请注释掉该方法
+        /// 5角色菜单关系 初始化数据库  执行完请注释掉该方法
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -200,7 +200,7 @@ namespace WebApi.Controllers.configmanage
 
 
         /// <summary>
-        /// 角色部门关系 初始化数据库  执行完请注释掉该方法
+        ///6 角色部门关系 初始化数据库  执行完请注释掉该方法
         /// </summary>
         /// <returns></returns>
         [HttpGet]
