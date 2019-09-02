@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using NLog.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
@@ -45,7 +46,7 @@ namespace WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseOptions();
+            app.UseCors("any");
             app.UseResponseTimeMiddleWare();
             #region Swagger
 
@@ -81,18 +82,15 @@ namespace WebApi
         {
             //services.AddSingleton
 
-            services.AddCors(c =>
+            //添加cors 服务 配置跨域处理            
+            services.AddCors(options =>
             {
-             
-                ////一般采用这种方法  iis也可以设置
-                //c.AddPolicy("LimitRequests", policy =>
-                //{
-                //    policy
-                //    .WithOrigins("http://127.0.0.1:80",  "http://127.0.0.1:8889","http://127.0.0.1","http://127.0.0.1:5000"
-                //    ,"127.0.0.1:80/", "127.0.0.1:8889/", "127.0.0.1", "127.0.0.1/", "127.0.0.1:5000/", "127.0.0.1:5000")//支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
-                //    .AllowAnyHeader()//Ensures that the policy allows any header.
-                //    .AllowAnyMethod();
-                //});
+                options.AddPolicy("any", builder =>
+                {
+                    builder.AllowAnyOrigin() //允许任何来源的主机访问
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();//指定处理cookie
+                });
             }).AddMvcCore().AddFluentValidation().AddApiExplorer();
             services.AddMvc(
            o =>
@@ -100,7 +98,13 @@ namespace WebApi
                // 全局异常过滤
                o.Filters.Add(typeof(GlobalExceptionsFilter));
            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddControllersAsServices()
-            .AddJsonOptions(options => { options.SerializerSettings.ContractResolver = new DefaultContractResolver(); });
+            .AddJsonOptions(options => {
+                options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                options.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Include;
+
+            });
 
             #region Swagger UI Service
 

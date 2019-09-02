@@ -21,6 +21,7 @@ namespace WebApi.Controllers.systemmanage
     [DisableCors]
     [Route("Api/SystemManage/User")]
     [ApiController]
+    [EnableCors("any")]
     public class UserController : Controller
     {
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
@@ -157,7 +158,7 @@ namespace WebApi.Controllers.systemmanage
                     HeadImage = string.IsNullOrEmpty(model.HeadImage) ? "" : model.HeadImage,
                     Introduction = model.Introduction,
                     NickName = model.NickName,
-                    Password = model.PassWord,
+                    PassWord = model.PassWord,
                     RsState = 1,
                     RowVersion = 0
                 };
@@ -223,46 +224,7 @@ namespace WebApi.Controllers.systemmanage
 
             return Json(result);
         }
-        [HttpPost]
-        [AllowAnonymous]
-        [WebApi.Common.Log]
-        [Route("Login2")]
-        public JsonResult Login2([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.User.LoginInput model)
-        {
-            ResponseResult result = new ResponseResult();
-
-            LoginInputModelValidation validator = new LoginInputModelValidation();
-            ValidationResult vr = validator.Validate(model);
-
-            if (!vr.IsValid)
-            {
-                result.Code = ResponseResultMessageDefine.ParaError;
-                result.Errors = vr.Errors.Select(e => e.ErrorMessage).ToList();
-            }
-            else
-            {
-                WXQ.BusinessCore.systemmanage.UserOp op = new WXQ.BusinessCore.systemmanage.UserOp();
-
-                WXQ.Enties.Users userModel = op.Login(model.UserName, model.PassWord);
-
-                if (userModel != null && userModel.UsersId > 0)
-                {
-                    TokenModelJWT jwtUser = new TokenModelJWT
-                    {
-                        Uid = userModel.UsersId
-                    };
-
-                    result.Data = JwtHelper.SerializeJWT(jwtUser);
-                }
-                else
-                {
-                    result.Code = ResponseResultMessageDefine.OpLost;
-                    result.Errors.Add(ResponseResultMessageDefine.OpLostMessage);
-                }
-            }
-
-            return Json(result);
-        }
+  
         /// <summary>
         /// 修改密码
         /// </summary>
@@ -292,7 +254,7 @@ namespace WebApi.Controllers.systemmanage
                 WXQ.Enties.Users m = new WXQ.Enties.Users
                 {
                     UsersId = this.User.Identity.Name.ToInt(0),
-                    Password=model.PassWord
+                    PassWord=model.PassWord
                 };
 
                 bool rv = op.ModifyUserPassord(m);
@@ -400,6 +362,8 @@ namespace WebApi.Controllers.systemmanage
         public JsonResult UpdateUsers([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.User.UpdateInput model)
         {
             ResponseResult result = new ResponseResult();
+           var  ts= this.Request.Form["HeadImage"];
+            string dsf = ts;
 
             UpdateInputModelValidation validator = new UpdateInputModelValidation();
             ValidationResult vr = validator.Validate(model);
@@ -415,13 +379,13 @@ namespace WebApi.Controllers.systemmanage
                 WXQ.BusinessCore.systemmanage.UserOp op = new WXQ.BusinessCore.systemmanage.UserOp(userId);
                 WXQ.Enties.Users userModel = new WXQ.Enties.Users
                 {
-                    UsersId = model.UserID,
+                    UsersId = model.UsersId,
                     UpdateDateTime = DateTime.Now,
                     UpdateUser = this.User.Identity.Name,
-                    HeadImage = model.HeadImage,
-                    Introduction = model.Introduction,
+                    HeadImage = model.HeadImage.ToSafeString(),
+                    Introduction = model.Introduction.ToSafeString(),
                     NickName = model.NickName,
-                    Password = model.PassWord,
+                    PassWord = model.PassWord,
                 };
     
                 bool rv = op.UpdateUsers(userModel);
@@ -472,7 +436,7 @@ namespace WebApi.Controllers.systemmanage
                     HeadImage = string.IsNullOrEmpty(model.HeadImage)?"0": model.HeadImage,
                     Introduction = model.Introduction,
                     NickName = model.NickName,
-                    Password = model.PassWord,
+                    PassWord = model.PassWord,
                 };
         
                 bool rv = op.UpdateUsers(userModel);

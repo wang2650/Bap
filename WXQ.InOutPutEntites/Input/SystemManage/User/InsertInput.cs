@@ -20,7 +20,7 @@ namespace WXQ.InOutPutEntites.Input.SystemManage.User
         /// Default:
         /// Nullable:True
         /// </summary>           
-        public string Introduction { get; set; }
+        public string Introduction { get; set; } = "";
 
         /// <summary>
         /// Desc:昵称
@@ -34,9 +34,9 @@ namespace WXQ.InOutPutEntites.Input.SystemManage.User
         /// Default:
         /// Nullable:True
         /// </summary>           
-        public string HeadImage { get; set; }
+        public string HeadImage { get; set; } = "";
 
-      
+
     }
 
 

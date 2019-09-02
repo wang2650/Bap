@@ -41,7 +41,7 @@ namespace WXQ.BusinessCore.systemmanage
         {
             UsersManager UsersManager = new UsersManager();
             m.AddUser = this.OpUserId.ToString();
-            m.Password = CommonLib.Helpers.Encrypt.Sha256(passwordRndSeed + m.Password);
+            m.PassWord = CommonLib.Helpers.Encrypt.Sha256(passwordRndSeed + m.PassWord);
 
             int userId=  UsersManager.InsertReturnInt(m);
 
@@ -83,11 +83,11 @@ namespace WXQ.BusinessCore.systemmanage
         {
             UsersManager UsersManager = new UsersManager();
             m.UpdateUser = this.OpUserId.ToString();
-            m.Password = CommonLib.Helpers.Encrypt.Sha256(passwordRndSeed + m.Password);
+            m.PassWord = CommonLib.Helpers.Encrypt.Sha256(passwordRndSeed + m.PassWord);
             m.RowVersion = m.RowVersion + 1;
             return UsersManager.Db.Updateable<WXQ.Enties.Users>(m).SetColumns(it => new WXQ.Enties.Users()
             {
-                Password = m.Password,
+                PassWord = m.PassWord,
                 UpdateDateTime = DateTime.Now,
                 UpdateUser = m.UpdateUser,
                 RowVersion = m.RowVersion
@@ -106,12 +106,12 @@ namespace WXQ.BusinessCore.systemmanage
             UsersManager UsersManager = new UsersManager();
          
             newPass = string.IsNullOrEmpty(newPass) ? CommonLib.Randoms.GuidRandomGenerator.Instance.Generate().Substring(0, 8) : newPass;
-            m.Password = CommonLib.Helpers.Encrypt.Sha256(passwordRndSeed + newPass);
+            m.PassWord = CommonLib.Helpers.Encrypt.Sha256(passwordRndSeed + newPass);
             m.RowVersion = m.RowVersion + 1;
             m.UpdateUser = this.OpUserId.ToString();
             bool rv = UsersManager.Db.Updateable<WXQ.Enties.Users>(m).SetColumns(it => new WXQ.Enties.Users()
             {
-                Password = m.Password,
+                PassWord = m.PassWord,
                 UpdateDateTime = DateTime.Now,
                 UpdateUser = m.UpdateUser,
                 RowVersion = m.RowVersion
@@ -229,7 +229,7 @@ namespace WXQ.BusinessCore.systemmanage
             result.Result = UsersManager.GetPageList(express, pageModel);
             foreach (Enties.Users u in result.Result)
             {
-                u.Password = "";
+                u.PassWord = "";
             }
             result.PageSize = pageModel.PageSize;
             result.PageIndex = pageModel.PageIndex;
@@ -257,7 +257,7 @@ namespace WXQ.BusinessCore.systemmanage
             List<Enties.Users> result = UsersManager.GetList(u => userIds.Contains(u.UsersId));
             foreach (Enties.Users u in result)
             {
-                u.Password = "";
+                u.PassWord = "";
             }
 
             return result;
@@ -351,7 +351,7 @@ namespace WXQ.BusinessCore.systemmanage
             UsersManager UsersManager = new UsersManager();
             string EncryptPassword = CommonLib.Helpers.Encrypt.Sha256(passwordRndSeed + password);
 
-            return UsersManager.UsersDb.GetSingle(u => u.UserName == userName && u.Password == EncryptPassword&& u.RsState==CommonLib.Tools.EnumHelper.GetValue<WXQ.Enties.CommonObj.RsState>( WXQ.Enties.CommonObj.RsState.Normal));
+            return UsersManager.UsersDb.GetSingle(u => u.UserName == userName && u.PassWord == EncryptPassword&& u.RsState==CommonLib.Tools.EnumHelper.GetValue<WXQ.Enties.CommonObj.RsState>( WXQ.Enties.CommonObj.RsState.Normal));
         }
     }
 }

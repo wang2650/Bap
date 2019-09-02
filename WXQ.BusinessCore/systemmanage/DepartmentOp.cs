@@ -192,7 +192,7 @@ namespace WXQ.BusinessCore.systemmanage
                   .Select((ud, d) => d).ToPageList(pageIndex, pageSize, ref totalRs);
             foreach (Enties.Users u in result.Result)
             {
-                u.Password = "";
+                u.PassWord = "";
             }
 
             result.PageSize = pageSize;
