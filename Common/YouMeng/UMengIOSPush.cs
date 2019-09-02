@@ -4,10 +4,10 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Common.YouMeng.Enums;
-using Common.YouMeng.ViewModel;
+using CommonLib.YouMeng.Enums;
+using CommonLib.YouMeng.ViewModel;
 
-namespace Common.YouMeng
+namespace CommonLib.YouMeng
 {
     public class UMengIOSPush
     {

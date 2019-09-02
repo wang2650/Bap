@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Common.YouMeng.Enums;
+using CommonLib.YouMeng.Enums;
 
-namespace Common.YouMeng.ViewModel
+namespace CommonLib.YouMeng.ViewModel
 {
     public class UMengSendMsgModel
     {

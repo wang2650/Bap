@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Common.YouMeng.Enums;
-using Common.YouMeng.ViewModel;
+using CommonLib.YouMeng.Enums;
+using CommonLib.YouMeng.ViewModel;
 
-namespace Common.YouMeng
+namespace CommonLib.YouMeng
 {
     public class UMengAndroidPush
     {
@@ -31,7 +31,7 @@ namespace Common.YouMeng
                     extra = new ExtraBody(),
                     body = new UMengPushAndroidBodyModel
                     {
-                        ticker = "小壹在线",
+                        ticker = "WXQ在线",
                         title = reqModel.Title,
                         text = reqModel.Title,
                         after_open = reqModel.AfterOpen.ToString(),

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.YouMeng.ViewModel
+namespace CommonLib.YouMeng.ViewModel
 {
     /// <summary>
     /// 友盟安卓通知,消息Body实体

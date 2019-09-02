@@ -7,9 +7,9 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Common.YouMeng.ViewModel;
+using CommonLib.YouMeng.ViewModel;
 
-namespace Common.YouMeng
+namespace CommonLib.YouMeng
 {
     public class UMengPushHelper
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.YouMeng.ViewModel
+namespace CommonLib.YouMeng.ViewModel
 {
     //device_token 设备ID，唯一
     //友盟文档地址：http://dev.umeng.com/push/android/api-doc

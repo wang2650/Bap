@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.YouMeng.Enums
+namespace CommonLib.YouMeng.Enums
 {
     /// <summary>
     ///  友盟推送类型
