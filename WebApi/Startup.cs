@@ -29,6 +29,7 @@ namespace WebApi
     //swagger 默认地址 localhost:5000/index.html
     public class Startup
     {
+
         private const string ApiName = "WXQManage";
 
         public Startup(IConfiguration configuration)
