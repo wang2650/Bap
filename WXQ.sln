@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WXQCaching", "WXQCaching\WX
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WXQ.WebSocket", "WXQ.WebSocket\WXQ.WebSocket.csproj", "{D49E752F-1F35-4EF1-B99B-5D5872A7807A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{20831442-B6E0-4478-A9F7-26157F1CED2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSeetafaceDemo", "..\FaceRecognition\NSeetafaceDemo\NSeetafaceDemo.csproj", "{CA33FE01-E922-4949-9971-F9F3DBE764FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,22 +143,22 @@ Global
 		{D49E752F-1F35-4EF1-B99B-5D5872A7807A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D49E752F-1F35-4EF1-B99B-5D5872A7807A}.Release|x86.ActiveCfg = Release|Any CPU
 		{D49E752F-1F35-4EF1-B99B-5D5872A7807A}.Release|x86.Build.0 = Release|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Debug_Ubuntu|x86.ActiveCfg = Debug|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Debug_Ubuntu|x86.Build.0 = Debug|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Debug|x86.Build.0 = Debug|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Release_Ubuntu|x86.ActiveCfg = Release|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Release_Ubuntu|x86.Build.0 = Release|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Release|x86.ActiveCfg = Release|Any CPU
-		{20831442-B6E0-4478-A9F7-26157F1CED2D}.Release|x86.Build.0 = Release|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug_Ubuntu|x86.ActiveCfg = Debug|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug_Ubuntu|x86.Build.0 = Debug|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug|x86.Build.0 = Debug|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release_Ubuntu|x86.ActiveCfg = Release|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release_Ubuntu|x86.Build.0 = Release|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release|x86.ActiveCfg = Release|Any CPU
+		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
