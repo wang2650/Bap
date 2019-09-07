@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Demo\websocketHelp\Chat.cs.txt" />
+    <None Remove="Demo\websocketHelp\ws.cs.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Demo\websocketHelp\Chat.cs.txt" />
+    <Compile Include="Demo\websocketHelp\ws.cs.txt" />
+  </ItemGroup>
+
 </Project>

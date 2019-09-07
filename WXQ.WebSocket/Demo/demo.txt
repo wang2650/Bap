@@ -1,0 +1,13 @@
+﻿ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            WebApplication2.websocketHelp.ws w = new websocketHelp.ws();
+            w.Init();
+            app.UseStaticFiles();
+            app.UseMvc();
+        }
+    }
