@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MagicOnion" Version="2.4.0" />
-    <PackageReference Include="MagicOnion.Hosting" Version="2.4.0" />
-    <PackageReference Include="MagicOnion.HttpGateway" Version="2.4.0" />
+    <PackageReference Include="MagicOnion" Version="2.6.1" />
+    <PackageReference Include="MagicOnion.Hosting" Version="2.6.1" />
+    <PackageReference Include="MagicOnion.HttpGateway" Version="2.6.1" />
   </ItemGroup>
 
 </Project>
