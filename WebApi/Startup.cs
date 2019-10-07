@@ -48,7 +48,7 @@ namespace WebApi
             }
 
             //app.UseCors("any");
-           app.UseResponseTimeMiddleWare();
+           app.UseEnableCorsMiddleware();
             #region Swagger
 
             /*使用NLog*/

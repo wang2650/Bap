@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace WebApi.Common.MiddleWare
 {
-    public class ResponseTimeMiddleware
+    public class EnableCorsMiddleware
     {
        
 
         private readonly RequestDelegate _next;
-        public ResponseTimeMiddleware(RequestDelegate next)
+        public EnableCorsMiddleware(RequestDelegate next)
         {
             _next = next;
         }
