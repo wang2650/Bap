@@ -47,8 +47,8 @@ namespace WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors("any");
-            app.UseResponseTimeMiddleWare();
+            //app.UseCors("any");
+           app.UseResponseTimeMiddleWare();
             #region Swagger
 
             /*使用NLog*/
@@ -86,12 +86,12 @@ namespace WebApi
             //添加cors 服务 配置跨域处理            
             services.AddCors(options =>
             {
-                options.AddPolicy("any", builder =>
-                {
-                    builder.AllowAnyOrigin() //允许任何来源的主机访问
-                    .AllowAnyMethod()
-                    .AllowAnyHeader();//指定处理cookie
-                });
+                //options.AddPolicy("any", builder =>
+                //{
+                //    builder.AllowAnyOrigin() //允许任何来源的主机访问
+                //    .AllowAnyMethod()
+                //    .AllowAnyHeader();//指定处理cookie
+                //});
             }).AddMvcCore().AddFluentValidation().AddApiExplorer();
             services.AddMvc(
            o =>

@@ -10,8 +10,8 @@ namespace WebApi.Common.MiddleWare
 {
     public class ResponseTimeMiddleware
     {
-        private const string RESPONSE_HEADER_RESPONSE_TIME = "X-Response-Time-ms";
-        // Handle to the next Middleware in the pipeline  
+       
+
         private readonly RequestDelegate _next;
         public ResponseTimeMiddleware(RequestDelegate next)
         {
@@ -20,34 +20,16 @@ namespace WebApi.Common.MiddleWare
         public Task InvokeAsync(HttpContext context)
         {
 
+            context.Response.Headers["Access-Control-Allow-Origin"] = "*";
+            context.Response.Headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS, PUT, PATCH, DELETE";
+            context.Response.Headers["Access-Control-Allow-Headers"] = "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, authorization , Access-Control-Request-Headers,Referer,User-Agent";
+            if (context.Request.Method.ToLower() == "options")
+            {
+                context.Response.StatusCode = 200;
+                return context.Response.WriteAsync("OK");
+            }
+          
 
-            //context.Response.Headers["server"] = "Tengine/1.1";
-            //context.Response.Headers["x-powered-by"] = "";
-            //context.Response.Headers["x-powered-by"] = "wxq";
-            // Start the Timer using Stopwatch  
-            var watch = new Stopwatch();
-            watch.Start();
-            context.Response.OnStarting(() => {
-                // Stop the timer information and calculate the time   
-                watch.Stop();
-                var responseTimeForCompleteRequest = watch.ElapsedMilliseconds;
-                // Add the Response time information in the Response headers.   
-                context.Response.Headers[RESPONSE_HEADER_RESPONSE_TIME] = responseTimeForCompleteRequest.ToString();
-
-                WXQ.Enties.Metrics m = new WXQ.Enties.Metrics();
-                m.MethodName = context.Request.Path;
-                m.AppId = 1;
-                m.AddDateTime = DateTime.Now;
-                //秒
-                m.CostTime =Convert.ToInt32 ( responseTimeForCompleteRequest/1000);
-
-
-                WXQ.BusinessCore.opLogManager.MetricsOp.InsertMetricsLog(m);
-
-
-                return Task.CompletedTask;
-            });
-            // Call the next delegate/middleware in the pipeline   
             return this._next(context);
         }
     }
