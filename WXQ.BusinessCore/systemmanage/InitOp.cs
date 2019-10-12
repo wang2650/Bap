@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using WXQ.BusinessCore.BaseCore;
 using WXQ.Enties;
+
 namespace WXQ.BusinessCore.systemmanage
 {
     public class InitOp : OpBase
@@ -151,7 +152,6 @@ namespace WXQ.BusinessCore.systemmanage
 
         public bool CreateRole(ref List<string> result)
         {
-      
             WXQ.BusinessCore.systemmanage.RoleOp op = new RoleOp(0);
             WXQ.Enties.Role role = new Enties.Role
             {
@@ -159,7 +159,7 @@ namespace WXQ.BusinessCore.systemmanage
                 Description = "超级管理员角色"
             };
             bool returnvalue = true;
-            if ( op.InsertRole(role))
+            if (op.InsertRole(role))
             {
                 result.Add("添加角色成功");
             }
@@ -191,7 +191,6 @@ namespace WXQ.BusinessCore.systemmanage
             menuId = menuOp.InsertMenuReturnId(sysindexMenu);
             if (menuId > 0)
             {
-             
                 result.Add("添加菜单系统首页成功");
             }
             else
@@ -214,7 +213,6 @@ namespace WXQ.BusinessCore.systemmanage
             menuId = menuOp.InsertMenuReturnId(sysmanagerMenu);
             if (menuId > 0)
             {
-            
                 result.Add("添加菜单系统管理成功");
                 int sysmanagerId = menuId;
 
@@ -367,7 +365,6 @@ namespace WXQ.BusinessCore.systemmanage
             menuId = menuOp.InsertMenuReturnId(myindexMenu);
             if (menuId > 0)
             {
-               
                 result.Add("添加菜单我的首页成功");
             }
             else
@@ -398,11 +395,8 @@ namespace WXQ.BusinessCore.systemmanage
         {
             bool returnvalue = true;
             int userId = 0;
-        
+
             int roleId = 0;
-
-       
-
 
             WXQ.BusinessCore.systemmanage.UserOp userOp = new UserOp(0);
             PageModel pageModel = new PageModel
@@ -418,9 +412,10 @@ namespace WXQ.BusinessCore.systemmanage
             WXQ.BusinessCore.systemmanage.RoleOp roleOp = new RoleOp(0);
             List<Enties.Role> roles = roleOp.GetRoleList();
 
-            if (roles!= null && roles.Count > 0)
+            if (roles != null && roles.Count > 0)
             {
                 roleId = roles[0].RoleId;
+
                 #region 角色和用户关系
 
                 if (roleOp.AddUserForRole(roleId, userId))
@@ -435,17 +430,11 @@ namespace WXQ.BusinessCore.systemmanage
                 #endregion 角色和用户关系
             }
 
-
-
-       
-
-
             return returnvalue;
         }
 
         public bool CreateUserDepartment(ref List<string> result)
         {
-
             WXQ.BusinessCore.systemmanage.DepartmentOp departmentOp = new DepartmentOp(0);
 
             int userId = 0;
@@ -463,13 +452,12 @@ namespace WXQ.BusinessCore.systemmanage
                 PageSize = 100
             };
 
-
-        
             ListResult<Enties.Users> users = userOp.GetUserList("", pageModel);
             if (users.Result != null && users.Result.Count > 0)
             {
                 userId = users.Result[0].UsersId;
             }
+
             #region 部门和用户关系
 
             List<int> userIds = new List<int>
@@ -486,16 +474,12 @@ namespace WXQ.BusinessCore.systemmanage
             }
 
             #endregion 部门和用户关系
-       
-        
+
             return returnvalue;
         }
 
-
-
         public bool CreateRoleDepartment(ref List<string> result)
         {
-
             WXQ.BusinessCore.systemmanage.DepartmentOp departmentOp = new DepartmentOp(0);
 
             int roleId = 0;
@@ -514,18 +498,21 @@ namespace WXQ.BusinessCore.systemmanage
             };
             WXQ.BusinessCore.systemmanage.RoleOp roleOp = new RoleOp(0);
             List<Enties.Role> roles = roleOp.GetRoleList();
-       
+
             if (roles != null && roles.Count > 0)
             {
                 roleId = roles[0].RoleId;
-
             }
+
             #region 部门和用户关系
+
             DepartmentRoleManager departmentRoleManager = new DepartmentRoleManager();
-            DepartmentRole dr = new DepartmentRole();
-            dr.RoleId = roleId;
-            dr.DepartmentId = departmentId;
-    
+            DepartmentRole dr = new DepartmentRole
+            {
+                RoleId = roleId,
+                DepartmentId = departmentId
+            };
+
             if (departmentRoleManager.Insert(dr))
             {
                 result.Add("添加部门和角色关系成功");
@@ -537,21 +524,8 @@ namespace WXQ.BusinessCore.systemmanage
 
             #endregion 部门和用户关系
 
-
             return returnvalue;
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
         public bool CreateRoleMenu(ref List<string> result)
         {
@@ -561,16 +535,16 @@ namespace WXQ.BusinessCore.systemmanage
             if (roles != null && roles.Count > 0)
             {
                 roleId = roles[0].RoleId;
-
             }
 
-                PageModel pageModel = new PageModel
+            PageModel pageModel = new PageModel
             {
                 PageIndex = 1,
                 PageSize = 10000
             };
 
             #region 角色菜单关系
+
             WXQ.BusinessCore.systemmanage.MenuOp menuOp = new MenuOp(0);
             ListResult<Enties.Menu> menus = menuOp.GetMenuList("", "", -1, pageModel);
             if (menus != null && menus.Result.Count > 0)
@@ -591,6 +565,251 @@ namespace WXQ.BusinessCore.systemmanage
 
             return true;
         }
+
+
+        public bool CreateFormElementType()
+        {
+
+            Dictionary<string, string> formtypes = new Dictionary<string, string>();
+            formtypes.Add("hidden", "隐藏字段");
+            formtypes.Add("input", "输入框");
+            formtypes.Add("InputNumber", "数字输入框");
+            formtypes.Add("autoComplete", "自动完成");
+            formtypes.Add("radio", "单选");
+            formtypes.Add("checkbox", "多选");
+            formtypes.Add("select", "下拉框");
+            formtypes.Add("switch", "开关");
+            formtypes.Add("cascader", "级联");
+            formtypes.Add("DatePicker", "日期选择");
+            formtypes.Add("TimePicker", "时间选择");
+            formtypes.Add("ColorPicker", "颜色选择");
+            formtypes.Add("upload", "上传");
+            formtypes.Add("rate", "评分");
+            formtypes.Add("slider", "滑块");
+            formtypes.Add("tree", "树形");
+            formtypes.Add("frame", "框架");
+
+            WXQ.BusinessCore.CommonManager.DictOp op = new WXQ.BusinessCore.CommonManager.DictOp(0);
+            bool rv = true;
+            foreach (var d in formtypes)
+            {
+                WXQ.Enties.Dict r = new WXQ.Enties.Dict
+                {
+
+                    Description = "",
+                    DictKey = d.Key,
+                    DictValue = d.Value,
+                    DictType = "string",
+                    OrderBy = 0,
+                    GroupName = "createelementformtype",
+                    AddDateTime = DateTime.Now,
+                    AddUser = "0"
+                };
+
+                rv = rv && op.InsertDict(r);
+            }
+
+
+
+
+
+
+
+
+            return rv;
+        }
+
+        public bool CreateFormElementEvent()
+        {
+            WXQ.BusinessCore.CommonManager.DictOp op = new WXQ.BusinessCore.CommonManager.DictOp(0);
+            bool rv = true;
+            #region input
+            WXQ.Enties.Dict r = new WXQ.Enties.Dict
+            {
+
+                Description = "",
+                DictKey = "blur",
+                DictValue = "模糊",
+                DictType = "string",
+                OrderBy = 0,
+                GroupName = "hiddenevent",
+                AddDateTime = DateTime.Now,
+                AddUser = "0"
+            };
+
+            rv = rv && op.InsertDict(r);
+            r.DictKey = "focus";
+            r.DictKey = "获取焦点";
+            r.GroupName = "hiddenevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "hiddenevent";
+            rv = rv && op.InsertDict(r);
+            r.DictKey = "clear";
+            r.DictKey = "清空";
+            r.GroupName = "hiddenevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+
+            #region InputNumber
+            r.DictKey = "focus";
+            r.DictKey = "获取焦点";
+            r.GroupName = "InputNumberevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "blur";
+            r.DictKey = "模糊";
+            r.GroupName = "InputNumberevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "InputNumberevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+
+            #region  autoComplete
+            r.DictKey = "select";
+            r.DictKey = "选择";
+            r.GroupName = "autoCompleteevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+
+            #region radio
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "radioevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+
+            #region checkbox
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "checkboxevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+
+
+            #region  select
+            r.DictKey = "change";
+            r.DictKey = "选择";
+            r.GroupName = "selectevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "visible-change";
+            r.DictKey = "下拉框出现/隐藏时触发";
+            r.GroupName = "selectevent";
+            rv = rv && op.InsertDict(r);
+
+
+            r.DictKey = "remove-tag";
+            r.DictKey = "多选模式下移除tag时触发";
+            r.GroupName = "selectevent";
+            rv = rv && op.InsertDict(r);
+
+
+            r.DictKey = "clear";
+            r.DictKey = "可清空的单选模式下用户点击清空按钮时触发";
+            r.GroupName = "selectevent";
+            rv = rv && op.InsertDict(r);
+            r.DictKey = "blur";
+            r.DictKey = "模糊";
+            r.GroupName = "selectevent";
+            rv = rv && op.InsertDict(r);
+            r.DictKey = "focus";
+            r.DictKey = "焦点";
+            r.GroupName = "selectevent";
+            rv = rv && op.InsertDict(r);
+
+
+            #endregion
+
+
+
+            #region switch
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "switchevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+
+            #region cascader
+            r.DictKey = "change";
+            r.DictKey = "选择";
+            r.GroupName = "cascaderevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "active-item-change";
+            r.DictKey = "当父级选项变化时触发的事件，仅在 change-on-select 为 false 时可用";
+            r.GroupName = "cascaderevent";
+            rv = rv && op.InsertDict(r);
+
+
+
+
+            r.DictKey = "visible-change";
+            r.DictKey = "下拉框出现/隐藏时触发";
+            r.GroupName = "cascaderevent";
+            rv = rv && op.InsertDict(r);
+            r.DictKey = "blur";
+            r.DictKey = "模糊";
+            r.GroupName = "cascaderevent";
+            rv = rv && op.InsertDict(r);
+            r.DictKey = "focus";
+            r.DictKey = "焦点";
+            r.GroupName = "cascaderevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+
+            #region checkbox
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "checkboxevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+
+
+            #region checkbox
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "checkboxevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+
+
+            #region checkbox
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "checkboxevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+
+
+            #region checkbox
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "checkboxevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+            #region checkbox
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "checkboxevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+
+
+
+
+
+
+
+
+            return rv;
+        }
+
 
 
     }
