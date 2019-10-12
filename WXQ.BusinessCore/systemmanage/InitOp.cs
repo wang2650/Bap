@@ -492,6 +492,7 @@ namespace WXQ.BusinessCore.systemmanage
         }
 
 
+
         public bool CreateRoleDepartment(ref List<string> result)
         {
 
