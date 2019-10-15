@@ -188,6 +188,11 @@ namespace WebApi.Controllers.systemmanage
         [Route("Login")]
         public JsonResult Login( [FromForm] WXQ.InOutPutEntites.Input.SystemManage.User.LoginInput model)
         {
+            WXQ.BusinessCore.systemmanage.InitOp initOp = new WXQ.BusinessCore.systemmanage.InitOp();
+            initOp.CreateFormprops();
+
+
+
             var a = this.Request;
            // WXQ.InOutPutEntites.Input.SystemManage.User.LoginInput model = new LoginInput();
             ResponseResult result = new ResponseResult();

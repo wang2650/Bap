@@ -10,6 +10,7 @@
     <DocumentationFile>G:\temp\WXQ.BusinessCore\WXQ.BusinessCore.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="CS-Script.Core" Version="1.2.2" />
     <PackageReference Include="SecurityCodeScan.VS2017" Version="3.2.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
@@ -24,6 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BusinessManager\" />
+    <Folder Include="CreateForm\" />
     <Folder Include="DbCore\" />
   </ItemGroup>
   <ItemGroup>

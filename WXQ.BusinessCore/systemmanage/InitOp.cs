@@ -5,6 +5,8 @@ using System.Linq;
 using WXQ.BusinessCore.BaseCore;
 using WXQ.Enties;
 
+using CSScriptLib;
+
 namespace WXQ.BusinessCore.systemmanage
 {
     public class InitOp : OpBase
@@ -567,57 +569,6 @@ namespace WXQ.BusinessCore.systemmanage
         }
 
 
-        public bool CreateFormElementType()
-        {
-
-            Dictionary<string, string> formtypes = new Dictionary<string, string>();
-            formtypes.Add("hidden", "隐藏字段");
-            formtypes.Add("input", "输入框");
-            formtypes.Add("InputNumber", "数字输入框");
-            formtypes.Add("autoComplete", "自动完成");
-            formtypes.Add("radio", "单选");
-            formtypes.Add("checkbox", "多选");
-            formtypes.Add("select", "下拉框");
-            formtypes.Add("switch", "开关");
-            formtypes.Add("cascader", "级联");
-            formtypes.Add("DatePicker", "日期选择");
-            formtypes.Add("TimePicker", "时间选择");
-            formtypes.Add("ColorPicker", "颜色选择");
-            formtypes.Add("upload", "上传");
-            formtypes.Add("rate", "评分");
-            formtypes.Add("slider", "滑块");
-            formtypes.Add("tree", "树形");
-            formtypes.Add("frame", "框架");
-
-            WXQ.BusinessCore.CommonManager.DictOp op = new WXQ.BusinessCore.CommonManager.DictOp(0);
-            bool rv = true;
-            foreach (var d in formtypes)
-            {
-                WXQ.Enties.Dict r = new WXQ.Enties.Dict
-                {
-
-                    Description = "",
-                    DictKey = d.Key,
-                    DictValue = d.Value,
-                    DictType = "string",
-                    OrderBy = 0,
-                    GroupName = "createelementformtype",
-                    AddDateTime = DateTime.Now,
-                    AddUser = "0"
-                };
-
-                rv = rv && op.InsertDict(r);
-            }
-
-
-
-
-
-
-
-
-            return rv;
-        }
 
         public bool CreateFormElementEvent()
         {
@@ -763,45 +714,148 @@ namespace WXQ.BusinessCore.systemmanage
             rv = rv && op.InsertDict(r);
             #endregion
 
-            #region checkbox
+            #region DatePicker
             r.DictKey = "change";
             r.DictKey = "值改变";
-            r.GroupName = "checkboxevent";
+            r.GroupName = "DatePickerevent";
+            rv = rv && op.InsertDict(r);
+            r.DictKey = "blur";
+            r.DictKey = "模糊";
+            r.GroupName = "DatePickerevent";
+            rv = rv && op.InsertDict(r);
+            r.DictKey = "focus";
+            r.DictKey = "焦点";
+            r.GroupName = "DatePickerevent";
+            rv = rv && op.InsertDict(r);
+
+
+
+            #endregion
+
+
+            #region TimePicker
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "TimePickerevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "blur";
+            r.DictKey = "模糊";
+            r.GroupName = "TimePickerevent";
+            rv = rv && op.InsertDict(r);
+            r.DictKey = "focus";
+            r.DictKey = "焦点";
+            r.GroupName = "TimePickerevent";
+            rv = rv && op.InsertDict(r);
+
+
+
+            #endregion
+
+
+            #region ColorPicker
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "ColorPickerevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "active-change";
+            r.DictKey = "面板中当前显示的颜色发生改变时触发";
+            r.GroupName = "ColorPickerevent";
+            rv = rv && op.InsertDict(r);
+
+            #endregion
+
+
+            #region rate
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "rateevent";
+            rv = rv && op.InsertDict(r);
+            #endregion
+            #region slider
+            r.DictKey = "change";
+            r.DictKey = "值改变";
+            r.GroupName = "sliderevent";
             rv = rv && op.InsertDict(r);
             #endregion
 
 
-            #region checkbox
-            r.DictKey = "change";
-            r.DictKey = "值改变";
-            r.GroupName = "checkboxevent";
+
+            #region tree
+            r.DictKey = "node-click";
+            r.DictKey = "节点被点击时的回调";
+            r.GroupName = "treeevent";
             rv = rv && op.InsertDict(r);
-            #endregion
 
-
-            #region checkbox
-            r.DictKey = "change";
-            r.DictKey = "值改变";
-            r.GroupName = "checkboxevent";
+            r.DictKey = "node-contextmenu";
+            r.DictKey = "当某一节点被鼠标右键点击时会触发该事件";
+            r.GroupName = "treeevent";
             rv = rv && op.InsertDict(r);
-            #endregion
-
-
-            #region checkbox
-            r.DictKey = "change";
-            r.DictKey = "值改变";
-            r.GroupName = "checkboxevent";
+            r.DictKey = "check-change";
+            r.DictKey = "节点选中状态发生变化时的回调";
+            r.GroupName = "treeevent";
             rv = rv && op.InsertDict(r);
-            #endregion
-            #region checkbox
-            r.DictKey = "change";
-            r.DictKey = "值改变";
-            r.GroupName = "checkboxevent";
+
+
+
+
+            r.DictKey = "check";
+            r.DictKey = "当复选框被点击的时候触发";
+            r.GroupName = "treeevent";
             rv = rv && op.InsertDict(r);
+
+            r.DictKey = "current-change";
+            r.DictKey = "当前选中节点变化时触发的事件";
+            r.GroupName = "treeevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "node-expand";
+            r.DictKey = "节点被展开时触发的事件";
+            r.GroupName = "treeevent";
+            rv = rv && op.InsertDict(r);
+
+
+            r.DictKey = "node-collapse";
+            r.DictKey = "节点被关闭时触发的事件";
+            r.GroupName = "treeevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "node-drag-start";
+            r.DictKey = "节点开始拖拽时触发的事件";
+            r.GroupName = "treeevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "node-drag-enter";
+            r.DictKey = "拖拽进入其他节点时触发的事件";
+            r.GroupName = "treeevent";
+            rv = rv && op.InsertDict(r);
+            r.DictKey = "node-drag-leave";
+            r.DictKey = "拖拽离开某个节点时触发的事件";
+            r.GroupName = "treeevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "node-drag-over";
+            r.DictKey = "在拖拽节点时触发的事件（类似浏览器的 mouseover 事件）";
+            r.GroupName = "treeevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "node-drag-end";
+            r.DictKey = "拖拽结束时（可能未成功）触发的事件";
+            r.GroupName = "treeevent";
+            rv = rv && op.InsertDict(r);
+            r.DictKey = "node-drop";
+            r.DictKey = "拖拽成功完成时触发的事件";
+            r.GroupName = "treeevent";
+            rv = rv && op.InsertDict(r);
+
+            r.DictKey = "check-change";
+            r.DictKey = "节点选中状态发生变化时的回调";
+            r.GroupName = "treeevent";
+            rv = rv && op.InsertDict(r);
+
+
             #endregion
-
-
-
 
 
 
@@ -811,6 +865,27 @@ namespace WXQ.BusinessCore.systemmanage
         }
 
 
+
+
+        public string CreateFormprops()
+        {
+            dynamic script = CSScript.Evaluator
+                         .LoadCode(@"using System.Windows.Forms;
+                                     public class Script
+                                     {
+                                         public string SayHello(string greeting)
+                                         {
+                                         
+return greeting;
+                                         }
+                                     }");
+         string d=   script.SayHello("Hello World!");
+
+
+
+
+            return d;
+        }
 
     }
 }
