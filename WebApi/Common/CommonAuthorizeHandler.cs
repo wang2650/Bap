@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Primitives;
@@ -10,18 +11,22 @@ using System.Threading.Tasks;
 
 namespace WebApi.Common
 {
-    public class CommonAuthorize : IAuthorizationRequirement
-    {
+  
 
-    }
-
-
-    public class CommonAuthorizeHandler : AuthorizationHandler<CommonAuthorize>
+    public class CommonAuthorizeRequirement :  AuthorizationHandler<NameAuthorizationRequirement>, IAuthorizationRequirement
     {
    
-        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, CommonAuthorize requirement)
+         public CommonAuthorizeRequirement(string name="")
         {
-            var httpContext = (context.Resource as AuthorizationFilterContext).HttpContext;
+
+        }
+
+
+        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, NameAuthorizationRequirement requirement)
+        {
+            var filterContext = (context.Resource as Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext);
+            var httpContext = (context.Resource as Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)?.HttpContext;
+        
             //var userContext = httpContext.RequestServices.GetService(typeof(UserContext)) as UserContext;
 
             //var jwtOption = (httpContext.RequestServices.GetService(typeof(IOptions<JwtOption>)) as IOptions<JwtOption>).Value;
@@ -66,4 +71,7 @@ namespace WebApi.Common
 
 
     }
+
+
+
 }

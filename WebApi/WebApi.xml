@@ -64,7 +64,7 @@
         </member>
         <member name="M:WebApi.Common.GlobalExceptionsFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
             <summary>
-            异常发生
+            异常发生+
             </summary>
             <param name="context"></param>
         </member>
@@ -143,6 +143,23 @@
             <summary>
             过期时间
             </summary>
+        </member>
+        <member name="T:WebApi.Common.MiddleWare.NoAuthorizeAttribute">
+            <summary>
+            不验证
+            </summary>
+        </member>
+        <member name="T:WebApi.Common.MiddleWare.AuthorizeAttribute">
+            <summary>
+            验证
+            </summary>
+        </member>
+        <member name="M:WebApi.Common.MiddleWare.ExceptionMiddleware.WriteLog(System.String,System.Exception)">
+            <summary>
+            写入日志
+            </summary>
+            <param name="throwMsg"></param>
+            <param name="ex"></param>
         </member>
         <member name="T:WebApi.Controllers.configmanager.DictController">
             <summary>

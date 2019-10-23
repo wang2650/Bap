@@ -27,7 +27,7 @@ namespace WebApi.Common
         }
 
         /// <summary>
-        /// 异常发生
+        /// 异常发生+
         /// </summary>
         /// <param name="context"></param>
         public void OnException(ExceptionContext context)

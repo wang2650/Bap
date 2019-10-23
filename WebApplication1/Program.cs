@@ -1,9 +1,13 @@
-﻿using Microsoft.Extensions.Hosting;
-using NLog.Web;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using AspectCore.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace WebApi
+namespace WebApplication1
 {
     public class Program
     {
@@ -11,20 +15,12 @@ namespace WebApi
         {
             CreateHostBuilder(args).Build().Run();
         }
-     
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                })
-              
-                .UseServiceProviderFactory(new AspectCoreServiceProviderFactory()).UseNLog()
-            ;
-
-
-
-
-}
+                });
+    }
 }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -10,11 +10,11 @@
     <DocumentationFile>G:\temp\WXQ.BusinessCore\WXQ.BusinessCore.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SecurityCodeScan.VS2017" Version="3.2.0">
+    <PackageReference Include="SecurityCodeScan.VS2017" Version="3.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="sqlSugarCore" Version="5.0.0.8" />
+    <PackageReference Include="sqlSugarCore" Version="5.0.0.10" />
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\WXQ.Enties\WXQ.Enties.csproj">
       <Name>WXQ.Enties</Name>

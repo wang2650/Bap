@@ -34,7 +34,7 @@ namespace WebApi.Controllers.systemmanage
         [HttpGet]
         [WebApi.Common.Log]
         [Route("DeleteUser")]
-        [Authorize("common")]
+        [WebApi.Common.MiddleWare.AuthorizeAttribute]
         public JsonResult DeleteUser([FromQuery] int userId)
         {
             ResponseResult result = new ResponseResult();
@@ -60,10 +60,12 @@ namespace WebApi.Controllers.systemmanage
         /// <returns></returns>
         [HttpGet]
         [Route("GetCurrentUserInfo")]
-        [Authorize("common")]
+        [WebApi.Common.MiddleWare.AuthorizeAttribute]
         [WebApi.Common.Log]
         public JsonResult GetCurrentUserInfo()
         {
+
+           
             ResponseResult result = new ResponseResult();
             int userId = WebApi.Common.HelpOp.UserOp.GetUserId(this.User);
 
