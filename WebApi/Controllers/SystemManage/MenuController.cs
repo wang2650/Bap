@@ -34,7 +34,7 @@ namespace WebApi.Controllers.systemmanage
         public JsonResult InsertMenu([FromForm]  WXQ.InOutPutEntites.Input.SystemManage.Menu.InsertMenuInput model)
         {
             ResponseResult result = new ResponseResult();
-
+           // this.Request.Form[""];
             InsertMenuInputModelValidation validator = new InsertMenuInputModelValidation();
             ValidationResult vr = validator.Validate(model);
 

@@ -4,6 +4,31 @@
         <name>WXQ.Enties</name>
     </assembly>
     <members>
+        <member name="P:WXQ.Enties.CommonObj.CreateFormProps.Remark">
+             <summary>
+            说明:
+             </summary>           
+        </member>
+        <member name="P:WXQ.Enties.CommonObj.CreateFormProps.Para">
+            <summary>
+            参数
+            </summary>           
+        </member>
+        <member name="P:WXQ.Enties.CommonObj.CreateFormProps.ParaType">
+            <summary>
+            类型
+            </summary>           
+        </member>
+        <member name="P:WXQ.Enties.CommonObj.CreateFormProps.CanSelectValue">
+            <summary>
+            可选值
+            </summary>           
+        </member>
+        <member name="P:WXQ.Enties.CommonObj.CreateFormProps.DefaultValue">
+            <summary>
+            默认值
+            </summary>           
+        </member>
         <member name="P:WXQ.Enties.CommonObj.MenuTree.index">
             <summary>
             索引
@@ -123,6 +148,61 @@
              <summary>
             版本号
              </summary>
+        </member>
+        <member name="P:WXQ.Enties.DbModels.CreateFormElementValidate.Remark">
+             <summary>
+            说明:
+             </summary>           
+        </member>
+        <member name="P:WXQ.Enties.DbModels.CreateFormElementValidate.Para">
+            <summary>
+            参数
+            </summary>           
+        </member>
+        <member name="P:WXQ.Enties.DbModels.CreateFormElementValidate.ParaType">
+            <summary>
+            类型
+            </summary>           
+        </member>
+        <member name="P:WXQ.Enties.DbModels.CreateFormElementValidate.ValidateId">
+            <summary>
+            主键
+            </summary>           
+        </member>
+        <member name="P:WXQ.Enties.DbModels.CreateFormElementValidate.DefaultValue">
+            <summary>
+            默认值
+            </summary>           
+        </member>
+        <member name="P:WXQ.Enties.DbModels.CreateFormOptions.Remark">
+             <summary>
+            说明:
+             </summary>           
+        </member>
+        <member name="P:WXQ.Enties.DbModels.CreateFormOptions.FieldName">
+            <summary>
+            字段名
+            </summary>           
+        </member>
+        <member name="P:WXQ.Enties.DbModels.CreateFormOptions.ParaType">
+            <summary>
+            类型
+            </summary>           
+        </member>
+        <member name="P:WXQ.Enties.DbModels.CreateFormOptions.OptionsId">
+            <summary>
+            主键
+            </summary>           
+        </member>
+        <member name="P:WXQ.Enties.DbModels.CreateFormOptions.IsRequired">
+            <summary>
+            是否必填
+            </summary>           
+        </member>
+        <member name="P:WXQ.Enties.DbModels.CreateFormOptions.DefaultValue">
+            <summary>
+            默认值
+            </summary>           
         </member>
         <member name="T:WXQ.Enties.Department">
             <summary>
