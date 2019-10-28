@@ -191,7 +191,7 @@ namespace WebApi.Controllers.systemmanage
         public JsonResult Login( [FromForm] WXQ.InOutPutEntites.Input.SystemManage.User.LoginInput model)
         {
             WXQ.BusinessCore.systemmanage.InitOp initOp = new WXQ.BusinessCore.systemmanage.InitOp();
-            initOp.CreateFormprops();
+     
 
 
 

@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.Primitives;
 using System;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace WebApi.Common.MiddleWare
 {
@@ -22,30 +21,33 @@ namespace WebApi.Common.MiddleWare
     /// 验证
     /// </summary>
 
-    public class AuthorizeAttribute : Attribute, IAuthorizationFilter, IAsyncAuthorizationFilter
+    public class AuthorizeAttribute : Attribute, IAuthorizationFilter
     {
         public string AccessKey { get; set; }
-
-        public  Task OnAuthorizationAsync(AuthorizationFilterContext context)
-        {
-
-            context.Result = new UnauthorizedResult();
-          //  context.HttpContext.Response.WriteAsync("Executing AuthorizationFilter. \r\n");
-
-            return Task.CompletedTask;
-        }
 
         public virtual void OnAuthorization(AuthorizationFilterContext filterContext)
         {
             if (filterContext == null)
                 throw new ArgumentNullException(nameof(filterContext));
 
-            filterContext.Result = new Microsoft.AspNetCore.Mvc.JsonResult(new { name = "kxy1" });
+            var result = filterContext.HttpContext.Request.Headers.TryGetValue("Authorization", out StringValues authStr);
+            if (!result || string.IsNullOrEmpty(authStr.ToString()))
+            {
+                filterContext.Result = new UnauthorizedResult();
+            }
+            else
+            {
+                var jwtuserModel = JwtHelper.DerializeJWT(authStr.ToString());
 
-            var identity = new CustomIdentity("10");
+                if (jwtuserModel != null && jwtuserModel.ExpDate > new DateTimeOffset(DateTime.Now.AddHours(1)).ToUnixTimeSeconds())
+                {
+                    var identity = new CustomIdentity(jwtuserModel.Uid.ToString());
 
-            var principal = new ClaimsPrincipal(identity);
-            filterContext.HttpContext.User = principal;
+                    var principal = new ClaimsPrincipal(identity);
+
+                    filterContext.HttpContext.User = principal;
+                }
+            }
         }
     }
 }

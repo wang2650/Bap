@@ -17,8 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WXQCaching", "WXQCaching\WX
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WXQ.WebSocket", "WXQ.WebSocket\WXQ.WebSocket.csproj", "{D49E752F-1F35-4EF1-B99B-5D5872A7807A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSeetafaceDemo", "..\FaceRecognition\NSeetafaceDemo\NSeetafaceDemo.csproj", "{CA33FE01-E922-4949-9971-F9F3DBE764FA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcServer", "GrpcServer\GrpcServer.csproj", "{DB737A14-2883-4F47-B9C9-DD97BA1989CB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcClient", "GrpcClient\GrpcClient.csproj", "{AFCA370E-075C-41D5-9F85-6D0802F6D321}"
@@ -27,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "newliftapiserver", "newlift
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "newlifeapiclient", "newlifeapiclient\newlifeapiclient.csproj", "{B77C3FB5-9ECB-4414-BF62-3EE646E27045}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{489B3AC3-2920-4709-AA9B-292F58B99D8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{489B3AC3-2920-4709-AA9B-292F58B99D8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,22 +151,6 @@ Global
 		{D49E752F-1F35-4EF1-B99B-5D5872A7807A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D49E752F-1F35-4EF1-B99B-5D5872A7807A}.Release|x86.ActiveCfg = Release|Any CPU
 		{D49E752F-1F35-4EF1-B99B-5D5872A7807A}.Release|x86.Build.0 = Release|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug_Ubuntu|x86.ActiveCfg = Debug|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug_Ubuntu|x86.Build.0 = Debug|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Debug|x86.Build.0 = Debug|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release_Ubuntu|x86.ActiveCfg = Release|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release_Ubuntu|x86.Build.0 = Release|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release|x86.ActiveCfg = Release|Any CPU
-		{CA33FE01-E922-4949-9971-F9F3DBE764FA}.Release|x86.Build.0 = Release|Any CPU
 		{DB737A14-2883-4F47-B9C9-DD97BA1989CB}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB737A14-2883-4F47-B9C9-DD97BA1989CB}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
 		{DB737A14-2883-4F47-B9C9-DD97BA1989CB}.Debug_Ubuntu|x86.ActiveCfg = Debug|Any CPU
