@@ -335,7 +335,7 @@
         </member>
         <member name="T:WebApi.Controllers.systemmanage.DepartmentController">
             <summary>
-            菜单模块
+            部门模块
             </summary>
         </member>
         <member name="M:WebApi.Controllers.systemmanage.DepartmentController.InsertDepartment(WXQ.InOutPutEntites.Input.SystemManage.Department.InsertDepartmentInput)">

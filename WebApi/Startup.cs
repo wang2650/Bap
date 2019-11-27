@@ -57,12 +57,14 @@ namespace WebApi
             #region Swagger
 
             /*使用NLog*/
+
             loggerFactory.AddNLog();
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint($"/swagger/V1/swagger.json", $"{ApiName}");
+               
                 c.RoutePrefix = "swagger"; //路径配置，设置为空，表示直接在根域名（localhost:8001）访问该文件,注意localhost:8001/swagger是访问不到的，去launchSettings.json把launchUrl去掉
             });
 
@@ -119,7 +121,8 @@ namespace WebApi
                     Contact = new OpenApiContact { Name = "WXQ", Email = "Wang2650@163.com", Url = new Uri("http://www.baidu.com") }
                 });
                 // 按相对路径排序，作者：Alby
-                c.OrderActionsBy(o => o.RelativePath);
+                c.OrderActionsBy(o =>o.GroupName+ o.RelativePath);
+             
 
                 //就是这里
                 string xmlPath = Path.Combine(basePath, "WebApi.xml");//这个就是刚刚配置的xml文件名

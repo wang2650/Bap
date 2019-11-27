@@ -15,9 +15,8 @@ namespace WebApi.Controllers.systemmanage
 {
 
     /// <summary>
-    /// 菜单模块
+    /// 部门模块
     /// </summary>
-
     [Route("Api/SystemManage/Department")]
     [ApiController]
     public class DepartmentController : Controller

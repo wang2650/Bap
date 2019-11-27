@@ -5,8 +5,6 @@ using System.Linq;
 using WXQ.BusinessCore.BaseCore;
 using WXQ.Enties;
 
-using CSScriptLib;
-
 namespace WXQ.BusinessCore.systemmanage
 {
     public class InitOp : OpBase
@@ -867,25 +865,6 @@ namespace WXQ.BusinessCore.systemmanage
 
 
 
-        public string CreateFormprops()
-        {
-            dynamic script = CSScript.Evaluator
-                         .LoadCode(@"using System.Windows.Forms;
-                                     public class Script
-                                     {
-                                         public string SayHello(string greeting)
-                                         {
-                                         
-return greeting;
-                                         }
-                                     }");
-         string d=   script.SayHello("Hello World!");
-
-
-
-
-            return d;
-        }
 
     }
 }
