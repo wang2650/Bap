@@ -34,7 +34,7 @@ namespace WebApi
         }
 
         public IConfiguration Configuration { get; }
-
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public void ConfigureContainer(IServiceContainer builder)
         {
             // 这里就是熟悉的味道了。。。
@@ -51,8 +51,8 @@ namespace WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors();
-            app.UseEnableCorsMiddleware();
+           // app.UseCors("mycors");
+            app.UseOptions();
 
             #region Swagger
 
@@ -67,7 +67,7 @@ namespace WebApi
             });
 
             #endregion Swagger
-
+          
             NLog.LogManager.LoadConfiguration("nlog.config");
             NLog.LogManager.Configuration.Variables["ConnectionStrings"] = AppConfigurtaionServices.Configuration.GetConnectionString("wxqconn");
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);  //避免日志中的中文输出乱码
@@ -81,13 +81,19 @@ namespace WebApi
             // 返回错误码
 
             app.UseStatusCodePages();//把错误码返回前台，比如是404
+
             app.UseRouting();
+            app.UseCors(MyAllowSpecificOrigins);
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers().RequireCors(MyAllowSpecificOrigins);
                 endpoints.MapControllerRoute(
-                      name: "default",
-                      pattern: "{controller=Home}/{action=Index}/{id?}");
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+   
+       
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -96,7 +102,17 @@ namespace WebApi
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //services.AddSingleton<IAsyncAuthorizationFilter, WebApi.Common.MiddleWare.AuthorizeAttribute>();
             //添加cors 服务 配置跨域处理
-            services.AddCors().AddMvcCore().AddFluentValidation().AddApiExplorer();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                    builder => builder
+           
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+
+            });
+            services.AddMvcCore().AddFluentValidation().AddApiExplorer();
             services.AddMvc(
            o =>
            {
@@ -106,7 +122,7 @@ namespace WebApi
 
             #region Swagger UI Service
 
-            string basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
+            string basePath =Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("V1", new OpenApiInfo

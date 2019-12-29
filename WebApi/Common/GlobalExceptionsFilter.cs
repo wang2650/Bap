@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.Hosting;
 using NLog;
 using System;
 using System.Threading.Tasks;
@@ -15,13 +16,13 @@ namespace WebApi.Common
     /// </summary>
     public class GlobalExceptionsFilter : IExceptionFilter
     {
-        private readonly IHostingEnvironment _env;
+        private readonly IWebHostEnvironment _env;
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
         /// <summary>
         /// 
         /// </summary>
         /// <param name="env"></param>
-        public GlobalExceptionsFilter(IHostingEnvironment env)
+        public GlobalExceptionsFilter(IWebHostEnvironment env)
         {
             _env = env;
         }
