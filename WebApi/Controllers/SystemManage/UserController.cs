@@ -35,6 +35,7 @@ namespace WebApi.Controllers.systemmanage
         [WebApi.Common.Log]
         [Route("DeleteUser")]
         [WebApi.Common.MiddleWare.AuthorizeAttribute]
+    
         public JsonResult DeleteUser([FromQuery] int userId)
         {
             ResponseResult result = new ResponseResult();
@@ -188,12 +189,10 @@ namespace WebApi.Controllers.systemmanage
         [AllowAnonymous]
         [WebApi.Common.Log]
         [Route("Login")]
-
         public JsonResult Login( [FromForm] WXQ.InOutPutEntites.Input.SystemManage.User.LoginInput model)
         {
             WXQ.BusinessCore.systemmanage.InitOp initOp = new WXQ.BusinessCore.systemmanage.InitOp();
-     
-
+        
 
 
             var a = this.Request;

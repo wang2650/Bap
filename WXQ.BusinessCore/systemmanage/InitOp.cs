@@ -5,8 +5,6 @@ using System.Linq;
 using WXQ.BusinessCore.BaseCore;
 using WXQ.Enties;
 
-
-
 namespace WXQ.BusinessCore.systemmanage
 {
     public class InitOp : OpBase
@@ -867,7 +865,6 @@ namespace WXQ.BusinessCore.systemmanage
 
 
 
-    
 
     }
 }

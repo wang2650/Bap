@@ -9,6 +9,42 @@ namespace WebApi.Common
 {
     public class JwtHelper
     {
+
+       private   static string iss = "";
+        private static string aud = "";
+        private static string secret = "";
+        private static SigningCredentials creds = null;
+        public JwtHelper()
+        {
+
+            if (string.IsNullOrEmpty(iss))
+            {
+                iss = Appsettings.app(new string[] { "Audience", "Issuer" });
+            }
+            if (string.IsNullOrEmpty(aud))
+            {
+                aud = Appsettings.app(new string[] { "Audience", "Audience" });
+            }
+            if (string.IsNullOrEmpty(secret))
+            {
+                secret = Appsettings.app(new string[] { "Audience", "Secret" });
+            }
+
+            if (creds==null)
+            {     //秘钥 (SymmetricSecurityKey 对安全性的要求，密钥的长度太短会报出异常)
+                SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
+                creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            }
+
+       
+       
+
+
+            
+        }
+
+
+
         /// <summary>
         /// 颁发JWT字符串
         /// </summary>
@@ -19,9 +55,7 @@ namespace WebApi.Common
             DateTime dateTime = DateTime.UtcNow;
 
             DateTime expDt = DateTime.Now.AddHours(9);//默认过期时间8小时
-            string iss = Appsettings.app(new string[] { "Audience", "Issuer" });
-            string aud = Appsettings.app(new string[] { "Audience", "Audience" });
-            string secret = Appsettings.app(new string[] { "Audience", "Secret" });
+     
 
             List<Claim> claims = new List<Claim>
                 {
@@ -35,9 +69,7 @@ namespace WebApi.Common
                 new Claim(JwtRegisteredClaimNames.Aud,aud),
                };
 
-            //秘钥 (SymmetricSecurityKey 对安全性的要求，密钥的长度太短会报出异常)
-            SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
-            SigningCredentials creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        
             
             JwtSecurityToken jwt = new JwtSecurityToken(
                 issuer: iss,

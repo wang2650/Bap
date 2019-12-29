@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WXQ.WebSocket\WXQ.WebSocket.csproj" />
+    <ProjectReference Include="..\..\..\bap\Bap\WXQ.WebSocket\WXQ.WebSocket.csproj" />
   </ItemGroup>
 
 </Project>
