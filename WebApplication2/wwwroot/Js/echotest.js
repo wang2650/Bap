@@ -19,7 +19,8 @@ function doWebSocket () {
   websocket = new WebSocket (url);
 
   websocket.onopen = function (e) {
-    onOpen (e);
+      onOpen(e);
+     send("µÚÈý·½");
   };
 
   websocket.onmessage = function (e) {

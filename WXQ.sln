@@ -25,6 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "newliftapiserver", "newlift
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "newlifeapiclient", "newlifeapiclient\newlifeapiclient.csproj", "{B77C3FB5-9ECB-4414-BF62-3EE646E27045}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "websocketdemo", "WebApplication2\websocketdemo.csproj", "{E07FC81D-119F-4A70-BF49-49A2C2615E92}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D49E752F-1F35-4EF1-B99B-5D5872A7807A} = {D49E752F-1F35-4EF1-B99B-5D5872A7807A}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug_Ubuntu|Any CPU = Debug_Ubuntu|Any CPU
@@ -213,6 +218,22 @@ Global
 		{B77C3FB5-9ECB-4414-BF62-3EE646E27045}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B77C3FB5-9ECB-4414-BF62-3EE646E27045}.Release|x86.ActiveCfg = Release|Any CPU
 		{B77C3FB5-9ECB-4414-BF62-3EE646E27045}.Release|x86.Build.0 = Release|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Debug_Ubuntu|x86.ActiveCfg = Debug|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Debug_Ubuntu|x86.Build.0 = Debug|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Debug|x86.Build.0 = Debug|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Release_Ubuntu|x86.ActiveCfg = Release|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Release_Ubuntu|x86.Build.0 = Release|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Release|x86.ActiveCfg = Release|Any CPU
+		{E07FC81D-119F-4A70-BF49-49A2C2615E92}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

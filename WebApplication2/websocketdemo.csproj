@@ -6,12 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <Content Remove="wwwroot\Js\echotest.js" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\bap\Bap\WXQ.WebSocket\WXQ.WebSocket.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="WebSocketSharp.Standard" Version="1.0.3" />
   </ItemGroup>
 
 </Project>

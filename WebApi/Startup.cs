@@ -101,7 +101,7 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
             //services.AddSingleton<IAsyncAuthorizationFilter, WebApi.Common.MiddleWare.AuthorizeAttribute>();
             //添加cors 服务 配置跨域处理
             services.AddCors(options =>
@@ -184,33 +184,7 @@ namespace WebApi
             string symmetricKeyAsBase64 = audienceConfig["Secret"];
             byte[] keyByteArray = Encoding.ASCII.GetBytes(symmetricKeyAsBase64);
             SymmetricSecurityKey signingKey = new SymmetricSecurityKey(keyByteArray);
-            //#region 【认证】
-            ////2.1【认证】
-            //services.AddAuthorization(options =>
-            //{
-            //    options.AddPolicy("common", policy => policy.Requirements.Add(new CommonAuthorizeRequirement("common")));
-            //}).AddAuthentication(x =>
-            //   {
-            //       x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //       x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            //   })
-            //.AddJwtBearer(o =>
-            //{
-            //    o.TokenValidationParameters = new TokenValidationParameters
-            //    {
-            //        ValidateIssuerSigningKey = true,
-            //        IssuerSigningKey = signingKey,
-            //        ValidateIssuer = true,
-            //        ValidIssuer = audienceConfig["Issuer"],//发行人
-            //         ValidateAudience = true,
-            //        ValidAudience = audienceConfig["Audience"],//订阅人
-            //         ValidateLifetime = true,
-            //        ClockSkew = TimeSpan.Zero,
-            //        RequireExpirationTime = true,
-            //    };
-            //});
 
-            //#endregion 【认证】
             services.AddControllers().AddNewtonsoftJson(options =>
             {
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
