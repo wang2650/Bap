@@ -722,5 +722,30 @@ namespace CommonLib.IO
 
 
 
+
+        #region 移动文件夹内容
+        /// <summary>
+        /// 移动文件夹内容
+        /// </summary>
+        /// <param name="srcFolder">源文件夹</param>
+        /// <param name="destFolder">目标文件夹</param>
+        private static void moveFiles(string srcFolder, string destFolder)
+        {
+            DirectoryInfo directoryInfo = new DirectoryInfo(srcFolder);
+            FileInfo[] files = directoryInfo.GetFiles();
+
+            foreach (FileInfo file in files) // Directory.GetFiles(srcFolder)
+            {
+             
+                    file.MoveTo(Path.Combine(destFolder, file.Name));
+
+            }
+        }
+
+        #endregion 
+
+
+
+
     }
 }
