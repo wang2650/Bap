@@ -189,7 +189,7 @@ namespace WebApi
             {
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 options.SerializerSettings.ContractResolver = new DefaultContractResolver();
-                options.SerializerSettings.DateFormatString = "yyyy-MM-dd";
+                options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
             });
 
             services.Configure<ApiBehaviorOptions>(options =>
