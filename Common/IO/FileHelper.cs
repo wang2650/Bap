@@ -722,6 +722,20 @@ namespace CommonLib.IO
 
 
 
+        public static string GetLastLineDataForTxt(string fileName)
+        {
+            string line = string.Empty;
+            using (FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            using (StreamReader sr = new StreamReader(fs))
+            {
+                line = GetLastLine(fs);
+
+                sr.Close();
+                fs.Close();
+            }
+            return line;
+        }
+
 
         #region 移动文件夹内容
         /// <summary>
