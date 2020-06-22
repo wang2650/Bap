@@ -1,16 +1,16 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using CommonLib.Extensions.IO;
 using Microsoft.AspNetCore.Authorization;
-using WXQ.InOutPutEntites.Output;
-using System.IO;
-using System.Text;
-using CommonLib.Extensions.IO;
 using Microsoft.AspNetCore.Http.Extensions;
-using System.Threading;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Primitives;
 using Microsoft.Net.Http.Headers;
+using System;
+using System.IO;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using WXQ.InOutPutEntites.Output;
 
 namespace WebApi.Controllers.FileHandle
 {
@@ -22,7 +22,6 @@ namespace WebApi.Controllers.FileHandle
     [ApiController]
     public class FileHandleController : Controller
     {
-
         /// <summary>
         /// 上传头像
         /// </summary>
@@ -71,7 +70,7 @@ namespace WebApi.Controllers.FileHandle
                     }
                     //else
                     //{
-                    //  取formdata中的信息 
+                    //  取formdata中的信息
                     //    var formDataSection = section.AsFormDataSection();
                     //    var name = formDataSection.Name;
                     //    var value = await formDataSection.GetValueAsync();
@@ -90,7 +89,6 @@ namespace WebApi.Controllers.FileHandle
                 //return (false, "用户取消操作", null);
             }
 
-
             return Json(result);
         }
 
@@ -102,7 +100,7 @@ namespace WebApi.Controllers.FileHandle
         [HttpPost]
         [Route("SaveExcel")]
         [WebApi.Common.Log]
-        public JsonResult SaveExcel([FromQuery] string  filename, Microsoft.AspNetCore.Http.IFormFile excelFile)
+        public JsonResult SaveExcel([FromQuery] string filename, Microsoft.AspNetCore.Http.IFormFile excelFile)
         {
             ResponseResult result = new ResponseResult();
             string targetDirectory = "\\wwwroot\\uploadfiles";
@@ -114,7 +112,6 @@ namespace WebApi.Controllers.FileHandle
             int bufferThreshold = 5120000;//500k  bufferThreshold 设置的是 Request.Body 最大缓存字节数（默认是30K） 超出这个阈值的字节会被写入磁盘
             int bufferLimit = 10240000;//1m 设置的是 Request.Body 允许的最大字节数（默认值是null），超出这个限制，就会抛出异常 System.IO.IOException
 
-
             HttpContext.Request.Body.Position = 0;
             if (this.Request.ContentLength > 0 && this.Request.Body != null && this.Request.Body.CanRead)
             {
@@ -125,8 +122,6 @@ namespace WebApi.Controllers.FileHandle
                     buffer.Flush();
                     buffer.Position = 0;
                     buffer.ToFile(Path.Combine(targetDirectory, "a.jpg"));
-                
-
                 }
             }
 
@@ -143,10 +138,27 @@ namespace WebApi.Controllers.FileHandle
                 buffer = null;
             }//使用using可以最后不用关闭fs 比较方便
         }
+        /// <summary>
+        /// 下载文件
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="caseId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("DownloadFile")]
+        [WebApi.Common.Log]
+        public async Task<IActionResult> DownloadFile(string fileName, string caseId)
+        {
+            string directoryPath = AppContext.BaseDirectory;
+            string filePath = directoryPath + "/a.jpg";
+             var memoryStream = new MemoryStream();
+            using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 65536, FileOptions.Asynchronous | FileOptions.SequentialScan))
+            {
+                await stream.CopyToAsync(memoryStream);
+            }
+            memoryStream.Seek(0, SeekOrigin.Begin);
 
-
-
-
-
+            return File(memoryStream, "application/octet-stream", fileName);
+        }
     }
 }

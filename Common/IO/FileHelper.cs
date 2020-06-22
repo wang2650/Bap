@@ -76,7 +76,7 @@ namespace CommonLib.IO
         #region KillFile(强力粉碎文件)
 
         /// <summary>
-        /// 强力粉碎文件，如果文件被打开，很难粉碎
+        /// 强力粉碎文件，如果文件被打开，很难粉碎 需要服务器上有handle.exe
         /// </summary>
         /// <param name="fileName">文件全路径</param>
         /// <param name="deleteCount">删除次数</param>
@@ -737,6 +737,20 @@ namespace CommonLib.IO
         }
 
 
+        private static string GetLastLine(FileStream fs)
+        {
+            int seekLength = (int)(fs.Length < 2048 ? fs.Length : 2048);  // 这里需要根据自己的数据长度进行调整，也可写成动态获取，可自己实现
+            byte[] buffer = new byte[seekLength];
+            fs.Seek(-buffer.Length, SeekOrigin.End);
+            fs.Read(buffer, 0, buffer.Length);
+            string multLine = System.Text.Encoding.UTF8.GetString(buffer);
+            string[] lines = multLine.Split(new string[] { "\\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+
+            string line = lines.Length > 0 ? lines[lines.Length - 1] : "";
+
+            return line;
+        }
         #region 移动文件夹内容
         /// <summary>
         /// 移动文件夹内容
