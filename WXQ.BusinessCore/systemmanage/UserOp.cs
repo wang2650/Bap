@@ -233,7 +233,7 @@ namespace WXQ.BusinessCore.systemmanage
             }
             result.PageSize = pageModel.PageSize;
             result.PageIndex = pageModel.PageIndex;
-            result.Total = pageModel.PageCount;
+            result.Total = pageModel.PageCount* pageModel.PageSize;
             return result;
         }
 

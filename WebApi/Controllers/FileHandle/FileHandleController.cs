@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Primitives;
 using Microsoft.Net.Http.Headers;
@@ -10,6 +11,7 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using WXQ.Enties.CommonObj;
 using WXQ.InOutPutEntites.Output;
 
 namespace WebApi.Controllers.FileHandle
@@ -160,5 +162,36 @@ namespace WebApi.Controllers.FileHandle
 
             return File(memoryStream, "application/octet-stream", fileName);
         }
+
+        public async Task<IActionResult> Download(string id)
+        {
+            string filename = "a.txt";
+            string filePath = "/downlfile/"+ filename;
+            if (!System.IO.File.Exists(filePath))
+            {
+                ResponseResult result = new ResponseResult();
+                result.Code = ResponseResultMessageDefine.OpLost;
+                result.Errors.Add(ResponseResultMessageDefine.NoExistFile);
+
+                return Ok(result);
+            }
+
+            else
+            {
+                var memoryStream = new MemoryStream();
+                using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 65536, FileOptions.Asynchronous | FileOptions.SequentialScan))
+                {
+                    await stream.CopyToAsync(memoryStream);
+                }
+                var ext = "." + filename.Split('.')[1];
+                memoryStream.Seek(0, SeekOrigin.Begin);
+                new FileExtensionContentTypeProvider().Mappings.TryGetValue(ext, out var contenttype);
+                return new FileStreamResult(memoryStream, contenttype);
+            }
+
+
+        }
+
+
     }
 }

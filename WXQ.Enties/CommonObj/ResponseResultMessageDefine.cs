@@ -49,5 +49,10 @@
         ///
         /// </summary>
         public const string NoLoginOrUserIdError = "用户未登录或者用户id错误";
+
+
+        public const string NoExistFile = "无此文件";
+
+
     }
 }
